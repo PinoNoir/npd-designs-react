@@ -1,0 +1,86 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--gray-1);
+  color: var(--gray-12);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: var(--font-family-monospace);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-headings);
+}
+
+h1,
+.h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2,
+.h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3,
+.h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4,
+.h4 {
+  font-size: var(--font-size-h4);
+}
+
+h5,
+.h5 {
+  font-size: var(--font-size-h5);
+}
+
+h6,
+.h6 {
+  font-size: var(--font-size-h6);
+}
+
+p {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  color: var(--gray-12);
+  line-height: var(--font-line-height-body);
+  margin-block-end: var(--space-2);
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+}

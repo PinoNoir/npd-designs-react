@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  color: var(--gray-12);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 1rem;
+}

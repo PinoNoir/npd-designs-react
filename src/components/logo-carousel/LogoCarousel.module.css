@@ -1,0 +1,28 @@
+.logo-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  background: var(--white);
+  padding: 1rem 0;
+  max-height: 100px;
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+  margin-inline: var(--space-24);
+  width: 120px;
+  height: auto;
+}
+
+.logo-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}

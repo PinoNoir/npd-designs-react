@@ -1,0 +1,42 @@
+.bannerSection {
+  position: relative;
+  display: flex;
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url('public/assets/img/profile1.jpg');
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: 0px -100px;
+  background-repeat: no-repeat;
+}
+
+.bannerText {
+  position: relative;
+  z-index: 10;
+  font-size: 3rem;
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-headings);
+  color: var(--gray-12);
+}
+
+.cursor {
+  font-weight: var(--font-weight-medium);
+  display: inline-block;
+}
+
+.subtextContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  color: var(--gray-12);
+
+  & h2 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-medium);
+    font-family: var(--font-family-headings);
+    line-height: 1.5;
+  }
+}
