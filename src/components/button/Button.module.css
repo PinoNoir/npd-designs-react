@@ -73,9 +73,9 @@
 }
 
 .ghost:hover:not(:disabled) {
-  background: var(--overlay-1);
+  background: var(--blue-a8);
 }
 
 .ghost:active:not(:disabled) {
-  background: var(--overlay-2);
+  background: var(--blue-a10);
 } 

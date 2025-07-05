@@ -10,7 +10,12 @@ const Blob = () => {
   useFrame((state) => {
     const { clock } = state;
     if (mesh.current) {
+      // Smooth rotation
       mesh.current.rotation.z = clock.getElapsedTime() * 0.1;
+      
+      // Smooth scale transition on hover
+      const targetScale = hover.current ? 1.8 : 1.5;
+      mesh.current.scale.lerp(new THREE.Vector3(targetScale, targetScale, targetScale), 0.1);
     }
   });
 
@@ -25,12 +30,12 @@ const Blob = () => {
       <icosahedronGeometry args={[1, 8]} />
       <MeshDistortMaterial
         color="#8352FD"
-        envMapIntensity={1.2}
-        clearcoat={1.3}
-        clearcoatRoughness={0.25}
+        envMapIntensity={hover.current ? 1.5 : 1.2}
+        clearcoat={hover.current ? 1.5 : 1.3}
+        clearcoatRoughness={hover.current ? 0.2 : 0.25}
         metalness={0.01}
-        distort={0.4}
-        speed={1}
+        distort={hover.current ? 0.6 : 0.4}
+        speed={hover.current ? 1.5 : 1}
         roughness={0.4}
         transmission={0.8}
         thickness={0.5}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ProjectCard from '../project-card/ProjectCard';
+import styles from './PortfolioGrid.module.css';
 
 interface Project {
   id: string;
@@ -18,24 +19,28 @@ const PortfolioGrid: React.FC<PortfolioGridProps> = ({ projects }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   // Get unique categories from projects
-  const categories = ['all', ...new Set(projects.map((project) => project.category))];
+  const categories = [
+    'all',
+    ...new Set(projects.map((project) => project.category)),
+  ];
 
-  const filteredProjects = selectedCategory === 'all'
-    ? projects
-    : projects.filter((project) => project.category === selectedCategory);
+  const filteredProjects =
+    selectedCategory === 'all'
+      ? projects
+      : projects.filter((project) => project.category === selectedCategory);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className={styles.container}>
       {/* Category Filter */}
-      <div className="flex flex-wrap gap-4 mb-8">
+      <div className={styles.categoryFilter}>
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
+            className={`${styles.categoryButton} ${
               selectedCategory === category
-                ? 'bg-indigo-600 text-white'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                ? styles.categoryButtonActive
+                : styles.categoryButtonInactive
             }`}
           >
             {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -44,7 +49,7 @@ const PortfolioGrid: React.FC<PortfolioGridProps> = ({ projects }) => {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className={styles.projectsGrid}>
         {filteredProjects.map((project) => (
           <ProjectCard
             key={project.id}
@@ -60,10 +65,11 @@ const PortfolioGrid: React.FC<PortfolioGridProps> = ({ projects }) => {
 
       {/* Empty State */}
       {filteredProjects.length === 0 && (
-        <div className="text-center py-12">
-          <h3 className="text-lg font-medium text-gray-900">No projects found</h3>
-          <p className="mt-2 text-gray-500">
-            Try selecting a different category or check back later for new projects.
+        <div className={styles.emptyState}>
+          <h3 className={styles.emptyStateTitle}>No projects found</h3>
+          <p className={styles.emptyStateText}>
+            Try selecting a different category or check back later for new
+            projects.
           </p>
         </div>
       )}
@@ -71,4 +77,4 @@ const PortfolioGrid: React.FC<PortfolioGridProps> = ({ projects }) => {
   );
 };
 
-export default PortfolioGrid; 
+export default PortfolioGrid;

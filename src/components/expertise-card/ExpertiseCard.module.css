@@ -5,11 +5,11 @@
   padding: var(--space-24);
   background-color: var(--gray-3);
   border-radius: 15px;
-  transition: transform 300s ease-in-out;
-}
+  transition: transform 300ms ease-in-out;
 
-.card:hover {
-  transform: translateY(-5px);
+  &:hover {
+    transform: translateY(-5px);
+  }
 }
 
 .wrapper {

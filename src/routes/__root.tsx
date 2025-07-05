@@ -39,7 +39,7 @@ function RootComponent() {
           </ul>
         </div>
         <div className={styles.wrapper}>
-          <Button variant='secondary' size='sm'>
+          <Button variant='ghost' size='sm'>
             Resume
             <DownloadCloud />
           </Button>

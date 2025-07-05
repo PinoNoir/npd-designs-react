@@ -1,0 +1,96 @@
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.categoryFilter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.categoryButton {
+  all: unset;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid var(--gray-2);
+  transition:
+    background-color 200ms,
+    color 300ms;
+
+  &:hover {
+    background-color: var(--gray-a2);
+  }
+}
+
+.categoryButtonActive {
+  background-color: var(--blue-a2);
+  color: var(--blue-11);
+
+  &:hover {
+    background-color: var(--blue-a4);
+  }
+}
+
+.categoryButtonInactive {
+  background-color: transparent;
+  color: var(--gray-11);
+
+  &:hover {
+    background-color: var(--gray-a2);
+  }
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projectsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.emptyStateTitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--gray-9);
+}
+
+.emptyStateText {
+  margin-top: 0.5rem;
+  color: var(--gray-5);
+}
