@@ -8,16 +8,15 @@
   text-align: center;
   background: var(--gray-1);
   padding: var(--space-32);
-  margin-inline: var(--space-32);
   border-radius: var(--border-radius-default);
-  background-color: var(--gray-3);
-  border: 1px solid var(--gray-4);
+  background-color: var(--blue-3);
+  border: 1px solid var(--blue-4);
 }
 
 .caseStudyOverline {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-  color: var(--blue-10);
+  color: var(--blue-11);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: var(--space-8);
@@ -34,8 +33,8 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-8);
-  background-color: var(--blue-10);
   color: var(--gray-1);
+  background-color: var(--blue-11);
   padding: var(--space-12) var(--space-24);
   border-radius: var(--border-radius-default);
   text-decoration: none;

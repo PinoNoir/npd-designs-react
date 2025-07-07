@@ -1,35 +1,35 @@
 import React from 'react';
 import { ProjectDeliverables } from '@/pages/projects/project-components';
-import { 
-  swellLifeDeliverables, 
-  miamahComedyDeliverables, 
-  makotoDeliverables 
-} from '@/data/projects/swell-life-data';
+import {
+  swellLifeDeliverables,
+  miamahComedyDeliverables,
+  makotoDeliverables,
+} from '@/data/projects';
 
 // Example component showing how to use ProjectDeliverables for different projects
 const ProjectDeliverablesExample: React.FC = () => {
   return (
     <div>
       {/* Swell Life Magazine Deliverables */}
-      <ProjectDeliverables 
+      <ProjectDeliverables
         deliverables={swellLifeDeliverables}
-        sectionTitle="Swell Life Magazine Deliverables"
+        sectionTitle='Swell Life Magazine Deliverables'
       />
 
       {/* Miamah Comedy Deliverables */}
-      <ProjectDeliverables 
+      <ProjectDeliverables
         deliverables={miamahComedyDeliverables}
-        sectionTitle="Miamah Comedy Deliverables"
+        sectionTitle='Miamah Comedy Deliverables'
       />
 
       {/* Makoto Restaurant Deliverables */}
-      <ProjectDeliverables 
+      <ProjectDeliverables
         deliverables={makotoDeliverables}
-        sectionTitle="Makoto Restaurant Deliverables"
+        sectionTitle='Makoto Restaurant Deliverables'
       />
 
       {/* Custom Deliverables Example */}
-      <ProjectDeliverables 
+      <ProjectDeliverables
         deliverables={[
           {
             id: 'custom-1',
@@ -44,10 +44,10 @@ const ProjectDeliverablesExample: React.FC = () => {
             imageAlt: 'Custom design showcase 2',
           },
         ]}
-        sectionTitle="Custom Project Deliverables"
+        sectionTitle='Custom Project Deliverables'
       />
     </div>
   );
 };
 
-export default ProjectDeliverablesExample; 
+export default ProjectDeliverablesExample;

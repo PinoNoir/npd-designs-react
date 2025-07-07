@@ -1,50 +1,29 @@
-/* Responsive Design */
-@media (max-width: 768px) {
-  .overviewGrid,
-  .processGrid {
-    grid-template-columns: 1fr;
-    gap: var(--space-24);
-  }
-  
-  .projectStage {
-    min-height: 40vh;
-  }
-  
-  .stageLogo {
-    max-width: 300px;
-  }
-  
-  .container {
-    padding: 0 var(--space-12);
-  }
-  
-  .projectName {
-    font-size: var(--font-size-h2);
-  }
-  
-  .projectType {
-    font-size: var(--font-size-h4);
-  }
-  
-  .projectLead {
-    font-size: var(--font-size-body);
-  }
+.page {
+  min-height: 100vh;
+  background-color: var(--gray-1);
+  color: var(--gray-12);
 }
 
-@media (max-width: 480px) {
-  .projectStage {
-    min-height: 30vh;
-  }
-  
-  .stageLogo {
-    max-width: 250px;
-  }
-  
-  .highlight {
-    padding: var(--space-24);
-  }
-  
-  .caseStudyClient {
-    font-size: var(--font-size-h3);
-  }
-} 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-16);
+}
+
+.moodBoard {
+  margin-block: var(--space-24);
+}
+
+.deliverableLabel {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-12);
+  margin-block-end: var(--space-16);
+}
+
+.moodBoardImage {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-default);
+  box-shadow: var(--shadow-2);
+}

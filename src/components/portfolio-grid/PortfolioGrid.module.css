@@ -65,6 +65,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+  margin-block: var(--space-40);
 }
 
 @media (min-width: 640px) {

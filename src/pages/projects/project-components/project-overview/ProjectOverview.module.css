@@ -1,46 +1,47 @@
 .projectOverview {
-    background: var(--gray-1);
-    color: var(--gray-12);
-    padding: var(--space-48) 0;
+  display: grid;
+  color: var(--gray-12);
+  margin-block: var(--space-48);
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-32);
+}
+
+.projectName {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+}
+
+.projectType {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  color: var(--gray-11);
+}
+
+.projectDetails {
+  margin-top: var(--space-8);
+}
+
+.projectLabel {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-8);
+  color: var(--blue-11);
+}
+
+.projectDescription {
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-12);
+}
+
+.projectLead {
+  font-size: var(--font-size-h4);
+  line-height: var(--font-line-height-body);
+  color: var(--gray-12);
+}
+
+
+@media (max-width: 768px) {
+  .projectOverview {
+    grid-template-columns: 1fr;
   }
-  
-  .overviewGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-32);
-    align-items: start;
-  }
-  
-  .projectName {
-    font-size: var(--font-size-h1);
-    font-weight: var(--font-weight-bold);
-  }
-  
-  .projectType {
-    font-size: var(--font-size-h3);
-    font-weight: var(--font-weight-medium);
-    color: var(--blue-10);
-  }
-  
-  .projectDetails {
-    margin-top: var(--space-24);
-  }
-  
-  .projectLabel {
-    font-size: var(--font-size-body);
-    font-weight: var(--font-weight-medium);
-    margin-bottom: var(--space-8);
-    color: var(--blue-10);
-  }
-  
-  .projectDescription {
-    font-weight: var(--font-weight-regular);
-    color: var(--gray-12);
-  }
-  
-  .projectLead {
-    font-size: var(--font-size-h4);
-    line-height: var(--font-line-height-body);
-    color: var(--gray-12);
-    margin: 0;
-  }
+}

@@ -17,7 +17,7 @@ const projects = [
       'Building a modern AI chatbot for multiple use cases and products',
     imageUrl: '/assets/img/projects/ecommerce.jpg',
     category: 'Vercel AI SDK',
-    tags: ['TypeScript', 'AI', 'Next.js', 'React'],
+    tags: ['TypeScript', 'AI', 'React'],
   },
   {
     id: '3',
@@ -26,16 +26,16 @@ const projects = [
       'A complete brand refresh for a comedy collective in Miami, Florida',
     imageUrl: '/assets/img/work_images/miamah_logo_1.png',
     category: 'Branding',
-    tags: ['Branding', 'Design', 'Website'],
+    tags: ['Branding', 'Visual Design'],
   },
   {
     id: '4',
     title: 'Swell Life Magazine',
     description:
       'A surf culture magazine that put a spotlight on the Cocoa Beach surf scene, local artists, and raised environmental awareness.',
-    imageUrl: '/assets/img/work_images/swell_life_logo.svg',
+    imageUrl: '/assets/img/work_images/swell_life_stage.jpg',
     category: 'Branding',
-    tags: ['Brand Identity', 'Visual Design', 'Product Development'],
+    tags: ['Branding', 'Visual Design'],
     route: '/swell-life',
   },
 ];

@@ -18,7 +18,7 @@ interface ProjectDeliverablesProps {
 const ProjectDeliverables = ({
   deliverables,
   sectionTitle = 'Project Deliverables',
-  className = '',
+  className,
 }: ProjectDeliverablesProps) => {
   return (
     <>

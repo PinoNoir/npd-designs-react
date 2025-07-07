@@ -1,9 +1,5 @@
-export interface Deliverable {
-  id: string;
-  title: string;
-  imageSrc: string;
-  imageAlt: string;
-}
+import { Deliverable, ProjectStep } from "./types";
+
 
 export const swellLifeDeliverables: Deliverable[] = [
   {
@@ -38,45 +34,22 @@ export const swellLifeDeliverables: Deliverable[] = [
   },
 ];
 
-// Example data for other projects
-export const miamahComedyDeliverables: Deliverable[] = [
+export const swellLifeSteps: ProjectStep[] = [
   {
-    id: 'miamah-1',
-    title: 'Brand Identity Design',
-    imageSrc: '/assets/img/work_images/miamah_logo_1.png',
-    imageAlt: 'Miamah Comedy brand identity design',
+    id: 'step-1',
+    text: 'Define design strategy in collaboration with the client.',
   },
   {
-    id: 'miamah-2',
-    title: 'Website Design',
-    imageSrc: '/assets/img/work_images/miamah_showcase_1.jpg',
-    imageAlt: 'Miamah Comedy website design showcase',
+    id: 'step-2',
+    text: 'Sketch thumbnails and develop rough drafts for review.',
   },
   {
-    id: 'miamah-3',
-    title: 'Marketing Materials',
-    imageSrc: '/assets/img/work_images/miamah_showcase_2.jpg',
-    imageAlt: 'Miamah Comedy marketing materials',
+    id: 'step-3',
+    text: 'Coordinate with photographers and production specialists.',
+  },
+  {
+    id: 'step-4',
+    text: 'Finalize and prep digital assets for print.',
   },
 ];
 
-export const makotoDeliverables: Deliverable[] = [
-  {
-    id: 'makoto-1',
-    title: 'Restaurant Branding',
-    imageSrc: '/assets/img/work_images/makoto_logo_1.png',
-    imageAlt: 'Makoto restaurant branding design',
-  },
-  {
-    id: 'makoto-2',
-    title: 'Menu Design',
-    imageSrc: '/assets/img/work_images/makoto_showcase_1.jpg',
-    imageAlt: 'Makoto menu design showcase',
-  },
-  {
-    id: 'makoto-3',
-    title: 'Interior Design Elements',
-    imageSrc: '/assets/img/work_images/makoto_showcase_2.jpg',
-    imageAlt: 'Makoto interior design elements',
-  },
-]; 

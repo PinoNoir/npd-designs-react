@@ -11,16 +11,14 @@ interface NextLinkProps {
 const NextLink = ({ label, projectName, link }: NextLinkProps) => {
   return (
     <section className={styles.featuredSection}>
-      <div className={styles.container}>
         <div className={styles.highlight}>
           <p className={styles.caseStudyOverline}>Up Next</p>
           <p className={styles.caseStudyClient}>{label}</p>
           <Link to={link} className={styles.nextProjectButton}>
             {projectName}
-            <ArrowRightIcon size={16} className={styles.arrowIcon} />
+            <ArrowRightIcon className={styles.arrowIcon} />
           </Link>
         </div>
-      </div>
     </section>
   );
 };

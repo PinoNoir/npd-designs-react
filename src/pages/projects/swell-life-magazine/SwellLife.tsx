@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from '../styles/sharedStyles.module.css';
-import { Footer } from '@/components';
+import styles from './SwellLife.module.css';
+import { Divider, Footer } from '@/components';
 import {
   NextLink,
   ProjectOverview,
@@ -9,7 +9,10 @@ import {
   ProjectDeliverables,
   ProjectDivider,
 } from '../project-components';
-import { swellLifeDeliverables } from '@/data/projects/swell-life-data';
+import {
+  swellLifeDeliverables,
+  swellLifeSteps,
+} from '@/data/projects/swell-life-data';
 
 const SwellLife: React.FC = () => {
   return (
@@ -31,11 +34,22 @@ const SwellLife: React.FC = () => {
         <ProjectDivider sectionTitle='Project Overview' />
 
         <ProjectProcess
-          projectOverview='After speaking with the client I researched some of the most popular surf magazines and brands to brainstorm ideas for the layout of Swell Life. I looked to world renoun designer and surfer David Carson for inspiration--their use of typography, color, shape, and texture was the style I wanted to emulate, but with my own interpretation. I decided to put strong emphasis on typograpic treatment to give each story/article a unique look and feel and incorporate a consistent visual language for each issue of the magazine.'
-          projectProcess='I decided to put strong emphasis on typograpic treatment to give each story/article a unique look and feel and incorporate a consistent visual language for each issue of the magazine.'
-          projectMoodBoard='/assets/img/work_images/swell_life_inspiration.jpg'
-          projectMoodBoardDescription='Design inspiration for Swell Life magazine'
-        />
+          projectOverview='For inspiration, I explored top surf magazines and brands, drawing particularly from the bold, textural style of designer and surfer David Carson. I focused on expressive typography to give each story a unique voice, while establishing a consistent visual language across the magazine.'
+          projectSteps={swellLifeSteps}
+          stepsTitle='Execution'
+        >
+          <Divider/>
+          <div className={styles.moodBoard}>
+            <p className={styles.deliverableLabel}>
+              Mood Board
+            </p>
+            <img
+              className={styles.moodBoardImage}
+              src='/assets/img/work_images/swell_life_inspiration.jpg'
+              alt='Design inspiration for Swell Life magazine'
+            />
+          </div>
+        </ProjectProcess>
 
         <ProjectDeliverables
           deliverables={swellLifeDeliverables}
