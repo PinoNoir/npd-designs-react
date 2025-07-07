@@ -1,0 +1,33 @@
+.projectStage {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px; 
+}
+
+.projectStage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/assets/img/work_images/swell_life_stage.jpg') center/cover;
+  z-index: 1;
+}
+
+.stageContent {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.stageLogo {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}

@@ -14,6 +14,24 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    /* Path Mapping */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/components/*": ["src/components/*"],
+      "@/pages/*": ["src/pages/*"],
+      "@/routes/*": ["src/routes/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/assets/*": ["public/assets/*"],
+      "@/types/*": ["src/types/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/constants/*": ["src/constants/*"]
+    },
+
+    /* Type Definitions */
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,

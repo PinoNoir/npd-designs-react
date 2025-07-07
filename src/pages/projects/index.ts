@@ -1,0 +1,1 @@
+export { default as SwellLife } from './swell-life-magazine/SwellLife';

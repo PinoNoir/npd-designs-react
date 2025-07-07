@@ -17,7 +17,7 @@
   "devDependencies": {
     "@tanstack/router-cli": "^1.97.3",
     "@tanstack/router-plugin": "^1.97.3",
-    "@types/node": "^22.7.2",
+    "@types/node": "^22.10.7",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
     "@types/three": "^0.176.0",
@@ -38,7 +38,9 @@
     "postcss-nested": "^6.2.0",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.0.3",
-    "vite": "^6.0.3"
+    "typed-css-modules": "^0.9.1",
+    "vite": "^6.0.3",
+    "vite-plugin-dts": "^4.5.4"
   },
   "dependencies": {
     "@radix-ui/colors": "^3.0.0",

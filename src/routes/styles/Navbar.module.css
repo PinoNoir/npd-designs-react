@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--gray-2);
+  background-color: var(--gray-1);
   padding-block: 1rem;
   padding-inline: 3rem;
 

@@ -1,23 +1,43 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { PortfolioGrid } from '../components';
+import { Footer, Hero, PortfolioGrid } from '@/components';
 
 const projects = [
   {
     id: '1',
-    title: 'Design System Development',
-    description: 'Created a comprehensive design system for enterprise applications',
+    title: 'Design Systems',
+    description: 'Building scalable systems for enterprise React applications',
     imageUrl: '/assets/img/projects/design-system.jpg',
     category: 'Design Systems',
-    tags: ['UX Design', 'Design Systems', 'React']
+    tags: ['UX Design', 'Design Systems', 'React'],
   },
   {
     id: '2',
-    title: 'E-commerce Platform',
-    description: 'Developed a modern e-commerce solution with advanced features',
+    title: 'GenAI Chatbot',
+    description:
+      'Building a modern AI chatbot for multiple use cases and products',
     imageUrl: '/assets/img/projects/ecommerce.jpg',
-    category: 'Frontend',
-    tags: ['Frontend', 'TypeScript', 'Next.js']
-  }
+    category: 'Vercel AI SDK',
+    tags: ['TypeScript', 'AI', 'Next.js', 'React'],
+  },
+  {
+    id: '3',
+    title: 'Miamah Comedy',
+    description:
+      'A complete brand refresh for a comedy collective in Miami, Florida',
+    imageUrl: '/assets/img/work_images/miamah_logo_1.png',
+    category: 'Branding',
+    tags: ['Branding', 'Design', 'Website'],
+  },
+  {
+    id: '4',
+    title: 'Swell Life Magazine',
+    description:
+      'A surf culture magazine that put a spotlight on the Cocoa Beach surf scene, local artists, and raised environmental awareness.',
+    imageUrl: '/assets/img/work_images/swell_life_logo.svg',
+    category: 'Branding',
+    tags: ['Brand Identity', 'Visual Design', 'Product Development'],
+    route: '/swell-life',
+  },
 ];
 
 export const Route = createFileRoute('/work')({
@@ -26,9 +46,14 @@ export const Route = createFileRoute('/work')({
 
 function WorkComponent() {
   return (
-    <div className="work-page">
-      <h1>My Work</h1>
+    <>
+      <Hero
+        title='My Work'
+        subtitle='An overview of the different projects I&apos;ve worked on'
+        description="I've worked on a variety of projects, from design systems to AI chatbots."
+      />
       <PortfolioGrid projects={projects} />
-    </div>
+      <Footer />
+    </>
   );
 }

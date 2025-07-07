@@ -8,15 +8,16 @@ interface ProjectCardProps {
   category: string;
   image: string;
   tags: string[];
+  route?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
-  id,
   title,
   description,
   category,
   image,
   tags,
+  route,
 }) => {
   return (
     <div className={styles.card}>
@@ -33,7 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </span>
           ))}
         </div>
-        <Link to='/work' search={{ id }} className={styles.link}>
+        <Link to={route || '/work'} className={styles.link}>
           View Project
         </Link>
       </div>

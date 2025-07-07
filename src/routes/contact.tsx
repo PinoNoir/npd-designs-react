@@ -6,11 +6,7 @@ export const Route = createFileRoute('/contact')({
 });
 
 function ContactComponent() {
-  return (
-    <>
-      <Contact />
-    </>
-  );
+  return <Contact />;
 }
 
 export default ContactComponent;

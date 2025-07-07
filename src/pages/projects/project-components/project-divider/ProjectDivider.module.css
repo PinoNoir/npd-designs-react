@@ -1,0 +1,15 @@
+.sectionDivider {
+  display: flex;
+  align-items: center;
+  background-color: var(--gray-2);
+  padding: var(--space-16);
+  margin-bottom: var(--space-32);
+  border-radius: var(--border-radius-default);
+}
+
+.sectionTitle {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-12);
+  margin: 0;
+}

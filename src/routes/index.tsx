@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { FeaturedSection, Footer, Hero } from '../components';
+import { FeaturedSection, Footer, Hero } from '@/components';
 
 import styles from './styles/Home.module.css';
 import {
@@ -12,7 +12,7 @@ import {
   Layout,
   Rotate3D,
 } from 'lucide-react';
-import ExpertiseCard from '../components/expertise-card/ExpertiseCard';
+import ExpertiseCard from '@/components/expertise-card/ExpertiseCard';
 
 export const Route = createFileRoute('/')({
   component: HomeComponent,
@@ -20,7 +20,7 @@ export const Route = createFileRoute('/')({
 
 function HomeComponent() {
   return (
-    <div>
+    <>
       <Hero
         title='Crafting Digital Experiences that Deliver Results'
         subtitle='UX engineer specializing in design systems & frontend development'
@@ -85,6 +85,6 @@ function HomeComponent() {
       <FeaturedSection />
 
       <Footer />
-    </div>
+    </>
   );
 }

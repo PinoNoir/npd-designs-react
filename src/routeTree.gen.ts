@@ -12,6 +12,7 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as WorkImport } from './routes/work'
+import { Route as SwellLifeImport } from './routes/swell-life'
 import { Route as ErrorImport } from './routes/error'
 import { Route as ContactImport } from './routes/contact'
 import { Route as AboutImport } from './routes/about'
@@ -22,6 +23,12 @@ import { Route as IndexImport } from './routes/index'
 const WorkRoute = WorkImport.update({
   id: '/work',
   path: '/work',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const SwellLifeRoute = SwellLifeImport.update({
+  id: '/swell-life',
+  path: '/swell-life',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -81,6 +88,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ErrorImport
       parentRoute: typeof rootRoute
     }
+    '/swell-life': {
+      id: '/swell-life'
+      path: '/swell-life'
+      fullPath: '/swell-life'
+      preLoaderRoute: typeof SwellLifeImport
+      parentRoute: typeof rootRoute
+    }
     '/work': {
       id: '/work'
       path: '/work'
@@ -98,6 +112,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/error': typeof ErrorRoute
+  '/swell-life': typeof SwellLifeRoute
   '/work': typeof WorkRoute
 }
 
@@ -106,6 +121,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/error': typeof ErrorRoute
+  '/swell-life': typeof SwellLifeRoute
   '/work': typeof WorkRoute
 }
 
@@ -115,15 +131,23 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/error': typeof ErrorRoute
+  '/swell-life': typeof SwellLifeRoute
   '/work': typeof WorkRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/error' | '/work'
+  fullPaths: '/' | '/about' | '/contact' | '/error' | '/swell-life' | '/work'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/error' | '/work'
-  id: '__root__' | '/' | '/about' | '/contact' | '/error' | '/work'
+  to: '/' | '/about' | '/contact' | '/error' | '/swell-life' | '/work'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/error'
+    | '/swell-life'
+    | '/work'
   fileRoutesById: FileRoutesById
 }
 
@@ -132,6 +156,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   ErrorRoute: typeof ErrorRoute
+  SwellLifeRoute: typeof SwellLifeRoute
   WorkRoute: typeof WorkRoute
 }
 
@@ -140,6 +165,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   ErrorRoute: ErrorRoute,
+  SwellLifeRoute: SwellLifeRoute,
   WorkRoute: WorkRoute,
 }
 
@@ -157,6 +183,7 @@ export const routeTree = rootRoute
         "/about",
         "/contact",
         "/error",
+        "/swell-life",
         "/work"
       ]
     },
@@ -171,6 +198,9 @@ export const routeTree = rootRoute
     },
     "/error": {
       "filePath": "error.tsx"
+    },
+    "/swell-life": {
+      "filePath": "swell-life.tsx"
     },
     "/work": {
       "filePath": "work.tsx"

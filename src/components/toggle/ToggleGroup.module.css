@@ -7,7 +7,7 @@
 
 .ToggleItem {
   all: unset;
-  background-color: white;
+  background-color: var(--gray-1);
   color: var(--gray-11);
   height: 35px;
   width: 35px;

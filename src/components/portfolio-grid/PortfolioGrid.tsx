@@ -9,6 +9,7 @@ interface Project {
   imageUrl: string;
   category: string;
   tags: string[];
+  route?: string;
 }
 
 interface PortfolioGridProps {
@@ -59,6 +60,7 @@ const PortfolioGrid: React.FC<PortfolioGridProps> = ({ projects }) => {
             image={project.imageUrl}
             category={project.category}
             tags={project.tags}
+            route={project.route}
           />
         ))}
       </div>
