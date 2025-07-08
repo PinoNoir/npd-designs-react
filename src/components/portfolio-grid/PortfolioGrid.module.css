@@ -23,7 +23,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-block-start: var(--space-16);
+  margin-block-end: var(--space-32);
+  background-color: var(--gray-2);
+  padding-inline: var(--space-24);
+  padding-block: var(--space-16);
+  border-radius: var(--border-radius-default);
 }
 
 .categoryButton {

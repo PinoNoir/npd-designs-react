@@ -24,7 +24,7 @@ const projects = [
     title: 'Miamah Comedy',
     description:
       'A complete brand refresh for a comedy collective in Miami, Florida',
-    imageUrl: '/assets/img/work_images/miamah_logo_1.png',
+    imageUrl: '/assets/img/work_images/miamah_stage.jpg',
     category: 'Branding',
     tags: ['Branding', 'Visual Design'],
   },
@@ -49,8 +49,7 @@ function WorkComponent() {
     <>
       <Hero
         title='My Work'
-        subtitle='An overview of the different projects I&apos;ve worked on'
-        description="I've worked on a variety of projects, from design systems to AI chatbots."
+        subtitle="An overview of the different projects I've worked on"
       />
       <PortfolioGrid projects={projects} />
       <Footer />

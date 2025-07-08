@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   padding: 5rem;
-  min-height: 100vh;
+  min-height: 80vh;
   margin: 0 auto;
   position: relative;
   background-size: 200% 200%;
@@ -35,21 +35,21 @@
   font-weight: 500;
   letter-spacing: -0.025em;
   color: var(--secondary-100);
-  margin-bottom: 1.5rem;
+  margin-block-end: var(--space-8);
 }
 
 .title {
-  font-size: 3.5rem;
-  font-weight: 400;
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-regular);
   line-height: 1.2;
-  margin-bottom: 1.5rem;
+  margin-block-end: var(--space-16);
   background: var(--secondary-100);
 }
 
 .subtitle {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  margin-block-end: var(--space-16);
   color: var(--secondary-100);
 }
 
@@ -58,7 +58,7 @@
   line-height: 1.4;
   max-width: 800px;
   color: var(--secondary-100);
-  margin-block-end: 2rem;
+  margin-block-end: var(--space-32);
 }
 
 .textContainer {
