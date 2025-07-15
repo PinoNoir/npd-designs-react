@@ -57,8 +57,9 @@ const Footer: React.FC = () => {
 
   const footerLinks = [
     { name: 'Home', to: '/' },
-    { name: 'Portfolio', to: '/portfolio' },
+    { name: 'Projects', to: '/projects' },
     { name: 'About', to: '/about' },
+    { name: 'Resume', to: '/resume' },
     { name: 'Contact', to: '/contact' },
   ];
 

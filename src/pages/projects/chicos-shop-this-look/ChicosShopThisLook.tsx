@@ -13,7 +13,7 @@ import {
   chicosShopThisLookDeliverables,
   chicosShopThisLookProblems,
   chicosShopThisLookGoals,
-} from '@/data/projects/chicos-data';
+} from '@/data/projects/chicos-stl-data';
 
 const ChicosShopThisLook: React.FC = () => {
   return (
@@ -21,13 +21,11 @@ const ChicosShopThisLook: React.FC = () => {
       <ProjectPage>
         <ProjectStage
           stageImage='/assets/img/work_images/chicos_stage.png'
-          stageLogo='/assets/img/work_images/chicos_logo.png'
-          stageDescription='Chicos FAS Inc. Shop This Look Widget'
           backgroundAlt="Chico's FAS retail environment showcasing the Shop This Look feature"
         />
 
         <ProjectOverview
-          projectName='Chicos FAS Inc.'
+          projectName='Chicos FAS Inc. - Shop This Look'
           projectType='Research | User Testing | UI Design | Prototyping'
           projectRole='UI/UX Designer'
           projectSoftware='Photoshop, Sketch, and Invision'
@@ -38,15 +36,15 @@ const ChicosShopThisLook: React.FC = () => {
 
         <ProjectProcess
           isUXProject={true}
-          projectOverview="UX research and design process for improving the Shop This Look feature"
+          projectOverview='UX research and design process for improving the Shop This Look feature'
           problems={chicosShopThisLookProblems}
           goals={chicosShopThisLookGoals}
-          outcome="I delivered my prototypes to the development team after a few
+          outcome='I delivered my prototypes to the development team after a few
           quick design iterations. Before the changes were released, testing
           revealed that my enhancements improved the mobile experience and
           allowed customers to visualize entire outfits for their wardrobe
           much better than before, thus improving conversions and creating
-          more opportunities to sell products."
+          more opportunities to sell products.'
         />
 
         <ProjectDeliverables
@@ -57,7 +55,7 @@ const ChicosShopThisLook: React.FC = () => {
         <NextLink
           label="Chico's FAS - Simply Soma Subscription Service"
           projectName='Go To Project'
-          link='#'
+          link='/chicos-simply-soma'
         />
       </ProjectPage>
       <Footer />

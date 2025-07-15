@@ -8,6 +8,7 @@ interface Deliverable {
   imageSrc: string;
   imageAlt: string;
   isVideo?: boolean;
+  videoType?: 'iframe' | 'mp4' | 'webm';
 }
 
 interface ProjectDeliverablesProps {
@@ -21,6 +22,37 @@ const ProjectDeliverables = ({
   sectionTitle = 'Project Deliverables',
   className,
 }: ProjectDeliverablesProps) => {
+  const renderVideo = (deliverable: Deliverable) => {
+    const { imageSrc, imageAlt, videoType = 'iframe' } = deliverable;
+    
+    if (videoType === 'iframe') {
+      // For embedded videos (Gfycat, Vimeo, etc.)
+      return (
+        <iframe
+          className={styles.deliverableVideo}
+          src={imageSrc}
+          title={imageAlt}
+          allow="fullscreen"
+          loading="lazy"
+        />
+      );
+    }
+    
+    // For self-hosted videos
+    return (
+      <video
+        className={styles.deliverableVideo}
+        controls
+        preload="metadata"
+        poster={`${imageSrc}?poster=true`}
+      >
+        <source src={imageSrc} type={`video/${videoType}`} />
+        <track kind="captions" src={`${imageSrc}.vtt`} label="English" />
+        Your browser does not support the video tag.
+      </video>
+    );
+  };
+
   return (
     <>
       {sectionTitle && <ProjectDivider sectionTitle={sectionTitle} />}
@@ -31,18 +63,14 @@ const ProjectDeliverables = ({
               <p className={styles.deliverableLabel}>{deliverable.title}</p>
               {deliverable.isVideo ? (
                 <div className={styles.videoContainer}>
-                  <iframe
-                    className={styles.deliverableVideo}
-                    src={deliverable.imageSrc}
-                    title={deliverable.imageAlt}
-                    allow="fullscreen"
-                  />
+                  {renderVideo(deliverable)}
                 </div>
               ) : (
                 <img
                   className={styles.deliverableImage}
                   src={deliverable.imageSrc}
                   alt={deliverable.imageAlt}
+                  loading="lazy"
                 />
               )}
             </div>

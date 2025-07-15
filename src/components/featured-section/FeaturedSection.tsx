@@ -36,11 +36,11 @@ const FeaturedSection = () => {
             </p>
             <Divider />
             <Button
-              href='chicos-project-shop-this-look.html'
+              href='/chicos-shop-this-look'
               aria-pressed='true'
             >
               View Case Study
-              <ArrowRight className={styles.buttonIcon} size={24} />
+              <ArrowRight />
             </Button>
           </div>
           <FeaturedImage

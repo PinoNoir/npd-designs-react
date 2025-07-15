@@ -60,39 +60,10 @@
 }
 
 .tag {
-  background: var(--gray-3);
-  color: var(--gray-11);
+  background: var(--blue-3);
+  color: var(--gray-12);
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-size: 0.875rem;
   font-weight: 500;
-}
-
-.link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--blue-9);
-  color: var(--gray-1);
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-
-.link:hover {
-  background: var(--blue-11);
-  color: var(--gray-1);
-  transform: translateY(-2px);
-}
-
-.arrowIcon {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.2s ease;
-}
-
-.link:hover .arrowIcon {
-  transform: translateX(2px);
 }

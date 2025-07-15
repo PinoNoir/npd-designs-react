@@ -1,0 +1,62 @@
+.deckTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.scrollingWrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) transparent;
+}
+
+.scrollingWrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scrollingWrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollingWrapper::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 4px;
+}
+
+.scrollingWrapper::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-secondary);
+}
+
+.deckImage {
+  flex: 0 0 auto;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.scrollImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.scrollImage:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .deckImage {
+    min-width: 250px;
+    max-width: 300px;
+  }
+  
+  .scrollingWrapper {
+    gap: 0.75rem;
+  }
+} 

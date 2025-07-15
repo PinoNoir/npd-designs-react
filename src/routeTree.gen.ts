@@ -12,12 +12,15 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as SwellLifeImport } from './routes/swell-life'
+import { Route as ResumeImport } from './routes/resume'
 import { Route as ProjectsImport } from './routes/projects'
 import { Route as MiamahComedyImport } from './routes/miamah-comedy'
 import { Route as MakotoImport } from './routes/makoto'
 import { Route as HolyCityImport } from './routes/holy-city'
 import { Route as ErrorImport } from './routes/error'
 import { Route as ContactImport } from './routes/contact'
+import { Route as ChicosZoomImport } from './routes/chicos-zoom'
+import { Route as ChicosSimplySomaImport } from './routes/chicos-simply-soma'
 import { Route as ChicosShopThisLookImport } from './routes/chicos-shop-this-look'
 import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
@@ -27,6 +30,12 @@ import { Route as IndexImport } from './routes/index'
 const SwellLifeRoute = SwellLifeImport.update({
   id: '/swell-life',
   path: '/swell-life',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ResumeRoute = ResumeImport.update({
+  id: '/resume',
+  path: '/resume',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -63,6 +72,18 @@ const ErrorRoute = ErrorImport.update({
 const ContactRoute = ContactImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ChicosZoomRoute = ChicosZoomImport.update({
+  id: '/chicos-zoom',
+  path: '/chicos-zoom',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ChicosSimplySomaRoute = ChicosSimplySomaImport.update({
+  id: '/chicos-simply-soma',
+  path: '/chicos-simply-soma',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -109,6 +130,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChicosShopThisLookImport
       parentRoute: typeof rootRoute
     }
+    '/chicos-simply-soma': {
+      id: '/chicos-simply-soma'
+      path: '/chicos-simply-soma'
+      fullPath: '/chicos-simply-soma'
+      preLoaderRoute: typeof ChicosSimplySomaImport
+      parentRoute: typeof rootRoute
+    }
+    '/chicos-zoom': {
+      id: '/chicos-zoom'
+      path: '/chicos-zoom'
+      fullPath: '/chicos-zoom'
+      preLoaderRoute: typeof ChicosZoomImport
+      parentRoute: typeof rootRoute
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -151,6 +186,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsImport
       parentRoute: typeof rootRoute
     }
+    '/resume': {
+      id: '/resume'
+      path: '/resume'
+      fullPath: '/resume'
+      preLoaderRoute: typeof ResumeImport
+      parentRoute: typeof rootRoute
+    }
     '/swell-life': {
       id: '/swell-life'
       path: '/swell-life'
@@ -167,12 +209,15 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/chicos-shop-this-look': typeof ChicosShopThisLookRoute
+  '/chicos-simply-soma': typeof ChicosSimplySomaRoute
+  '/chicos-zoom': typeof ChicosZoomRoute
   '/contact': typeof ContactRoute
   '/error': typeof ErrorRoute
   '/holy-city': typeof HolyCityRoute
   '/makoto': typeof MakotoRoute
   '/miamah-comedy': typeof MiamahComedyRoute
   '/projects': typeof ProjectsRoute
+  '/resume': typeof ResumeRoute
   '/swell-life': typeof SwellLifeRoute
 }
 
@@ -180,12 +225,15 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/chicos-shop-this-look': typeof ChicosShopThisLookRoute
+  '/chicos-simply-soma': typeof ChicosSimplySomaRoute
+  '/chicos-zoom': typeof ChicosZoomRoute
   '/contact': typeof ContactRoute
   '/error': typeof ErrorRoute
   '/holy-city': typeof HolyCityRoute
   '/makoto': typeof MakotoRoute
   '/miamah-comedy': typeof MiamahComedyRoute
   '/projects': typeof ProjectsRoute
+  '/resume': typeof ResumeRoute
   '/swell-life': typeof SwellLifeRoute
 }
 
@@ -194,12 +242,15 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/chicos-shop-this-look': typeof ChicosShopThisLookRoute
+  '/chicos-simply-soma': typeof ChicosSimplySomaRoute
+  '/chicos-zoom': typeof ChicosZoomRoute
   '/contact': typeof ContactRoute
   '/error': typeof ErrorRoute
   '/holy-city': typeof HolyCityRoute
   '/makoto': typeof MakotoRoute
   '/miamah-comedy': typeof MiamahComedyRoute
   '/projects': typeof ProjectsRoute
+  '/resume': typeof ResumeRoute
   '/swell-life': typeof SwellLifeRoute
 }
 
@@ -209,36 +260,45 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/chicos-shop-this-look'
+    | '/chicos-simply-soma'
+    | '/chicos-zoom'
     | '/contact'
     | '/error'
     | '/holy-city'
     | '/makoto'
     | '/miamah-comedy'
     | '/projects'
+    | '/resume'
     | '/swell-life'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/chicos-shop-this-look'
+    | '/chicos-simply-soma'
+    | '/chicos-zoom'
     | '/contact'
     | '/error'
     | '/holy-city'
     | '/makoto'
     | '/miamah-comedy'
     | '/projects'
+    | '/resume'
     | '/swell-life'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/chicos-shop-this-look'
+    | '/chicos-simply-soma'
+    | '/chicos-zoom'
     | '/contact'
     | '/error'
     | '/holy-city'
     | '/makoto'
     | '/miamah-comedy'
     | '/projects'
+    | '/resume'
     | '/swell-life'
   fileRoutesById: FileRoutesById
 }
@@ -247,12 +307,15 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ChicosShopThisLookRoute: typeof ChicosShopThisLookRoute
+  ChicosSimplySomaRoute: typeof ChicosSimplySomaRoute
+  ChicosZoomRoute: typeof ChicosZoomRoute
   ContactRoute: typeof ContactRoute
   ErrorRoute: typeof ErrorRoute
   HolyCityRoute: typeof HolyCityRoute
   MakotoRoute: typeof MakotoRoute
   MiamahComedyRoute: typeof MiamahComedyRoute
   ProjectsRoute: typeof ProjectsRoute
+  ResumeRoute: typeof ResumeRoute
   SwellLifeRoute: typeof SwellLifeRoute
 }
 
@@ -260,12 +323,15 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ChicosShopThisLookRoute: ChicosShopThisLookRoute,
+  ChicosSimplySomaRoute: ChicosSimplySomaRoute,
+  ChicosZoomRoute: ChicosZoomRoute,
   ContactRoute: ContactRoute,
   ErrorRoute: ErrorRoute,
   HolyCityRoute: HolyCityRoute,
   MakotoRoute: MakotoRoute,
   MiamahComedyRoute: MiamahComedyRoute,
   ProjectsRoute: ProjectsRoute,
+  ResumeRoute: ResumeRoute,
   SwellLifeRoute: SwellLifeRoute,
 }
 
@@ -282,12 +348,15 @@ export const routeTree = rootRoute
         "/",
         "/about",
         "/chicos-shop-this-look",
+        "/chicos-simply-soma",
+        "/chicos-zoom",
         "/contact",
         "/error",
         "/holy-city",
         "/makoto",
         "/miamah-comedy",
         "/projects",
+        "/resume",
         "/swell-life"
       ]
     },
@@ -299,6 +368,12 @@ export const routeTree = rootRoute
     },
     "/chicos-shop-this-look": {
       "filePath": "chicos-shop-this-look.tsx"
+    },
+    "/chicos-simply-soma": {
+      "filePath": "chicos-simply-soma.tsx"
+    },
+    "/chicos-zoom": {
+      "filePath": "chicos-zoom.tsx"
     },
     "/contact": {
       "filePath": "contact.tsx"
@@ -317,6 +392,9 @@ export const routeTree = rootRoute
     },
     "/projects": {
       "filePath": "projects.tsx"
+    },
+    "/resume": {
+      "filePath": "resume.tsx"
     },
     "/swell-life": {
       "filePath": "swell-life.tsx"

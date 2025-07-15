@@ -1,6 +1,6 @@
-import { Link } from '@tanstack/react-router';
 import styles from './ProjectCard.module.css';
 import { ArrowRightIcon } from 'lucide-react';
+import { Button } from '@/components';
 
 interface ProjectCardProps {
   id: string;
@@ -35,10 +35,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </span>
           ))}
         </div>
-        <Link to={route || '/work'} className={styles.link}>
+        <Button href={route || '/projects'}>
           View Project
-          <ArrowRightIcon className={styles.arrowIcon} />
-        </Link>
+          <ArrowRightIcon />
+        </Button>
       </div>
     </div>
   );

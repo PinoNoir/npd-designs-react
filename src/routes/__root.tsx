@@ -1,6 +1,5 @@
 import { Link, Outlet, createRootRoute } from '@tanstack/react-router';
 import { useTheme, Toggle, SVGIcon, Button } from '../components';
-import { DownloadCloud } from 'lucide-react';
 import styles from './styles/Navbar.module.css';
 
 export const Route = createRootRoute({
@@ -39,9 +38,8 @@ function RootComponent() {
           </ul>
         </div>
         <div className={styles.wrapper}>
-          <Button variant='ghost' size='sm'>
-            Resume
-            <DownloadCloud />
+          <Button variant='ghost' href='/resume'>
+            Resumé
           </Button>
         </div>
         <div className={styles.themeToggle}>
