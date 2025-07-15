@@ -11,24 +11,46 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as WorkImport } from './routes/work'
 import { Route as SwellLifeImport } from './routes/swell-life'
+import { Route as ProjectsImport } from './routes/projects'
+import { Route as MiamahComedyImport } from './routes/miamah-comedy'
+import { Route as MakotoImport } from './routes/makoto'
+import { Route as HolyCityImport } from './routes/holy-city'
 import { Route as ErrorImport } from './routes/error'
 import { Route as ContactImport } from './routes/contact'
+import { Route as ChicosShopThisLookImport } from './routes/chicos-shop-this-look'
 import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
 
-const WorkRoute = WorkImport.update({
-  id: '/work',
-  path: '/work',
-  getParentRoute: () => rootRoute,
-} as any)
-
 const SwellLifeRoute = SwellLifeImport.update({
   id: '/swell-life',
   path: '/swell-life',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ProjectsRoute = ProjectsImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const MiamahComedyRoute = MiamahComedyImport.update({
+  id: '/miamah-comedy',
+  path: '/miamah-comedy',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const MakotoRoute = MakotoImport.update({
+  id: '/makoto',
+  path: '/makoto',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const HolyCityRoute = HolyCityImport.update({
+  id: '/holy-city',
+  path: '/holy-city',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -41,6 +63,12 @@ const ErrorRoute = ErrorImport.update({
 const ContactRoute = ContactImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ChicosShopThisLookRoute = ChicosShopThisLookImport.update({
+  id: '/chicos-shop-this-look',
+  path: '/chicos-shop-this-look',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -74,6 +102,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutImport
       parentRoute: typeof rootRoute
     }
+    '/chicos-shop-this-look': {
+      id: '/chicos-shop-this-look'
+      path: '/chicos-shop-this-look'
+      fullPath: '/chicos-shop-this-look'
+      preLoaderRoute: typeof ChicosShopThisLookImport
+      parentRoute: typeof rootRoute
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -88,18 +123,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ErrorImport
       parentRoute: typeof rootRoute
     }
+    '/holy-city': {
+      id: '/holy-city'
+      path: '/holy-city'
+      fullPath: '/holy-city'
+      preLoaderRoute: typeof HolyCityImport
+      parentRoute: typeof rootRoute
+    }
+    '/makoto': {
+      id: '/makoto'
+      path: '/makoto'
+      fullPath: '/makoto'
+      preLoaderRoute: typeof MakotoImport
+      parentRoute: typeof rootRoute
+    }
+    '/miamah-comedy': {
+      id: '/miamah-comedy'
+      path: '/miamah-comedy'
+      fullPath: '/miamah-comedy'
+      preLoaderRoute: typeof MiamahComedyImport
+      parentRoute: typeof rootRoute
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsImport
+      parentRoute: typeof rootRoute
+    }
     '/swell-life': {
       id: '/swell-life'
       path: '/swell-life'
       fullPath: '/swell-life'
       preLoaderRoute: typeof SwellLifeImport
-      parentRoute: typeof rootRoute
-    }
-    '/work': {
-      id: '/work'
-      path: '/work'
-      fullPath: '/work'
-      preLoaderRoute: typeof WorkImport
       parentRoute: typeof rootRoute
     }
   }
@@ -110,63 +166,107 @@ declare module '@tanstack/react-router' {
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/chicos-shop-this-look': typeof ChicosShopThisLookRoute
   '/contact': typeof ContactRoute
   '/error': typeof ErrorRoute
+  '/holy-city': typeof HolyCityRoute
+  '/makoto': typeof MakotoRoute
+  '/miamah-comedy': typeof MiamahComedyRoute
+  '/projects': typeof ProjectsRoute
   '/swell-life': typeof SwellLifeRoute
-  '/work': typeof WorkRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/chicos-shop-this-look': typeof ChicosShopThisLookRoute
   '/contact': typeof ContactRoute
   '/error': typeof ErrorRoute
+  '/holy-city': typeof HolyCityRoute
+  '/makoto': typeof MakotoRoute
+  '/miamah-comedy': typeof MiamahComedyRoute
+  '/projects': typeof ProjectsRoute
   '/swell-life': typeof SwellLifeRoute
-  '/work': typeof WorkRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/chicos-shop-this-look': typeof ChicosShopThisLookRoute
   '/contact': typeof ContactRoute
   '/error': typeof ErrorRoute
+  '/holy-city': typeof HolyCityRoute
+  '/makoto': typeof MakotoRoute
+  '/miamah-comedy': typeof MiamahComedyRoute
+  '/projects': typeof ProjectsRoute
   '/swell-life': typeof SwellLifeRoute
-  '/work': typeof WorkRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/error' | '/swell-life' | '/work'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/chicos-shop-this-look'
+    | '/contact'
+    | '/error'
+    | '/holy-city'
+    | '/makoto'
+    | '/miamah-comedy'
+    | '/projects'
+    | '/swell-life'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/error' | '/swell-life' | '/work'
+  to:
+    | '/'
+    | '/about'
+    | '/chicos-shop-this-look'
+    | '/contact'
+    | '/error'
+    | '/holy-city'
+    | '/makoto'
+    | '/miamah-comedy'
+    | '/projects'
+    | '/swell-life'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/chicos-shop-this-look'
     | '/contact'
     | '/error'
+    | '/holy-city'
+    | '/makoto'
+    | '/miamah-comedy'
+    | '/projects'
     | '/swell-life'
-    | '/work'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ChicosShopThisLookRoute: typeof ChicosShopThisLookRoute
   ContactRoute: typeof ContactRoute
   ErrorRoute: typeof ErrorRoute
+  HolyCityRoute: typeof HolyCityRoute
+  MakotoRoute: typeof MakotoRoute
+  MiamahComedyRoute: typeof MiamahComedyRoute
+  ProjectsRoute: typeof ProjectsRoute
   SwellLifeRoute: typeof SwellLifeRoute
-  WorkRoute: typeof WorkRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ChicosShopThisLookRoute: ChicosShopThisLookRoute,
   ContactRoute: ContactRoute,
   ErrorRoute: ErrorRoute,
+  HolyCityRoute: HolyCityRoute,
+  MakotoRoute: MakotoRoute,
+  MiamahComedyRoute: MiamahComedyRoute,
+  ProjectsRoute: ProjectsRoute,
   SwellLifeRoute: SwellLifeRoute,
-  WorkRoute: WorkRoute,
 }
 
 export const routeTree = rootRoute
@@ -181,10 +281,14 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/about",
+        "/chicos-shop-this-look",
         "/contact",
         "/error",
-        "/swell-life",
-        "/work"
+        "/holy-city",
+        "/makoto",
+        "/miamah-comedy",
+        "/projects",
+        "/swell-life"
       ]
     },
     "/": {
@@ -193,17 +297,29 @@ export const routeTree = rootRoute
     "/about": {
       "filePath": "about.tsx"
     },
+    "/chicos-shop-this-look": {
+      "filePath": "chicos-shop-this-look.tsx"
+    },
     "/contact": {
       "filePath": "contact.tsx"
     },
     "/error": {
       "filePath": "error.tsx"
     },
+    "/holy-city": {
+      "filePath": "holy-city.tsx"
+    },
+    "/makoto": {
+      "filePath": "makoto.tsx"
+    },
+    "/miamah-comedy": {
+      "filePath": "miamah-comedy.tsx"
+    },
+    "/projects": {
+      "filePath": "projects.tsx"
+    },
     "/swell-life": {
       "filePath": "swell-life.tsx"
-    },
-    "/work": {
-      "filePath": "work.tsx"
     }
   }
 }

@@ -26,4 +26,12 @@ export default defineConfig({
   build: {
     cssMinify: 'esbuild',
   },
+  server: {
+    hmr: {
+      overlay: false,
+    },
+  },
+  optimizeDeps: {
+    exclude: ['@tanstack/router-devtools'],
+  },
 });

@@ -57,8 +57,8 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, description }) => {
           className={styles.buttonContainer}
           variants={itemVariants}
         >
-          <Button>Explore Work</Button>
-          <Button variant='secondary'>Contact Me</Button>
+          <Button href='/projects'>Explore Work</Button>
+          <Button variant='secondary' href='/contact'>Contact Me</Button>
         </motion.div>
       </motion.div>
     </section>

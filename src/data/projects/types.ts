@@ -3,6 +3,7 @@ export type Deliverable = {
   title: string;
   imageSrc: string;
   imageAlt: string;
+  isVideo?: boolean;
 };
 
 export type ProjectStep = { id: string; text: string };

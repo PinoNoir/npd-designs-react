@@ -5,3 +5,4 @@ export { default as ProjectProcess } from './project-process/ProjectProcess';
 export { default as ProjectDeliverables } from './project-deliverables/ProjectDeliverables';
 export { default as ProjectSteps } from './project-steps/ProjectSteps';
 export { default as ProjectDivider } from './project-divider/ProjectDivider';
+export { default as ProjectPage } from './project-page/ProjectPage';

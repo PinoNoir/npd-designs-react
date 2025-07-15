@@ -1,24 +1,40 @@
 import styles from './ProjectStage.module.css';
 
 interface ProjectStageProps {
-    stageLogo: string;
-    stageDescription: string;
+  stageImage: string;
+  stageLogo?: string;
+  stageDescription?: string;
+  backgroundAlt?: string;
 }
 
-const ProjectStage = ({ stageLogo, stageDescription }: ProjectStageProps) => {
-    return (
-        <section className={styles.projectStage}>
-        <div className={styles.container}>
-          <div className={styles.stageContent}>
-            <img 
-              className={styles.stageLogo} 
-              src={stageLogo} 
-              alt={stageDescription}
-            />
-          </div>
+const ProjectStage = ({ 
+  stageImage, 
+  stageLogo, 
+  stageDescription, 
+  backgroundAlt 
+}: ProjectStageProps) => {
+  return (
+    <section 
+      className={styles.projectStage}
+      style={{
+        backgroundImage: `url(${stageImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+      aria-label={backgroundAlt}
+    >
+      <div className={styles.container}>
+        <div className={styles.stageContent}>
+          <img
+            className={styles.stageLogo}
+            src={stageLogo}
+            alt={stageDescription}
+          />
         </div>
-      </section>
-    );
+      </div>
+    </section>
+  );
 };
 
 export default ProjectStage;

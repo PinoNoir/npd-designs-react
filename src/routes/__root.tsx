@@ -28,7 +28,7 @@ function RootComponent() {
               <Link to='/'>Profile</Link>
             </li>
             <li>
-              <Link to='/work'>Work</Link>
+              <Link to='/projects'>Projects</Link>
             </li>
             <li>
               <Link to='/about'>About</Link>
