@@ -12,16 +12,22 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as SwellLifeImport } from './routes/swell-life'
+import { Route as StrettoInvoicesPaymentsImport } from './routes/stretto-invoices-payments'
+import { Route as StrettoEballotImport } from './routes/stretto-eballot'
+import { Route as SolvablyImport } from './routes/solvably'
+import { Route as SeriousErpImport } from './routes/serious-erp'
 import { Route as ResumeImport } from './routes/resume'
 import { Route as ProjectsImport } from './routes/projects'
 import { Route as MiamahComedyImport } from './routes/miamah-comedy'
 import { Route as MakotoImport } from './routes/makoto'
 import { Route as HolyCityImport } from './routes/holy-city'
+import { Route as GymSyncImport } from './routes/gym-sync'
 import { Route as ErrorImport } from './routes/error'
 import { Route as ContactImport } from './routes/contact'
 import { Route as ChicosZoomImport } from './routes/chicos-zoom'
 import { Route as ChicosSimplySomaImport } from './routes/chicos-simply-soma'
 import { Route as ChicosShopThisLookImport } from './routes/chicos-shop-this-look'
+import { Route as CadenceDesignSystemImport } from './routes/cadence-design-system'
 import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 
@@ -30,6 +36,30 @@ import { Route as IndexImport } from './routes/index'
 const SwellLifeRoute = SwellLifeImport.update({
   id: '/swell-life',
   path: '/swell-life',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const StrettoInvoicesPaymentsRoute = StrettoInvoicesPaymentsImport.update({
+  id: '/stretto-invoices-payments',
+  path: '/stretto-invoices-payments',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const StrettoEballotRoute = StrettoEballotImport.update({
+  id: '/stretto-eballot',
+  path: '/stretto-eballot',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const SolvablyRoute = SolvablyImport.update({
+  id: '/solvably',
+  path: '/solvably',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const SeriousErpRoute = SeriousErpImport.update({
+  id: '/serious-erp',
+  path: '/serious-erp',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -63,6 +93,12 @@ const HolyCityRoute = HolyCityImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const GymSyncRoute = GymSyncImport.update({
+  id: '/gym-sync',
+  path: '/gym-sync',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const ErrorRoute = ErrorImport.update({
   id: '/error',
   path: '/error',
@@ -90,6 +126,12 @@ const ChicosSimplySomaRoute = ChicosSimplySomaImport.update({
 const ChicosShopThisLookRoute = ChicosShopThisLookImport.update({
   id: '/chicos-shop-this-look',
   path: '/chicos-shop-this-look',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const CadenceDesignSystemRoute = CadenceDesignSystemImport.update({
+  id: '/cadence-design-system',
+  path: '/cadence-design-system',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -121,6 +163,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutImport
+      parentRoute: typeof rootRoute
+    }
+    '/cadence-design-system': {
+      id: '/cadence-design-system'
+      path: '/cadence-design-system'
+      fullPath: '/cadence-design-system'
+      preLoaderRoute: typeof CadenceDesignSystemImport
       parentRoute: typeof rootRoute
     }
     '/chicos-shop-this-look': {
@@ -158,6 +207,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ErrorImport
       parentRoute: typeof rootRoute
     }
+    '/gym-sync': {
+      id: '/gym-sync'
+      path: '/gym-sync'
+      fullPath: '/gym-sync'
+      preLoaderRoute: typeof GymSyncImport
+      parentRoute: typeof rootRoute
+    }
     '/holy-city': {
       id: '/holy-city'
       path: '/holy-city'
@@ -193,6 +249,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ResumeImport
       parentRoute: typeof rootRoute
     }
+    '/serious-erp': {
+      id: '/serious-erp'
+      path: '/serious-erp'
+      fullPath: '/serious-erp'
+      preLoaderRoute: typeof SeriousErpImport
+      parentRoute: typeof rootRoute
+    }
+    '/solvably': {
+      id: '/solvably'
+      path: '/solvably'
+      fullPath: '/solvably'
+      preLoaderRoute: typeof SolvablyImport
+      parentRoute: typeof rootRoute
+    }
+    '/stretto-eballot': {
+      id: '/stretto-eballot'
+      path: '/stretto-eballot'
+      fullPath: '/stretto-eballot'
+      preLoaderRoute: typeof StrettoEballotImport
+      parentRoute: typeof rootRoute
+    }
+    '/stretto-invoices-payments': {
+      id: '/stretto-invoices-payments'
+      path: '/stretto-invoices-payments'
+      fullPath: '/stretto-invoices-payments'
+      preLoaderRoute: typeof StrettoInvoicesPaymentsImport
+      parentRoute: typeof rootRoute
+    }
     '/swell-life': {
       id: '/swell-life'
       path: '/swell-life'
@@ -208,32 +292,44 @@ declare module '@tanstack/react-router' {
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/cadence-design-system': typeof CadenceDesignSystemRoute
   '/chicos-shop-this-look': typeof ChicosShopThisLookRoute
   '/chicos-simply-soma': typeof ChicosSimplySomaRoute
   '/chicos-zoom': typeof ChicosZoomRoute
   '/contact': typeof ContactRoute
   '/error': typeof ErrorRoute
+  '/gym-sync': typeof GymSyncRoute
   '/holy-city': typeof HolyCityRoute
   '/makoto': typeof MakotoRoute
   '/miamah-comedy': typeof MiamahComedyRoute
   '/projects': typeof ProjectsRoute
   '/resume': typeof ResumeRoute
+  '/serious-erp': typeof SeriousErpRoute
+  '/solvably': typeof SolvablyRoute
+  '/stretto-eballot': typeof StrettoEballotRoute
+  '/stretto-invoices-payments': typeof StrettoInvoicesPaymentsRoute
   '/swell-life': typeof SwellLifeRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/cadence-design-system': typeof CadenceDesignSystemRoute
   '/chicos-shop-this-look': typeof ChicosShopThisLookRoute
   '/chicos-simply-soma': typeof ChicosSimplySomaRoute
   '/chicos-zoom': typeof ChicosZoomRoute
   '/contact': typeof ContactRoute
   '/error': typeof ErrorRoute
+  '/gym-sync': typeof GymSyncRoute
   '/holy-city': typeof HolyCityRoute
   '/makoto': typeof MakotoRoute
   '/miamah-comedy': typeof MiamahComedyRoute
   '/projects': typeof ProjectsRoute
   '/resume': typeof ResumeRoute
+  '/serious-erp': typeof SeriousErpRoute
+  '/solvably': typeof SolvablyRoute
+  '/stretto-eballot': typeof StrettoEballotRoute
+  '/stretto-invoices-payments': typeof StrettoInvoicesPaymentsRoute
   '/swell-life': typeof SwellLifeRoute
 }
 
@@ -241,16 +337,22 @@ export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/cadence-design-system': typeof CadenceDesignSystemRoute
   '/chicos-shop-this-look': typeof ChicosShopThisLookRoute
   '/chicos-simply-soma': typeof ChicosSimplySomaRoute
   '/chicos-zoom': typeof ChicosZoomRoute
   '/contact': typeof ContactRoute
   '/error': typeof ErrorRoute
+  '/gym-sync': typeof GymSyncRoute
   '/holy-city': typeof HolyCityRoute
   '/makoto': typeof MakotoRoute
   '/miamah-comedy': typeof MiamahComedyRoute
   '/projects': typeof ProjectsRoute
   '/resume': typeof ResumeRoute
+  '/serious-erp': typeof SeriousErpRoute
+  '/solvably': typeof SolvablyRoute
+  '/stretto-eballot': typeof StrettoEballotRoute
+  '/stretto-invoices-payments': typeof StrettoInvoicesPaymentsRoute
   '/swell-life': typeof SwellLifeRoute
 }
 
@@ -259,46 +361,64 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/cadence-design-system'
     | '/chicos-shop-this-look'
     | '/chicos-simply-soma'
     | '/chicos-zoom'
     | '/contact'
     | '/error'
+    | '/gym-sync'
     | '/holy-city'
     | '/makoto'
     | '/miamah-comedy'
     | '/projects'
     | '/resume'
+    | '/serious-erp'
+    | '/solvably'
+    | '/stretto-eballot'
+    | '/stretto-invoices-payments'
     | '/swell-life'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/cadence-design-system'
     | '/chicos-shop-this-look'
     | '/chicos-simply-soma'
     | '/chicos-zoom'
     | '/contact'
     | '/error'
+    | '/gym-sync'
     | '/holy-city'
     | '/makoto'
     | '/miamah-comedy'
     | '/projects'
     | '/resume'
+    | '/serious-erp'
+    | '/solvably'
+    | '/stretto-eballot'
+    | '/stretto-invoices-payments'
     | '/swell-life'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/cadence-design-system'
     | '/chicos-shop-this-look'
     | '/chicos-simply-soma'
     | '/chicos-zoom'
     | '/contact'
     | '/error'
+    | '/gym-sync'
     | '/holy-city'
     | '/makoto'
     | '/miamah-comedy'
     | '/projects'
     | '/resume'
+    | '/serious-erp'
+    | '/solvably'
+    | '/stretto-eballot'
+    | '/stretto-invoices-payments'
     | '/swell-life'
   fileRoutesById: FileRoutesById
 }
@@ -306,32 +426,44 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  CadenceDesignSystemRoute: typeof CadenceDesignSystemRoute
   ChicosShopThisLookRoute: typeof ChicosShopThisLookRoute
   ChicosSimplySomaRoute: typeof ChicosSimplySomaRoute
   ChicosZoomRoute: typeof ChicosZoomRoute
   ContactRoute: typeof ContactRoute
   ErrorRoute: typeof ErrorRoute
+  GymSyncRoute: typeof GymSyncRoute
   HolyCityRoute: typeof HolyCityRoute
   MakotoRoute: typeof MakotoRoute
   MiamahComedyRoute: typeof MiamahComedyRoute
   ProjectsRoute: typeof ProjectsRoute
   ResumeRoute: typeof ResumeRoute
+  SeriousErpRoute: typeof SeriousErpRoute
+  SolvablyRoute: typeof SolvablyRoute
+  StrettoEballotRoute: typeof StrettoEballotRoute
+  StrettoInvoicesPaymentsRoute: typeof StrettoInvoicesPaymentsRoute
   SwellLifeRoute: typeof SwellLifeRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  CadenceDesignSystemRoute: CadenceDesignSystemRoute,
   ChicosShopThisLookRoute: ChicosShopThisLookRoute,
   ChicosSimplySomaRoute: ChicosSimplySomaRoute,
   ChicosZoomRoute: ChicosZoomRoute,
   ContactRoute: ContactRoute,
   ErrorRoute: ErrorRoute,
+  GymSyncRoute: GymSyncRoute,
   HolyCityRoute: HolyCityRoute,
   MakotoRoute: MakotoRoute,
   MiamahComedyRoute: MiamahComedyRoute,
   ProjectsRoute: ProjectsRoute,
   ResumeRoute: ResumeRoute,
+  SeriousErpRoute: SeriousErpRoute,
+  SolvablyRoute: SolvablyRoute,
+  StrettoEballotRoute: StrettoEballotRoute,
+  StrettoInvoicesPaymentsRoute: StrettoInvoicesPaymentsRoute,
   SwellLifeRoute: SwellLifeRoute,
 }
 
@@ -347,16 +479,22 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/about",
+        "/cadence-design-system",
         "/chicos-shop-this-look",
         "/chicos-simply-soma",
         "/chicos-zoom",
         "/contact",
         "/error",
+        "/gym-sync",
         "/holy-city",
         "/makoto",
         "/miamah-comedy",
         "/projects",
         "/resume",
+        "/serious-erp",
+        "/solvably",
+        "/stretto-eballot",
+        "/stretto-invoices-payments",
         "/swell-life"
       ]
     },
@@ -365,6 +503,9 @@ export const routeTree = rootRoute
     },
     "/about": {
       "filePath": "about.tsx"
+    },
+    "/cadence-design-system": {
+      "filePath": "cadence-design-system.tsx"
     },
     "/chicos-shop-this-look": {
       "filePath": "chicos-shop-this-look.tsx"
@@ -381,6 +522,9 @@ export const routeTree = rootRoute
     "/error": {
       "filePath": "error.tsx"
     },
+    "/gym-sync": {
+      "filePath": "gym-sync.tsx"
+    },
     "/holy-city": {
       "filePath": "holy-city.tsx"
     },
@@ -395,6 +539,18 @@ export const routeTree = rootRoute
     },
     "/resume": {
       "filePath": "resume.tsx"
+    },
+    "/serious-erp": {
+      "filePath": "serious-erp.tsx"
+    },
+    "/solvably": {
+      "filePath": "solvably.tsx"
+    },
+    "/stretto-eballot": {
+      "filePath": "stretto-eballot.tsx"
+    },
+    "/stretto-invoices-payments": {
+      "filePath": "stretto-invoices-payments.tsx"
     },
     "/swell-life": {
       "filePath": "swell-life.tsx"

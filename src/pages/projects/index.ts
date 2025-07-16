@@ -5,3 +5,6 @@ export { default as HolyCity } from './holy-city-trim-shop/HolyCity';
 export { default as ChicosShopThisLook } from './chicos-shop-this-look/ChicosShopThisLook';
 export { default as ChicosSimplySoma } from './chicos-simply-soma/ChicosSimplySoma';
 export { default as ChicosZoom } from './chicos-zoom/ChicosZoom';
+export { default as GymSync } from './gym-sync/GymSync';
+export { default as Solvably } from './solvably/Solvably';
+export { default as CadenceDesignSystem } from './cadence-design-system/CadenceDesignSystem';

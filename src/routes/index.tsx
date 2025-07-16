@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { FeaturedSection, Footer, Hero } from '@/components';
+import SEO from '@/components/SEO/SEO';
 
 import styles from './styles/Home.module.css';
 import {
@@ -18,9 +19,48 @@ export const Route = createFileRoute('/')({
   component: HomeComponent,
 });
 
+// Structured data for the homepage
+const homeStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Nick Pino",
+  "jobTitle": "UI/UX Designer & Developer",
+  "url": "https://www.nickpinodesigns.com",
+  "image": "https://www.nickpinodesigns.com/assets/img/profile1.jpg",
+  "description": "UX engineer specializing in design systems & frontend development, crafting digital experiences that deliver results.",
+  "sameAs": [
+    "https://www.linkedin.com/in/nickpinodesigns",
+    "https://www.behance.net/nickpinodesigns",
+    "https://dribbble.com/nickpinodesigns"
+  ],
+  "knowsAbout": [
+    "User Experience Design",
+    "User Interface Design", 
+    "Frontend Development",
+    "Design Systems",
+    "Motion Design",
+    "React",
+    "TypeScript",
+    "Figma",
+    "Adobe Creative Suite"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Nick Pino Designs"
+  }
+};
+
 function HomeComponent() {
   return (
     <>
+      <SEO
+        title="UI/UX Designer & Developer Portfolio"
+        description="Nick Pino is a UX engineer specializing in design systems & frontend development. Crafting digital experiences that deliver results through motion design, product design, and modern web development."
+        keywords="UI/UX designer, frontend developer, design systems, motion design, React developer, TypeScript, Figma, Adobe Creative Suite, user experience design, user interface design, web development, portfolio"
+        url="/"
+        structuredData={homeStructuredData}
+      />
+
       <Hero
         title='Crafting Digital Experiences that Deliver Results'
         subtitle='UX engineer specializing in design systems & frontend development'

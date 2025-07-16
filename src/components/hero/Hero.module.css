@@ -17,6 +17,35 @@
   overflow: hidden;
 }
 
+/* Remove background for specific pages */
+.noBackground {
+  background: none !important;
+  background-image: none !important;
+  animation: none !important;
+}
+
+.noBackground::after {
+  display: none !important;
+}
+
+/* Hero image overlay with blend mode */
+.container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/img/hero_1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  mix-blend-mode: overlay;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 1;
+}
+
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -29,6 +58,7 @@
   }
 }
 
+/* Simplified Animation - only fade in */
 .heading {
   font-size: 6rem;
   line-height: 1.2;
@@ -70,11 +100,78 @@
   text-align: center;
   position: relative;
   z-index: 2;
+  animation: slideUpFade 0.8s ease-out 0.2s both;
 }
 
+/* Simplified Animation - only fade in */
 .buttonContainer {
   display: flex;
   gap: 1rem;
+}
+
+/* Subtle slide up with fade animation */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure animations work with reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .textContainer {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Optional overlay image */
+.overlayImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  overflow: hidden;
+  mix-blend-mode: overlay;
+  opacity: 0.3;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlayImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive design for overlay */
+@media (max-width: 1024px) {
+  .overlayImage {
+    right: 5%;
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlayImage {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin-bottom: 2rem;
+    width: 200px;
+    height: 200px;
+  }
 }
 
 

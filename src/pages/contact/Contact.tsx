@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import Hero from '../../components/hero/Hero';
 import styles from './Contact.module.css';
+import { Button } from '@/components';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -8,15 +10,40 @@ const Contact: React.FC = () => {
     subject: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'success' | 'error'
+  >('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically handle the form submission
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('subject', formData.subject);
+      formDataToSend.append('message', formData.message);
+      const response = await fetch('/contact.php', {
+        method: 'POST',
+        body: formDataToSend,
+      });
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -26,124 +53,127 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.wrapper}>
-        <div className={styles.header}>
-          <h2 className={styles.title}>Get in Touch</h2>
-          <p className={styles.subtitle}>
-            Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
-          </p>
-        </div>
+    <div>
+      {/* Hero with profile image overlay */}
+      <Hero
+        title='Contact'
+        subtitle='Thank you for checking out my portfolio!'
+        description=" I'm open to freelancing opportunities. If you have a project in mind or are simply interested in finding out more, get in touch and let's get things moving."
+        overlayImage='/assets/img/profile1.jpg'
+        noBackground
+        overlayBlendMode='normal'
+        overlayOpacity={1}
+      />
 
-        <form onSubmit={handleSubmit} className={styles.form}>
-          <div className={styles.formGroup}>
-            <label htmlFor="name" className={styles.label}>
-              Name
-            </label>
-            <div>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                value={formData.name}
-                onChange={handleChange}
-                className={styles.input}
-                required
-              />
+      {/* Contact Section */}
+      <div className={styles.contactSection}>
+        <div className={styles.contactContainer}>
+          {/* Map Section */}
+          <div className={styles.mapSection}>
+            <div className={styles.mapHeader}>
+              <h2 className={styles.mapTitle}>Location</h2>
+              <p className={styles.mapSubtitle}>Melbourne, Florida</p>
             </div>
+            <iframe
+              src='https://snazzymaps.com/embed/144902'
+              width='100%'
+              height='300px'
+              className={styles.map}
+              allowFullScreen
+              title='Location Map'
+            />
           </div>
-
-          <div className={styles.formGroup}>
-            <label htmlFor="email" className={styles.label}>
-              Email
-            </label>
-            <div>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                value={formData.email}
-                onChange={handleChange}
-                className={styles.input}
-                required
-              />
+          {/* Contact Form */}
+          <div className={styles.formSection}>
+            <div className={styles.formHeader}>
+              <h2 className={styles.formTitle}>Get in Touch</h2>
+              <p className={styles.formSubtitle}>
+                Have a project in mind? Let's discuss how we can work together.
+              </p>
             </div>
-          </div>
 
-          <div className={styles.formGroup}>
-            <label htmlFor="subject" className={styles.label}>
-              Subject
-            </label>
-            <div>
-              <input
-                type="text"
-                name="subject"
-                id="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                className={styles.input}
-                required
-              />
-            </div>
-          </div>
-
-          <div className={styles.formGroup}>
-            <label htmlFor="message" className={styles.label}>
-              Message
-            </label>
-            <div>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                value={formData.message}
-                onChange={handleChange}
-                className={styles.textarea}
-                required
-              />
-            </div>
-          </div>
-
-          <button type="submit" className={styles.submitButton}>
-            Send Message
-          </button>
-        </form>
-
-        <div className={styles.connectSection}>
-          <h3 className={styles.connectTitle}>Other ways to connect</h3>
-          <div className={styles.contactList}>
-            <div className={styles.contactItem}>
-              <svg
-                className={styles.icon}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            {/* Contact Form */}
+            {submitStatus === 'success' && (
+              <div className={styles.successMessage}>
+                Thank you! Your message has been sent successfully. I'll get
+                back to you soon.
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className={styles.errorMessage}>
+                Sorry, there was an error sending your message. Please try again
+                or contact me directly.
+              </div>
+            )}
+            <form onSubmit={handleSubmit} className={styles.form}>
+              <div className={styles.formGroup}>
+                <label htmlFor='name' className={styles.label}>
+                  Name
+                </label>
+                <input
+                  type='text'
+                  name='name'
+                  id='name'
+                  value={formData.name}
+                  onChange={handleChange}
+                  className={styles.input}
+                  required
+                  disabled={isSubmitting}
                 />
-              </svg>
-              <span className={styles.contactText}>contact@example.com</span>
-            </div>
-            <div className={styles.contactItem}>
-              <svg
-                className={styles.icon}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+              </div>
+              <div className={styles.formGroup}>
+                <label htmlFor='email' className={styles.label}>
+                  Email
+                </label>
+                <input
+                  type='email'
+                  name='email'
+                  id='email'
+                  value={formData.email}
+                  onChange={handleChange}
+                  className={styles.input}
+                  required
+                  disabled={isSubmitting}
                 />
-              </svg>
-              <span className={styles.contactText}>+1 (555) 123-4567</span>
-            </div>
+              </div>
+              <div className={styles.formGroup}>
+                <label htmlFor='subject' className={styles.label}>
+                  Subject
+                </label>
+                <input
+                  type='text'
+                  name='subject'
+                  id='subject'
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className={styles.input}
+                  required
+                  disabled={isSubmitting}
+                />
+              </div>
+              <div className={styles.formGroup}>
+                <label htmlFor='message' className={styles.label}>
+                  Message
+                </label>
+                <textarea
+                  id='message'
+                  name='message'
+                  rows={6}
+                  value={formData.message}
+                  onChange={handleChange}
+                  className={styles.textarea}
+                  required
+                  disabled={isSubmitting}
+                />
+              </div>
+              <Button
+                type='submit'
+                className={styles.submitButton}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </Button>
+            </form>
           </div>
         </div>
       </div>
@@ -151,4 +181,4 @@ const Contact: React.FC = () => {
   );
 };
 
-export default Contact; 
+export default Contact;

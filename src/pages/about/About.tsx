@@ -7,8 +7,8 @@ const About = () => {
   return (
     <>
       <Hero
-        title='About Me'
-        subtitle='UX Designer & Frontend Developer'
+        title='About'
+        subtitle='UX Engineer & Designer'
         description="I'm passionate about creating intuitive and engaging digital experiences that solve real problems. With expertise in UX design, design systems, and frontend development, I bring a holistic approach to every project."
       />
       <section className={styles.aboutSection}>
@@ -62,14 +62,13 @@ const About = () => {
                 </div>
                 <p>
                   My journey in frontend development complements my design
-                  background perfectly. I believe in writing clean, maintainable
-                  code that not only looks great but performs exceptionally
-                  well. I focus on creating accessible, responsive interfaces
-                  that work seamlessly across all devices. By combining my
-                  design expertise with technical skills in React, TypeScript,
-                  and modern CSS, I can bridge the gap between design and
-                  implementation, ensuring that the final product matches the
-                  vision while meeting technical requirements.
+                  background perfectly. I focus on creating accessible,
+                  responsive interfaces that work seamlessly across all devices.
+                  By combining my design expertise with technical skills in
+                  React, TypeScript, and modern CSS, I can bridge the gap
+                  between design and implementation, ensuring that the final
+                  product matches the vision while meeting technical
+                  requirements and best practices.
                 </p>
               </div>
             </div>
