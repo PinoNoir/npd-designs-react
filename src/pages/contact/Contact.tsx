@@ -88,7 +88,7 @@ const Contact: React.FC = () => {
             <div className={styles.formHeader}>
               <h2 className={styles.formTitle}>Get in Touch</h2>
               <p className={styles.formSubtitle}>
-                Have a project in mind? Let's discuss how we can work together.
+                Have a project in mind? Let's talk!
               </p>
             </div>
 

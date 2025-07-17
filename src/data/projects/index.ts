@@ -12,3 +12,5 @@ export * from './solvably-data';
 export * from './cadence-design-system-data';
 export * from './types';
 export * from './all-projects-data';
+export * from './marine-institute-data';
+export * from './home-data';

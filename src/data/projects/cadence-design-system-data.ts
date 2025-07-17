@@ -4,7 +4,7 @@ export const cadenceDesignSystemDeliverables: Deliverable[] = [
   {
     id: 'cds-1',
     title: 'Component Library',
-    imageSrc: '/assets/img/work_images/stretto_ds_stage.jpg',
+    imageSrc: '/assets/img/work_images/stretto_cds_stage.jpg',
     imageAlt: 'Cadence Design System component library showcase',
   },
   {

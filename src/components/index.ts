@@ -16,4 +16,5 @@ export { default as Card } from './card/Card';
 export { default as LogoCarousel } from './logo-carousel/LogoCarousel';
 export { default as PageTransition } from './page-transition/PageTransition';
 export { default as OptimizedImage } from './optimized-image/OptimizedImage';
+export { default as SEO } from './SEO/SEO';
 export { ThemeProvider, useTheme } from './theme-provider/ThemeProvider';

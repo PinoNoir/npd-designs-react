@@ -9,7 +9,7 @@ const About = () => {
       <Hero
         title='About'
         subtitle='UX Engineer & Designer'
-        description="I'm passionate about creating intuitive and engaging digital experiences that solve real problems. With expertise in UX design, design systems, and frontend development, I bring a holistic approach to every project."
+        description="I'm passionate about creating intuitive and engaging digital experiences that solve problems. With expertise in UX design, design systems, and frontend development, I bring a holistic approach to every project."
       />
       <section className={styles.aboutSection}>
         <div className={styles.container}>

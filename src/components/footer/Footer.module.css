@@ -22,7 +22,7 @@
 }
 
 .container {
-  max-width: 80rem;
+  max-width: 1200px;
   margin: 0 auto;
   padding: var(--space-48) var(--space-16);
 }
@@ -30,12 +30,20 @@
 .navLink {
   color: var(--gray-11);
   font-family: var(--font-family-base);
-  font-size: var(--font-size-body);
-  transition: var(--transition-time-default);
+  font-size: var(--font-size-links);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--blue-12);
+  padding-block: 0.5rem;
+  padding-inline: 0.75rem;
+  border-radius: var(--border-radius-round);
+  background-color: var(--transparent);
+  transition: all 300ms ease-in-out;
 }
 
 .navLink:hover {
-  color: var(--font-color-links-hover);
+  color: var(--blue-12);
+  background-color: var(--blue-7);
 }
 
 .socialContainer {
@@ -47,16 +55,24 @@
 
 .socialLink {
   color: var(--blue-9);
-  transition: var(--transition-time-default);
+  transition: all 300ms ease-in-out;
+
+  & svg {
+    width: 24px;
+    height: 24px;
+    color: var(--blue-9);
+    fill: var(--blue-9);
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      color: var(--blue-12);
+      fill: var(--blue-12);
+    }
+  }
 }
 
 .socialLink:hover {
   color: var(--blue-10);
-}
-
-.socialIcon {
-  width: 1.5rem;
-  height: 1.5rem;
 }
 
 .srOnly {
@@ -102,5 +118,3 @@
     gap: var(--space-48);
   }
 }
-
-

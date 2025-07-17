@@ -19,6 +19,7 @@ import { Route as SeriousErpImport } from './routes/serious-erp'
 import { Route as ResumeImport } from './routes/resume'
 import { Route as ProjectsImport } from './routes/projects'
 import { Route as MiamahComedyImport } from './routes/miamah-comedy'
+import { Route as MarineInstituteImport } from './routes/marine-institute'
 import { Route as MakotoImport } from './routes/makoto'
 import { Route as HolyCityImport } from './routes/holy-city'
 import { Route as GymSyncImport } from './routes/gym-sync'
@@ -78,6 +79,12 @@ const ProjectsRoute = ProjectsImport.update({
 const MiamahComedyRoute = MiamahComedyImport.update({
   id: '/miamah-comedy',
   path: '/miamah-comedy',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const MarineInstituteRoute = MarineInstituteImport.update({
+  id: '/marine-institute',
+  path: '/marine-institute',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -228,6 +235,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MakotoImport
       parentRoute: typeof rootRoute
     }
+    '/marine-institute': {
+      id: '/marine-institute'
+      path: '/marine-institute'
+      fullPath: '/marine-institute'
+      preLoaderRoute: typeof MarineInstituteImport
+      parentRoute: typeof rootRoute
+    }
     '/miamah-comedy': {
       id: '/miamah-comedy'
       path: '/miamah-comedy'
@@ -301,6 +315,7 @@ export interface FileRoutesByFullPath {
   '/gym-sync': typeof GymSyncRoute
   '/holy-city': typeof HolyCityRoute
   '/makoto': typeof MakotoRoute
+  '/marine-institute': typeof MarineInstituteRoute
   '/miamah-comedy': typeof MiamahComedyRoute
   '/projects': typeof ProjectsRoute
   '/resume': typeof ResumeRoute
@@ -323,6 +338,7 @@ export interface FileRoutesByTo {
   '/gym-sync': typeof GymSyncRoute
   '/holy-city': typeof HolyCityRoute
   '/makoto': typeof MakotoRoute
+  '/marine-institute': typeof MarineInstituteRoute
   '/miamah-comedy': typeof MiamahComedyRoute
   '/projects': typeof ProjectsRoute
   '/resume': typeof ResumeRoute
@@ -346,6 +362,7 @@ export interface FileRoutesById {
   '/gym-sync': typeof GymSyncRoute
   '/holy-city': typeof HolyCityRoute
   '/makoto': typeof MakotoRoute
+  '/marine-institute': typeof MarineInstituteRoute
   '/miamah-comedy': typeof MiamahComedyRoute
   '/projects': typeof ProjectsRoute
   '/resume': typeof ResumeRoute
@@ -370,6 +387,7 @@ export interface FileRouteTypes {
     | '/gym-sync'
     | '/holy-city'
     | '/makoto'
+    | '/marine-institute'
     | '/miamah-comedy'
     | '/projects'
     | '/resume'
@@ -391,6 +409,7 @@ export interface FileRouteTypes {
     | '/gym-sync'
     | '/holy-city'
     | '/makoto'
+    | '/marine-institute'
     | '/miamah-comedy'
     | '/projects'
     | '/resume'
@@ -412,6 +431,7 @@ export interface FileRouteTypes {
     | '/gym-sync'
     | '/holy-city'
     | '/makoto'
+    | '/marine-institute'
     | '/miamah-comedy'
     | '/projects'
     | '/resume'
@@ -435,6 +455,7 @@ export interface RootRouteChildren {
   GymSyncRoute: typeof GymSyncRoute
   HolyCityRoute: typeof HolyCityRoute
   MakotoRoute: typeof MakotoRoute
+  MarineInstituteRoute: typeof MarineInstituteRoute
   MiamahComedyRoute: typeof MiamahComedyRoute
   ProjectsRoute: typeof ProjectsRoute
   ResumeRoute: typeof ResumeRoute
@@ -457,6 +478,7 @@ const rootRouteChildren: RootRouteChildren = {
   GymSyncRoute: GymSyncRoute,
   HolyCityRoute: HolyCityRoute,
   MakotoRoute: MakotoRoute,
+  MarineInstituteRoute: MarineInstituteRoute,
   MiamahComedyRoute: MiamahComedyRoute,
   ProjectsRoute: ProjectsRoute,
   ResumeRoute: ResumeRoute,
@@ -488,6 +510,7 @@ export const routeTree = rootRoute
         "/gym-sync",
         "/holy-city",
         "/makoto",
+        "/marine-institute",
         "/miamah-comedy",
         "/projects",
         "/resume",
@@ -530,6 +553,9 @@ export const routeTree = rootRoute
     },
     "/makoto": {
       "filePath": "makoto.tsx"
+    },
+    "/marine-institute": {
+      "filePath": "marine-institute.tsx"
     },
     "/miamah-comedy": {
       "filePath": "miamah-comedy.tsx"

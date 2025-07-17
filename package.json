@@ -16,8 +16,8 @@
   },
   "devDependencies": {
     "@tanstack/router-cli": "^1.97.3",
-    "@tanstack/router-plugin": "^1.97.3",
     "@tanstack/router-devtools": "^1.97.3",
+    "@tanstack/router-plugin": "^1.97.3",
     "@types/node": "^22.10.7",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
@@ -52,6 +52,7 @@
     "@tanstack/react-router": "^1.97.3",
     "framer-motion": "^12.12.1",
     "lucide-react": "^0.511.0",
+    "motion": "^12.23.6",
     "radix-ui": "^1.4.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"

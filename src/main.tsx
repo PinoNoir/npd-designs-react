@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createRouter } from '@tanstack/react-router';
+import { HelmetProvider } from 'react-helmet-async';
 import { routeTree } from './routeTree.gen';
 import './styles/global.css';
 import './styles/tokens.css';
@@ -24,8 +25,10 @@ if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement);
 
   root.render(
-    <ThemeProvider>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </HelmetProvider>
   );
 }

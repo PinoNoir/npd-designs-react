@@ -46,7 +46,7 @@
 
 .aboutHeader h2 {
   font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-bold);
   color: var(--gray-12);
 }
 

@@ -24,6 +24,19 @@ const SEO = ({
 
   return (
     <Helmet>
+      {/* Google Analytics */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131953297-2"></script>
+      <script>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'UA-131953297-2');
+        `}
+      </script>
+
       {/* Primary Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="title" content={fullTitle} />
