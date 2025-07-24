@@ -74,7 +74,7 @@
   align-items: center;
   gap: 0.5rem;
   background: var(--primary-100);
-  color: var(--gray-1);
+  color: var(--gray-12);
   padding: var(--space-8) var(--space-16);
   border-radius: var(--border-radius-default);
   text-decoration: none;
@@ -88,7 +88,7 @@
 
 .downloadButton:hover {
   background: transparent;
-  color: var(--primary-300);
+  color: var(--primary-100);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -118,9 +118,9 @@
 .sectionTitle {
   font-size: var(--font-size-h3);
   font-weight: var(--font-weight-bold);
-  color: var(--font-color-headings);
+  color: var(--gray-11);
   margin-bottom: var(--space-8);
-  letter-spacing: 0.075rem;
+  letter-spacing: 0.25rem;
   text-transform: uppercase;
 }
 
@@ -129,6 +129,13 @@
   line-height: 1.7;
   color: var(--text-secondary);
   margin: 0;
+}
+
+.references {
+  font-size: var(--font-size-body);
+  font-style: italic;
+  color: var(--blue-11);
+  margin-top: var(--space-4);
 }
 
 /* Education */

@@ -139,4 +139,14 @@ export const projects = [
     tags: ['Branding', 'Visual Design'],
     route: '/holy-city',
   },
+  {
+    id: '16',
+    title: 'Hawaii Wildlife Fund',
+    description:
+      'Rebranding and visual identity design for a non-profit organization.',
+    imageUrl: '/assets/img/work_images/hawaii_stage.jpg',
+    category: 'Branding',
+    tags: ['Branding', 'UI Design', 'Development'],
+    route: '/hawaii-wildlife-fund',
+  },
 ];

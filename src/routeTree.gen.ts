@@ -22,6 +22,7 @@ import { Route as MiamahComedyImport } from './routes/miamah-comedy'
 import { Route as MarineInstituteImport } from './routes/marine-institute'
 import { Route as MakotoImport } from './routes/makoto'
 import { Route as HolyCityImport } from './routes/holy-city'
+import { Route as HawaiiWildlifeFundImport } from './routes/hawaii-wildlife-fund'
 import { Route as GymSyncImport } from './routes/gym-sync'
 import { Route as ErrorImport } from './routes/error'
 import { Route as ContactImport } from './routes/contact'
@@ -97,6 +98,12 @@ const MakotoRoute = MakotoImport.update({
 const HolyCityRoute = HolyCityImport.update({
   id: '/holy-city',
   path: '/holy-city',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const HawaiiWildlifeFundRoute = HawaiiWildlifeFundImport.update({
+  id: '/hawaii-wildlife-fund',
+  path: '/hawaii-wildlife-fund',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -221,6 +228,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GymSyncImport
       parentRoute: typeof rootRoute
     }
+    '/hawaii-wildlife-fund': {
+      id: '/hawaii-wildlife-fund'
+      path: '/hawaii-wildlife-fund'
+      fullPath: '/hawaii-wildlife-fund'
+      preLoaderRoute: typeof HawaiiWildlifeFundImport
+      parentRoute: typeof rootRoute
+    }
     '/holy-city': {
       id: '/holy-city'
       path: '/holy-city'
@@ -313,6 +327,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/error': typeof ErrorRoute
   '/gym-sync': typeof GymSyncRoute
+  '/hawaii-wildlife-fund': typeof HawaiiWildlifeFundRoute
   '/holy-city': typeof HolyCityRoute
   '/makoto': typeof MakotoRoute
   '/marine-institute': typeof MarineInstituteRoute
@@ -336,6 +351,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/error': typeof ErrorRoute
   '/gym-sync': typeof GymSyncRoute
+  '/hawaii-wildlife-fund': typeof HawaiiWildlifeFundRoute
   '/holy-city': typeof HolyCityRoute
   '/makoto': typeof MakotoRoute
   '/marine-institute': typeof MarineInstituteRoute
@@ -360,6 +376,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/error': typeof ErrorRoute
   '/gym-sync': typeof GymSyncRoute
+  '/hawaii-wildlife-fund': typeof HawaiiWildlifeFundRoute
   '/holy-city': typeof HolyCityRoute
   '/makoto': typeof MakotoRoute
   '/marine-institute': typeof MarineInstituteRoute
@@ -385,6 +402,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/error'
     | '/gym-sync'
+    | '/hawaii-wildlife-fund'
     | '/holy-city'
     | '/makoto'
     | '/marine-institute'
@@ -407,6 +425,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/error'
     | '/gym-sync'
+    | '/hawaii-wildlife-fund'
     | '/holy-city'
     | '/makoto'
     | '/marine-institute'
@@ -429,6 +448,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/error'
     | '/gym-sync'
+    | '/hawaii-wildlife-fund'
     | '/holy-city'
     | '/makoto'
     | '/marine-institute'
@@ -453,6 +473,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   ErrorRoute: typeof ErrorRoute
   GymSyncRoute: typeof GymSyncRoute
+  HawaiiWildlifeFundRoute: typeof HawaiiWildlifeFundRoute
   HolyCityRoute: typeof HolyCityRoute
   MakotoRoute: typeof MakotoRoute
   MarineInstituteRoute: typeof MarineInstituteRoute
@@ -476,6 +497,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   ErrorRoute: ErrorRoute,
   GymSyncRoute: GymSyncRoute,
+  HawaiiWildlifeFundRoute: HawaiiWildlifeFundRoute,
   HolyCityRoute: HolyCityRoute,
   MakotoRoute: MakotoRoute,
   MarineInstituteRoute: MarineInstituteRoute,
@@ -508,6 +530,7 @@ export const routeTree = rootRoute
         "/contact",
         "/error",
         "/gym-sync",
+        "/hawaii-wildlife-fund",
         "/holy-city",
         "/makoto",
         "/marine-institute",
@@ -547,6 +570,9 @@ export const routeTree = rootRoute
     },
     "/gym-sync": {
       "filePath": "gym-sync.tsx"
+    },
+    "/hawaii-wildlife-fund": {
+      "filePath": "hawaii-wildlife-fund.tsx"
     },
     "/holy-city": {
       "filePath": "holy-city.tsx"

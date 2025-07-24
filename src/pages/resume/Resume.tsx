@@ -244,7 +244,7 @@ const Resume: React.FC = () => {
                 <div className={styles.experienceBlock}>
                   <div className={styles.expHeader}>
                     <span className={styles.expRole}>UX Designer</span>
-                    <span className={styles.expCompany}>Chico’s FAS Inc.</span>
+                    <span className={styles.expCompany}>Chico&apos;s FAS Inc.</span>
                     <span className={styles.expDates}>
                       July 2019 - April 2020
                     </span>
@@ -253,7 +253,7 @@ const Resume: React.FC = () => {
                     Worked closely with project managers, senior designers, and
                     business stakeholders in multiple capacities to update and
                     maintain enterprise level e-commerce projects for all
-                    Chico’s FAS brands. My role consisted of the following
+                    Chico&apos;s FAS brands. My role consisted of the following
                     responsibilities:
                     <ul>
                       <li>
@@ -273,6 +273,9 @@ const Resume: React.FC = () => {
                     </ul>
                   </div>
                 </div>
+                <p className={styles.references}>
+                  References available upon request.
+                </p>
               </section>
             </div>
           </div>

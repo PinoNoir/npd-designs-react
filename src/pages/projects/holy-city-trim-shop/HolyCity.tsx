@@ -45,7 +45,7 @@ const HolyCity: React.FC = () => {
           sectionTitle='Project Deliverables'
         />
 
-        <NextLink label='Stretto - Electronic Balloting' projectName='Go To Project' link='#' />
+        <NextLink label='Hawaii Wildlife Fund' projectName='Go To Project' link='/hawaii-wildlife-fund' />
       </ProjectPage>
       <Footer />
     </PageTransition>
