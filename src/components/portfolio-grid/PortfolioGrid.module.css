@@ -33,15 +33,15 @@
 
 .categoryButton {
   all: unset;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--border-radius-round);
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   cursor: pointer;
-  border: 1px solid var(--gray-2);
+  border: 1px solid var(--blue-4);
   transition:
-    background-color 200ms,
-    color 300ms;
+    background-color 300ms ease-in-out,
+    color 300ms ease-in-out;
 
   &:hover {
     background-color: var(--gray-a2);
@@ -51,6 +51,7 @@
 .categoryButtonActive {
   background-color: var(--blue-a2);
   color: var(--blue-11);
+  border: 1px solid var(--blue-6);
 
   &:hover {
     background-color: var(--blue-a4);

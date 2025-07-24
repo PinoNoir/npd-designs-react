@@ -79,8 +79,8 @@
   --secondary-400: hsl(255 100% 40%);
   --secondary-500: hsl(255 0% 20%);
   --secondary-600: hsl(255 0% 10%);
-  --font-color-headings: var(--secondary-200);
-  --font-color-body: var(--secondary-100);
+  --font-color-headings: var(--blue-9);
+  --font-color-body: var(--gray-12);
   --font-color-links: var(--secondary-400);
   --font-color-links-hover: var(--secondary-300);
   --logo-color: var(--blue-9);

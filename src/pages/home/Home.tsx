@@ -60,7 +60,7 @@ const Home = () => {
 
       <section className={styles.toolsSection}>
         <div className={styles.container}>
-          <h1>Software & Tooling</h1>
+          <h1>Software & Technologies</h1>
           <div className={styles.toolsGrid}>
             <ExpertiseCard
               icon={Layout}

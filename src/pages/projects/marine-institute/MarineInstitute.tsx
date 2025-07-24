@@ -34,7 +34,7 @@ const MarineInstitute: React.FC = () => {
         <ProjectDivider sectionTitle='Project Overview' />
 
         <ProjectProcess
-          projectOverview='The goal was to create a portal for marine biologists to upload and track new ocean discoveries, with a focus on bioluminescent species.'
+          projectOverview='The goal was to create a portal for marine biologists to review, upload, and track new ocean discoveries, with a focus on bioluminescent species.'
           projectSteps={marineInstituteSteps}
           stepsTitle='Process'
         />

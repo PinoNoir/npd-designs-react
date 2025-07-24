@@ -2,7 +2,6 @@
   min-height: 100vh;
   background: var(--bg-primary);
   color: var(--text-primary);
-  padding: 2rem 0;
 }
 
 .container {
@@ -11,45 +10,45 @@
   padding-block: 2rem;
 }
 
+.downloadButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-block-end: var(--space-16);
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 2.5rem;
+  margin-block-end: var(--space-16);
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: var(--space-16);
 }
 
 .headerLeft {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: var(--space-16);
 }
 
 .logoNameTitle {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-}
-
-.logo {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
+  gap: var(--space-16);
 }
 
 .name {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.025rem;
   margin: 0;
-  color: var(--blue-9);
+  color: var(--font-color-headings);
 }
 
 .role {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--blue-11);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  color: var(--font-color-body);
   margin: 0;
   letter-spacing: 0.01em;
 }
@@ -74,19 +73,22 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: transparent;
-  color: var(--blue-11);
-  padding: 0.6rem 1.25rem;
-  border-radius: 8px;
+  background: var(--primary-100);
+  color: var(--gray-1);
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--border-radius-default);
   text-decoration: none;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 300ms ease-in-out;
 }
 
 .downloadButton:hover {
   background: transparent;
-  color: var(--blue-11);
+  color: var(--primary-300);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -114,11 +116,11 @@
 }
 
 .sectionTitle {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--blue-9);
-  margin-bottom: 1.1rem;
-  letter-spacing: 0.04em;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  color: var(--font-color-headings);
+  margin-bottom: var(--space-8);
+  letter-spacing: 0.075rem;
   text-transform: uppercase;
 }
 
@@ -131,70 +133,75 @@
 
 /* Education */
 .educationBlock {
-  margin-bottom: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-block-start: var(--space-8);
+  margin-block-end: var(--space-16);
 }
 .eduSchool {
-  font-weight: 700;
-  color: var(--text-primary);
-  font-size: 1.05rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--font-color-headings);
+  font-size: var(--font-size-h4);
 }
 .eduDegree {
-  font-weight: 500;
-  color: var(--text-secondary);
-  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--font-color-body);
+  font-size: var(--font-size-body);
 }
 .eduDetails {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
+  font-size: var(--font-size-body);
+  color: var(--font-color-body);
 }
 
 /* Skills */
 .skillsBlock {
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: var(--space-8);
 }
 .skillCategory {
-  font-size: 1rem;
-  color: var(--text-secondary);
+  font-size: var(--font-size-body);
+  color: var(--font-color-body);
 }
 .skillLabel {
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-right: 0.25em;
+  font-weight: var(--font-weight-medium);
+  color: var(--font-color-headings);
+  margin-right: var(--space-4);
 }
 
 /* Experience */
 .experienceBlock {
-  margin-bottom: 2.2rem;
+  margin-block-end: var(--space-48);
 }
 .expHeader {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 1rem;
+  gap: var(--space-16);
   flex-wrap: wrap;
-  margin-bottom: 0.5rem;
+  margin-block-end: var(--space-8);
 }
 .expRole {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-primary);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  color: var(--font-color-headings);
 }
 .expCompany {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--primary-color);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  color: var(--font-color-body);
 }
 .expDates {
-  font-size: 0.98rem;
-  color: var(--text-secondary);
+  font-size: var(--font-size-body);
+  color: var(--font-color-body);
   font-style: italic;
 }
 .expDetails {
-  font-size: 1rem;
-  color: var(--text-secondary);
-  margin-top: 0.2rem;
+  line-height: 1.5;
+  font-size: var(--font-size-body);
+  color: var(--font-color-body);
+  margin-top: var(--space-4);
 }
 .expDetails ul {
   margin: 0.5rem 0 0 1.2rem;
@@ -242,10 +249,11 @@
   .sectionTitle {
     font-size: 1rem;
   }
-  .expRole, .expCompany {
+  .expRole,
+  .expCompany {
     font-size: 1rem;
   }
   .expDates {
     font-size: 0.9rem;
   }
-} 
+}

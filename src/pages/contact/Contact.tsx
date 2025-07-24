@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Hero from '../../components/hero/Hero';
 import styles from './Contact.module.css';
-import { Button } from '@/components';
+import { Button, Input, TextArea } from '@/components';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
           {/* Map Section */}
           <div className={styles.mapSection}>
             <div className={styles.mapHeader}>
-              <h2 className={styles.mapTitle}>Location</h2>
+              <h1 className={styles.mapTitle}>Location</h1>
               <p className={styles.mapSubtitle}>Melbourne, Florida</p>
             </div>
             <iframe
@@ -106,66 +106,46 @@ const Contact: React.FC = () => {
               </div>
             )}
             <form onSubmit={handleSubmit} className={styles.form}>
-              <div className={styles.formGroup}>
-                <label htmlFor='name' className={styles.label}>
-                  Name
-                </label>
-                <input
-                  type='text'
-                  name='name'
-                  id='name'
-                  value={formData.name}
-                  onChange={handleChange}
-                  className={styles.input}
-                  required
-                  disabled={isSubmitting}
-                />
-              </div>
-              <div className={styles.formGroup}>
-                <label htmlFor='email' className={styles.label}>
-                  Email
-                </label>
-                <input
-                  type='email'
-                  name='email'
-                  id='email'
-                  value={formData.email}
-                  onChange={handleChange}
-                  className={styles.input}
-                  required
-                  disabled={isSubmitting}
-                />
-              </div>
-              <div className={styles.formGroup}>
-                <label htmlFor='subject' className={styles.label}>
-                  Subject
-                </label>
-                <input
-                  type='text'
-                  name='subject'
-                  id='subject'
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className={styles.input}
-                  required
-                  disabled={isSubmitting}
-                />
-              </div>
-              <div className={styles.formGroup}>
-                <label htmlFor='message' className={styles.label}>
-                  Message
-                </label>
-                <textarea
-                  id='message'
-                  name='message'
-                  rows={6}
-                  value={formData.message}
-                  onChange={handleChange}
-                  className={styles.textarea}
-                  required
-                  disabled={isSubmitting}
-                />
-              </div>
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                value={formData.name}
+                onChange={handleChange}
+                label="Name"
+                required
+                disabled={isSubmitting}
+              />
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                label="Email"
+                required
+                disabled={isSubmitting}
+              />
+              <Input
+                id="subject"
+                name="subject"
+                type="text"
+                value={formData.subject}
+                onChange={handleChange}
+                label="Subject"
+                required
+                disabled={isSubmitting}
+              />
+              <TextArea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                label="Message"
+                rows={6}
+                required
+                disabled={isSubmitting}
+              />
               <Button
                 type='submit'
                 className={styles.submitButton}

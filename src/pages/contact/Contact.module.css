@@ -27,8 +27,7 @@
 }
 
 .formTitle {
-  font-size: 2rem;
-  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h1);
   color: var(--gray-12);
   margin-bottom: 0;
 }
@@ -37,11 +36,6 @@
   font-size: 1.125rem;
   color: var(--gray-11);
   margin: 0;
-}
-
-.mailtoButton {
-  text-align: center;
-  margin-bottom: 2rem;
 }
 
 /* Map Section */
@@ -59,8 +53,7 @@
 }
 
 .mapTitle {
-  font-size: 2rem;
-  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h1);
   color: var(--gray-12);
   margin-bottom: 0;
 }
@@ -79,72 +72,12 @@
 
 /* Form Styles */
 .form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
 }
 
-.formGroup {
-  grid-column: span 2;
-}
-
-@media (max-width: 640px) {
-  .form {
-    grid-template-columns: 1fr;
-  }
-  .formGroup {
-    grid-column: span 1;
-  }
-}
-
-.label {
-  display: block;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--gray-12);
-  margin-bottom: 0.5rem;
-}
-
-.input {
-  width: 100%;
-  padding: 0.875rem 1rem;
-  border: 2px solid var(--gray-4);
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  background: var(--gray-1);
-  color: var(--gray-12);
-  transition: all 0.3s ease;
-}
-
-.input:focus {
-  outline: none;
-  border-color: var(--blue-9);
-  background: var(--gray-1);
-  box-shadow: 0 0 0 3px var(--blue-a3);
-}
-
-.textarea {
-  width: 100%;
-  padding: 0.875rem 1rem;
-  border: 2px solid var(--gray-4);
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  background: var(--gray-1);
-  color: var(--gray-12);
-  resize: vertical;
-  min-height: 120px;
-  transition: all 0.3s ease;
-}
-
-.textarea:focus {
-  outline: none;
-  border-color: var(--blue-9);
-  background: var(--gray-1);
-  box-shadow: 0 0 0 3px var(--blue-a3);
-}
-
 .submitButton {
-  grid-column: span 2;
   width: 100%;
   display: inline-flex;
   align-items: center;
@@ -153,12 +86,6 @@
   box-shadow: 0 2px 8px var(--blue-a3);
   transition: all 0.3s ease;
   cursor: pointer;
-}
-
-@media (max-width: 640px) {
-  .submitButton {
-    grid-column: span 1;
-  }
 }
 
 .submitButton:disabled {

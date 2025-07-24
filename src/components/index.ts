@@ -17,4 +17,6 @@ export { default as LogoCarousel } from './logo-carousel/LogoCarousel';
 export { default as PageTransition } from './page-transition/PageTransition';
 export { default as OptimizedImage } from './optimized-image/OptimizedImage';
 export { default as SEO } from './SEO/SEO';
+export { default as Input } from './input/Input';
+export { default as TextArea } from './textarea/TextArea';
 export { ThemeProvider, useTheme } from './theme-provider/ThemeProvider';
