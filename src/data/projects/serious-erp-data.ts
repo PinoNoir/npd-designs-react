@@ -4,13 +4,13 @@ export const seriousErpDeliverables: Deliverable[] = [
   {
     id: 'serp-1',
     title: 'Before',
-    imageSrc: '/assets/img/work_images/serp_showcase_before.jpg',
+    imageSrc: '/assets/img/work_images/serp/serp_showcase_before.jpg',
     imageAlt: 'Original Serious ERP system design',
   },
   {
     id: 'serp-2',
     title: 'After - Final Mockups',
-    imageSrc: '/assets/img/work_images/serp_showcase_1.jpg',
+    imageSrc: '/assets/img/work_images/serp/serp_showcase_1.jpg',
     imageAlt: 'Redesigned Serious ERP system using Material Design principles',
   },
 ];

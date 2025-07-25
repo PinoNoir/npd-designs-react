@@ -4,19 +4,19 @@ export const holyCityDeliverables: Deliverable[] = [
   {
     id: 'holy-city-1',
     title: 'Baseball Cap Design',
-    imageSrc: '/assets/img/work_images/holy_city_showcase_2.jpg',
+    imageSrc: '/assets/img/work_images/holy_city/holy_city_showcase_2.jpg',
     imageAlt: 'Holy City Trim Shop baseball cap design',
   },
   {
     id: 'holy-city-2',
     title: 'T-shirt Design',
-    imageSrc: '/assets/img/work_images/holy_city_showcase.jpg',
+    imageSrc: '/assets/img/work_images/holy_city/holy_city_showcase.jpg',
     imageAlt: 'Holy City Trim Shop T-shirt design',
   },
   {
     id: 'holy-city-3',
     title: 'Leather Stamp Logo',
-    imageSrc: '/assets/img/work_images/holy_city_logo_2.jpg',
+    imageSrc: '/assets/img/work_images/holy_city/holy_city_logo_2.jpg',
     imageAlt: 'Holy City Trim Shop leather stamp logo',
   },
 ];

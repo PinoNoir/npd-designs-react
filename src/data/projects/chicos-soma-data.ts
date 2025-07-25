@@ -4,19 +4,19 @@ export const chicosSomaDeliverables: Deliverable[] = [
   {
     id: 'chicos-soma-1',
     title: 'Design Callouts',
-    imageSrc: '/assets/img/work_images/chicos_og_comparison.png',
+    imageSrc: '/assets/img/work_images/chicos/chicos_og_comparison.png',
     imageAlt: 'My Account Design Callout showing before and after comparison',
   },
   {
     id: 'chicos-soma-2',
     title: 'Screen Flow',
-    imageSrc: '/assets/img/work_images/chicos_og_screenflow.jpg',
+    imageSrc: '/assets/img/work_images/chicos/chicos_og_screenflow.jpg',
     imageAlt: 'Simply Soma Subscription Service Screen Flow',
   },
   {
     id: 'chicos-soma-3',
     title: 'Task Flow',
-    imageSrc: '/assets/img/work_images/chicos_og_taskflow.jpg',
+    imageSrc: '/assets/img/work_images/chicos/chicos_og_taskflow.jpg',
     imageAlt: 'Simply Soma Subscription Service Flowchart',
   },
 ];

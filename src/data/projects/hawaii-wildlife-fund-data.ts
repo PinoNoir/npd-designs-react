@@ -4,19 +4,19 @@ export const hawaiiWildlifeFundDeliverables: Deliverable[] = [
   {
     id: 'hawaii-1',
     title: 'Style Guide Layout',
-    imageSrc: '/assets/img/work_images/hawaii_showcase_3.jpg',
+    imageSrc: '/assets/img/work_images/hawaii-wildlife-fund/hawaii_showcase_3.jpg',
     imageAlt: 'Hawaii Wildlife Fund Style Guide layout',
   },
   {
     id: 'hawaii-2',
     title: 'Website Home Page',
-    imageSrc: '/assets/img/work_images/hawaii_showcase_1.jpg',
+    imageSrc: '/assets/img/work_images/hawaii-wildlife-fund/hawaii_showcase_1.jpg',
     imageAlt: 'Hawaii Wildlife Fund website home page displaying on computer screen',
   },
   {
     id: 'hawaii-3',
     title: 'Business Card Design',
-    imageSrc: '/assets/img/work_images/hawaii_showcase_2.jpg',
+    imageSrc: '/assets/img/work_images/hawaii-wildlife-fund/hawaii_showcase_2.jpg',
     imageAlt: 'Hawaii Wildlife Fund business card design mockup',
   },
 ];

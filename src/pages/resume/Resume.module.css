@@ -42,7 +42,7 @@
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.025rem;
   margin: 0;
-  color: var(--font-color-headings);
+  color: var(--blue-10);
 }
 
 .role {
@@ -66,15 +66,15 @@
   align-items: flex-end;
   gap: 0.15rem;
   font-size: 1rem;
-  color: var(--text-primary);
+  color: var(--blue-12);
 }
 
 .downloadButton {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--primary-100);
-  color: var(--gray-12);
+  background: var(--blue-4);
+  color: var(--blue-11);
   padding: var(--space-8) var(--space-16);
   border-radius: var(--border-radius-default);
   text-decoration: none;
@@ -88,7 +88,7 @@
 
 .downloadButton:hover {
   background: transparent;
-  color: var(--primary-100);
+  color: var(--blue-11);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -148,7 +148,7 @@
 }
 .eduSchool {
   font-weight: var(--font-weight-medium);
-  color: var(--font-color-headings);
+  color: var(--blue-11);
   font-size: var(--font-size-h4);
 }
 .eduDegree {
@@ -173,7 +173,7 @@
 }
 .skillLabel {
   font-weight: var(--font-weight-medium);
-  color: var(--font-color-headings);
+  color: var(--blue-11);
   margin-right: var(--space-4);
 }
 
@@ -192,7 +192,7 @@
 .expRole {
   font-size: var(--font-size-h3);
   font-weight: var(--font-weight-bold);
-  color: var(--font-color-headings);
+  color: var(--blue-11);
 }
 .expCompany {
   font-size: var(--font-size-h3);

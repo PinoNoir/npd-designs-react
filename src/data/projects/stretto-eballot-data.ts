@@ -4,31 +4,31 @@ export const strettoEballotDeliverables: Deliverable[] = [
   {
     id: 'stretto-eballot-1',
     title: 'Legacy E-Ballot setup UI - WYSIWYG text editor',
-    imageSrc: '/assets/img/work_images/stretto-ca-legacy-wysiwyg-editor.png',
+    imageSrc: '/assets/img/work_images/stretto/stretto-ca-legacy-wysiwyg-editor.png',
     imageAlt: 'Legacy E-ballot setup interface',
   },
   {
     id: 'stretto-eballot-2',
     title: 'Redesigned E-Ballot setup UI',
-    imageSrc: '/assets/img/work_images/stretto-ca-eballot-redesign.png',
+    imageSrc: '/assets/img/work_images/stretto/stretto-ca-eballot-redesign.png',
     imageAlt: 'Redesigned E-ballot setup interface',
   },
   {
     id: 'stretto-eballot-3',
     title: 'E-Ballot overview UI design',
-    imageSrc: '/assets/img/work_images/stretto-ca-eballot-overview.png',
+    imageSrc: '/assets/img/work_images/stretto/stretto-ca-eballot-overview.png',
     imageAlt: 'E-Ballot Overview interface',
   },
   {
     id: 'stretto-eballot-4',
     title: 'E-Ballot grouping UI design',
-    imageSrc: '/assets/img/work_images/stretto-ca-eballot-grouping.png',
+    imageSrc: '/assets/img/work_images/stretto/stretto-ca-eballot-grouping.png',
     imageAlt: 'E-ballot Grouping interface',
   },
   {
     id: 'stretto-eballot-5',
     title: 'Existing EBW interface',
-    imageSrc: '/assets/img/work_images/stretto-ebw-legacy.png',
+    imageSrc: '/assets/img/work_images/stretto/stretto-ebw-legacy.png',
     imageAlt: 'Legacy E-ballot website interface',
   },
 ];

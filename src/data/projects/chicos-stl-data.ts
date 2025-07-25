@@ -4,13 +4,13 @@ export const chicosShopThisLookDeliverables: Deliverable[] = [
   {
     id: 'chicos-stl-1',
     title: 'Initial Sketches & Notes',
-    imageSrc: '/assets/img/work_images/chicos_stl_sketches.jpg',
+    imageSrc: '/assets/img/work_images/chicos/chicos_stl_sketches.jpg',
     imageAlt: 'Initial sketches and notes for Shop This Look project',
   },
   {
     id: 'chicos-stl-2',
     title: 'Final Mockups',
-    imageSrc: '/assets/img/work_images/chicos_stl_final.jpg',
+    imageSrc: '/assets/img/work_images/chicos/chicos_stl_final.jpg',
     imageAlt: 'Finished screens for Shop This Look project',
   },
   {

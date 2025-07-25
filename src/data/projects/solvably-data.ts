@@ -4,7 +4,7 @@ export const solvablyDeliverables: Deliverable[] = [
   {
     id: 'solvably-1',
     title: 'Design System Components',
-    imageSrc: '/assets/img/work_images/massive_u_stage.jpg',
+    imageSrc: '/assets/img/work_images/massive_u/massive_u_stage.jpg',
     imageAlt: 'Solvably design system components showcase',
   },
 ];

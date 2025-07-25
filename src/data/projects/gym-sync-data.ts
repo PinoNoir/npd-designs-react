@@ -4,31 +4,31 @@ export const gymSyncDeliverables: Deliverable[] = [
   {
     id: 'gym-sync-1',
     title: 'Design Process',
-    imageSrc: '/assets/img/work_images/gym_sync_design_process-01.jpg',
+    imageSrc: '/assets/img/work_images/gym_sync/gym_sync_design_process-01.jpg',
     imageAlt: 'Gym Sync UX design process',
   },
   {
     id: 'gym-sync-2',
     title: 'Market Matrix Chart',
-    imageSrc: '/assets/img/work_images/gym_sync_matrix_chart.jpg',
+    imageSrc: '/assets/img/work_images/gym_sync/gym_sync_matrix_chart.jpg',
     imageAlt: 'Gym Sync Market Matrix Chart',
   },
   {
     id: 'gym-sync-3',
     title: 'Wireframes',
-    imageSrc: '/assets/img/work_images/gym_sync_showcase_4.jpg',
+    imageSrc: '/assets/img/work_images/gym_sync/gym_sync_showcase_4.jpg',
     imageAlt: 'Gym Sync workout app lo-fidelity prototype',
   },
   {
     id: 'gym-sync-4',
     title: 'Screen Flow',
-    imageSrc: '/assets/img/work_images/gym_sync_showcase_2.png',
+    imageSrc: '/assets/img/work_images/gym_sync/gym_sync_showcase_2.png',
     imageAlt: 'Gym Sync workout app user flow diagram showcase',
   },
   {
     id: 'gym-sync-5',
     title: 'Final Mockups',
-    imageSrc: '/assets/img/work_images/gym_sync_showcase_3.jpg',
+    imageSrc: '/assets/img/work_images/gym_sync/gym_sync_showcase_3.jpg',
     imageAlt: 'Gym Sync workout app high fidelity prototype showcase',
   },
 ];

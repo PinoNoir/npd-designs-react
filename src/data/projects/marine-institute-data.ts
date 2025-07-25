@@ -4,25 +4,25 @@ export const marineInstituteDeliverables: Deliverable[] = [
   {
     id: 'marine-1',
     title: 'Home Page Design',
-    imageSrc: '/assets/img/work_images/marine_showcase_1.jpg',
+    imageSrc: '/assets/img/work_images/marine_institute/marine_showcase_1.jpg',
     imageAlt: 'Marine Institute home page displaying on iMac screen',
   },
   {
     id: 'marine-2',
     title: 'Online Portal - View Discoveries',
-    imageSrc: '/assets/img/work_images/marine_showcase_02.jpg',
+    imageSrc: '/assets/img/work_images/marine_institute/marine_showcase_02.jpg',
     imageAlt: 'Marine Institute online portal to view scientific discoveries',
   },
   {
     id: 'marine-3',
     title: 'Online Portal - Upload Discoveries',
-    imageSrc: '/assets/img/work_images/marine_showcase_3.jpg',
+    imageSrc: '/assets/img/work_images/marine_institute/marine_showcase_3.jpg',
     imageAlt: 'Marine Institute online portal to upload scientific discoveries',
   },
   {
     id: 'marine-4',
     title: 'Isometric Design Showcase',
-    imageSrc: '/assets/img/work_images/marine_showcase_2.jpg',
+    imageSrc: '/assets/img/work_images/marine_institute/marine_showcase_2.jpg',
     imageAlt: 'Marine Institute web page isometric design showcase',
   },
 ];

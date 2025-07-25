@@ -5,31 +5,31 @@ export const swellLifeDeliverables: Deliverable[] = [
   {
     id: 'swell-life-1',
     title: '1st Issue Layout Design',
-    imageSrc: '/assets/img/work_images/swell_life_showcase_2.jpg',
+    imageSrc: '/assets/img/work_images/swell_life/swell_life_showcase_2.jpg',
     imageAlt: 'Swell Life layout design showcase for issue 1',
   },
   {
     id: 'swell-life-2',
     title: '2nd Issue Layout Design',
-    imageSrc: '/assets/img/work_images/swell_life_showcase_3.jpg',
+    imageSrc: '/assets/img/work_images/swell_life/swell_life_showcase_3.jpg',
     imageAlt: 'Swell Life layout design showcase for issue 2',
   },
   {
     id: 'swell-life-3',
     title: '3rd Issue Layout Design',
-    imageSrc: '/assets/img/work_images/swell_life_showcase_4.jpg',
+    imageSrc: '/assets/img/work_images/swell_life/swell_life_showcase_4.jpg',
     imageAlt: 'Swell Life layout design showcase for issue 3',
   },
   {
     id: 'swell-life-4',
     title: '4th Issue Layout Design',
-    imageSrc: '/assets/img/work_images/swell_life_showcase_5.jpg',
+    imageSrc: '/assets/img/work_images/swell_life/swell_life_showcase_5.jpg',
     imageAlt: 'Swell Life layout design showcase for issue 4',
   },
   {
     id: 'swell-life-5',
     title: '5th Issue Layout Design',
-    imageSrc: '/assets/img/work_images/swell_life_showcase_6.jpg',
+    imageSrc: '/assets/img/work_images/swell_life/swell_life_showcase_6.jpg',
     imageAlt: 'Swell Life layout design showcase for issue 5',
   },
 ];

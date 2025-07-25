@@ -4,25 +4,25 @@ export const miamahComedyDeliverables: Deliverable[] = [
   {
     id: 'miamah-1',
     title: 'Visual Identity/Branding Materials',
-    imageSrc: '/assets/img/work_images/miamah_showcase_1.jpg',
+    imageSrc: '/assets/img/work_images/miamah/miamah_showcase_1.jpg',
     imageAlt: 'Visual identity branding layout',
   },
   {
     id: 'miamah-2',
     title: 'Logo Design',
-    imageSrc: '/assets/img/work_images/miamah_showcase_3.jpg',
+    imageSrc: '/assets/img/work_images/miamah/miamah_showcase_3.jpg',
     imageAlt: 'Logo design',
   },
   {
     id: 'miamah-3',
     title: 'T-shirt Design',
-    imageSrc: '/assets/img/work_images/miamah_showcase_4.jpg',
+    imageSrc: '/assets/img/work_images/miamah/miamah_showcase_4.jpg',
     imageAlt: 'T-shirt design',
   },
   {
     id: 'miamah-4',
     title: 'Poster Design',
-    imageSrc: '/assets/img/work_images/miamah_showcase_2.jpg',
+    imageSrc: '/assets/img/work_images/miamah/miamah_showcase_2.jpg',
     imageAlt: 'Poster design',
   },
 ];

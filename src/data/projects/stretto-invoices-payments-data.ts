@@ -4,7 +4,7 @@ export const strettoInvoicesPaymentsDeliverables: Deliverable[] = [
   {
     id: 'stretto-ip-2',
     title: 'Redesigned Payment Collection Flow',
-    imageSrc: '/assets/img/work_images/stretto_ip_stage.jpg',
+    imageSrc: '/assets/img/work_images/stretto/stretto_ip_stage.jpg',
     imageAlt: 'New streamlined payment collection interface',
   },
 ];
