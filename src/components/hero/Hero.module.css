@@ -163,6 +163,45 @@
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+    min-height: 70vh;
+  }
+
+  .heading {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-block-end: var(--space-8);
+  }
+
+  .title {
+    font-size: var(--font-size-h2);
+    margin-block-end: var(--space-12);
+  }
+
+  .subtitle {
+    font-size: var(--font-size-h3);
+    margin-block-end: var(--space-12);
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-block-end: var(--space-24);
+    padding: 0 1rem;
+  }
+
+  .textContainer {
+    padding: 0 1rem;
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 300px;
+  }
+
   .overlayImage {
     position: relative;
     right: auto;
@@ -174,8 +213,38 @@
   }
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 0.75rem;
+    min-height: 60vh;
+  }
 
+  .heading {
+    font-size: 2.5rem;
+    margin-block-end: var(--space-4);
+  }
 
+  .title {
+    font-size: var(--font-size-h3);
+    margin-block-end: var(--space-8);
+  }
 
+  .subtitle {
+    font-size: var(--font-size-body);
+    margin-block-end: var(--space-8);
+  }
 
+  .description {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+    margin-block-end: var(--space-24);
+  }
 
+  .textContainer {
+    padding: 0 0.5rem;
+  }
+
+  .buttonContainer {
+    max-width: 250px;
+  }
+}
