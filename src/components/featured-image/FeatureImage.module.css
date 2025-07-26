@@ -1,11 +1,17 @@
 .imageWrapper {
-  width: 30%;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .featuredImage {
   width: 100%;
-  min-width: 320px;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-default);
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
@@ -13,6 +19,7 @@
   .imageWrapper {
     width: 100%;
     max-width: 500px;
-    margin: var(--space-24) auto;
+    margin: var(--space-16) auto;
+    height: 300px;
   }
 } 

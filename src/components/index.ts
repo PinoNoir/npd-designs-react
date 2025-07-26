@@ -20,4 +20,5 @@ export { default as SEO } from './SEO/SEO';
 export { default as Input } from './input/Input';
 export { default as TextArea } from './textarea/TextArea';
 export { default as ComingSoon } from './coming-soon/ComingSoon';
+export { default as Error } from '../pages/error/Error';
 export { ThemeProvider, useTheme } from './theme-provider/ThemeProvider';
