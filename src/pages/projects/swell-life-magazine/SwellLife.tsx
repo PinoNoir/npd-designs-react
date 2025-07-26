@@ -20,8 +20,8 @@ const SwellLife: React.FC = () => {
     <PageTransition>
       <ProjectPage>
         <ProjectStage
-          stageImage='/assets/img/work_images/swell_life_stage.jpg'
-          stageLogo='/assets/img/work_images/swell_life_logo.svg'
+          stageImage='/assets/img/work_images/swell_life/swell_life_stage.jpg'
+          stageLogo='/assets/img/work_images/swell_life/swell_life_logo.svg'
           stageDescription='Swell Life brand logo'
         />
 
@@ -39,13 +39,14 @@ const SwellLife: React.FC = () => {
           projectOverview='For inspiration, I explored top surf magazines and brands, drawing particularly from the bold, textural style of designer and surfer David Carson. I focused on expressive typography to give each story a unique voice, while establishing a consistent visual language across the magazine.'
           projectSteps={swellLifeSteps}
           stepsTitle='Execution'
+          overviewTitle='Inspiration'
         >
           <Divider />
           <div className={styles.moodBoard}>
             <p className={styles.deliverableLabel}>Mood Board</p>
             <OptimizedImage
               className={styles.moodBoardImage}
-              src='/assets/img/work_images/swell_life_inspiration.jpg'
+              src='/assets/img/work_images/swell_life/swell_life_inspiration.jpg'
               alt='Design inspiration for Swell Life magazine'
             />
           </div>

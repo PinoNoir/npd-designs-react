@@ -19,8 +19,8 @@ const MiamahComedy: React.FC = () => {
     <PageTransition>
       <ProjectPage>
         <ProjectStage
-          stageImage='/assets/img/work_images/miamah_stage.jpg'
-          stageLogo='/assets/img/work_images/miamah_logo_1.png'
+          stageImage='/assets/img/work_images/miamah/miamah_stage.jpg'
+          stageLogo='/assets/img/work_images/miamah/miamah_logo_1.png'
           stageDescription='Miamah Comedy brand logo'
         />
 

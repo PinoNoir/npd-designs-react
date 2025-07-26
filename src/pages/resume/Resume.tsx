@@ -1,6 +1,6 @@
 import React from 'react';
 import { Footer, PageTransition } from '@/components';
-import { DownloadCloud } from 'lucide-react';
+import { DownloadIcon } from 'lucide-react';
 import styles from './Resume.module.css';
 
 const Resume: React.FC = () => {
@@ -14,7 +14,7 @@ const Resume: React.FC = () => {
               download='Nick_Pino_Resume.pdf'
               className={styles.downloadButton}
             >
-              <DownloadCloud size={18} /> Download PDF
+              Download PDF <DownloadIcon size={18} /> 
             </a>
           </div>
           <div className={styles.header}>

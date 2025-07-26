@@ -19,8 +19,8 @@ const Makoto: React.FC = () => {
     <PageTransition>
       <ProjectPage>
         <ProjectStage
-          stageImage='/assets/img/work_images/makoto_stage.jpg'
-          stageLogo='/assets/img/work_images/makoto_logo_1.png'
+          stageImage='/assets/img/work_images/makoto/makoto_stage.jpg'
+          stageLogo='/assets/img/work_images/makoto/makoto_logo_1.png'
           stageDescription='Makoto Japanese Steakhouse brand logo'
         />
 
@@ -38,6 +38,7 @@ const Makoto: React.FC = () => {
           projectOverview='At the time, in 2014, this was my first large scale project. After building a rapport with the client to guage what they liked and tour the restaurant to get a feel for the interior design and decor, I knew exactly what style I wanted to work towards. My research process began with immersing myself in traditional Japanese art—drawing inspiration from Ukiyo-e masters such as Hokusai and Hiroshige. It was challenging to create 8 separate pieces of art and also be consistent enough to flow throughout the restaurant without clashing with any of the existing decor. The result of careful planning, sketching, and attention to detail led to a beautiful display of classical woodblock style prints that completely rejuvenated the interior.'
           projectSteps={makotosSteps}
           stepsTitle='Execution'
+          overviewTitle='Inspiration'
         />
 
         <ProjectDeliverables

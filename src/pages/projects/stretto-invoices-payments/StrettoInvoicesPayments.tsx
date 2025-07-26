@@ -20,7 +20,7 @@ const StrettoInvoicesPayments: React.FC = () => {
     <PageTransition>
       <ProjectPage>
         <ProjectStage
-          stageImage='/assets/img/work_images/stretto_ip_stage.jpg'
+          stageImage='/assets/img/work_images/stretto/stretto_ip_stage.jpg'
           backgroundAlt="Stretto Best Case Cloud Invoices & Payments interface showcasing the payment collection system"
         />
 

@@ -23,7 +23,7 @@
   font-size: var(--font-size-body);
   line-height: var(--font-line-height-body);
   color: var(--gray-11);
-  margin: 0;
+  margin-block-end: var(--space-16) ;
 }
 
 .inlineLink {
@@ -72,9 +72,14 @@
   font-size: var(--font-size-body);
   line-height: var(--font-line-height-body);
   color: var(--gray-12);
-  margin-bottom: var(--space-12);
-  padding-left: var(--space-32);
+  margin-bottom: var(--space-16);
+  padding-left: var(--space-40);
   position: relative;
+  padding-top: var(--space-4);
+}
+
+.listItem:last-child {
+  margin-bottom: 0;
 }
 
 .listItem::before {
@@ -84,14 +89,15 @@
   top: 0;
   background-color: var(--blue-9);
   color: var(--white);
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .outcomeText {

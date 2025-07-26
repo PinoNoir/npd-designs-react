@@ -11,16 +11,18 @@ import {
 } from '../project-components';
 import {
   cadenceDesignSystemDeliverables,
+  cadenceDesignSystemOverview,
   cadenceDesignSystemSteps,
 } from '@/data/projects/cadence-design-system-data';
 import styles from './CadenceDesignSystem.module.css';
+import { DownloadIcon } from 'lucide-react';
 
 const CadenceDesignSystem: React.FC = () => {
   return (
     <PageTransition>
       <ProjectPage>
         <ProjectStage
-          stageImage='/assets/img/work_images/stretto_ds_stage.jpg'
+          stageImage='/assets/img/work_images/stretto/stretto_cds_stage.jpg'
           backgroundAlt='Cadence Design System showcase'
         />
 
@@ -28,35 +30,37 @@ const CadenceDesignSystem: React.FC = () => {
           projectName='Stretto'
           projectType='Storybook | React | Typescript | UI Design | Documentation'
           projectRole='Lead UX Engineer'
-          projectSoftware='Figma'
-          projectDescription='Cadence Design System is a comprehensive library of reusable components, meticulously crafted to ensure consistency and efficiency across our React applications. This system not only enhances the development process but also guarantees a cohesive user experience, aligning with our commitment to quality and innovation.'
+          projectSoftware='Figma | VS Code'
+          projectDescription='Cadence Design System is a comprehensive library of reusable components, meticulously crafted to ensure consistency and efficiency across multiple React applications. This system not only enhances the development process but also guarantees cohesive ui design, styling, and user experience, aligning with my commitment to quality and innovation.'
         />
 
         <ProjectDivider sectionTitle='Project Overview' />
+
+        <ProjectProcess
+          projectOverview={cadenceDesignSystemOverview}
+          projectSteps={cadenceDesignSystemSteps}
+          stepsTitle='Development Process'
+          overviewTitle='Background'
+        />
 
         <div className={styles.presentationSection}>
           <div className={styles.container}>
             <div className={styles.content}>
               <p className={styles.description}>
-                For an in-depth exploration of the CDS project, please refer to this deck:
+                For an in-depth exploration of the CDS project, please refer to
+                this deck:
               </p>
               <a
-                href='/files/cds_presentation_deck.pdf'
+                href='/assets/files/cds_presentation_deck.pdf'
                 target='_blank'
                 rel='noopener noreferrer'
                 className={styles.downloadButton}
               >
-                Cadence Design System
+                Download PDF <DownloadIcon size={18} />
               </a>
             </div>
           </div>
         </div>
-
-        <ProjectProcess
-          projectOverview='Led the development of a comprehensive design system that standardizes UI components across all Stretto applications, improving development efficiency and user experience consistency.'
-          projectSteps={cadenceDesignSystemSteps}
-          stepsTitle='Development Process'
-        />
 
         <ProjectDeliverables
           deliverables={cadenceDesignSystemDeliverables}
@@ -74,4 +78,4 @@ const CadenceDesignSystem: React.FC = () => {
   );
 };
 
-export default CadenceDesignSystem; 
+export default CadenceDesignSystem;

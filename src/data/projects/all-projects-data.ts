@@ -144,7 +144,7 @@ export const projects = [
     title: 'Hawaii Wildlife Fund',
     description:
       'Rebranding and visual identity design for a non-profit organization.',
-    imageUrl: '/assets/img/work_images/hawaii-wildlife-fund/hawaii_stage.jpg',
+    imageUrl: '/assets/img/work_images/hawaii_wildlife_fund/hawaii_stage.jpg',
     category: 'Branding',
     tags: ['Branding', 'UI Design', 'Development'],
     route: '/hawaii-wildlife-fund',

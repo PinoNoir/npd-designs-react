@@ -72,7 +72,7 @@
 .downloadButton {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-8);
   background: var(--blue-4);
   color: var(--blue-11);
   padding: var(--space-8) var(--space-16);

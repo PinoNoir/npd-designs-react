@@ -20,15 +20,15 @@ const SeriousErp: React.FC = () => {
     <PageTransition>
       <ProjectPage>
         <ProjectStage
-          stageImage='/assets/img/work_images/serp_stage.jpg'
+          stageImage='/assets/img/work_images/serp/serp_stage.jpg'
           backgroundAlt="Serious ERP system interface showcasing the redesigned platform"
         />
 
         <ProjectOverview
           projectName='Serious ERP'
-          projectType='Design System | Micro Interactions | Information Architecture'
+          projectType='Component Library | Micro Interactions | Information Architecture'
           projectRole='Product Designer'
-          projectSoftware='Figma and After Effects'
+          projectSoftware='Figma | After Effects | Lottie'
           projectDescription="Serious ERP is a multi-functional software platform built for the growing needs of the home healthcare industry. Initially, the client approached me about improving the design of their ordering/cart system. It soon turned into a large scale project with various technical issues that needed to be solved. My goal as the designer was to take a design thinking approach to solve these complex problems and improve the usability of their system."
         />
 

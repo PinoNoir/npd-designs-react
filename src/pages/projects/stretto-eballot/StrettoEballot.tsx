@@ -21,7 +21,7 @@ const StrettoEballot: React.FC = () => {
     <PageTransition>
       <ProjectPage>
         <ProjectStage
-          stageImage='/assets/img/work_images/stretto_ebw_stage.jpg'
+          stageImage='/assets/img/work_images/stretto/stretto_ebw_stage.jpg'
           backgroundAlt="Stretto E-Ballot system interface showcasing the electronic balloting platform"
         />
 

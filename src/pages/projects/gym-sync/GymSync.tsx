@@ -19,7 +19,7 @@ const GymSync: React.FC = () => {
     <PageTransition>
       <ProjectPage>
         <ProjectStage
-          stageImage='/assets/img/work_images/gym_sync_stage.jpg'
+          stageImage='/assets/img/work_images/gym_sync/gym_sync_stage.jpg'
           backgroundAlt='Gym Sync app showcase'
         />
 
@@ -37,6 +37,7 @@ const GymSync: React.FC = () => {
           projectOverview='While researching workout apps we found that our competitors did not offer people seeking a personal trainer the ability to connect with one in their area or a way for personal trainers to market themselves. Our strategy was to design a product that solved those problems and delivered solutions for each user.'
           projectSteps={gymSyncSteps}
           stepsTitle='Strategy'
+          overviewTitle='Background'
         />
 
         <ProjectDeliverables

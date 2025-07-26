@@ -19,7 +19,7 @@ const HawaiiWildlifeFund: React.FC = () => {
     <PageTransition>
       <ProjectPage>
         <ProjectStage
-          stageImage='/assets/img/work_images/hawaii_stage.jpg'
+          stageImage='/assets/img/work_images/hawaii_wildlife_fund/hawaii_showcase_1.jpg'
           backgroundAlt='Hawaii Wildlife Fund background'
         />
 
@@ -37,6 +37,7 @@ const HawaiiWildlifeFund: React.FC = () => {
           projectOverview='The goal was to address visual identity issues and create a comprehensive rebranding strategy for the Hawaii Wildlife Fund non-profit organization to improve user engagement and community outreach.'
           projectSteps={hawaiiWildlifeFundSteps}
           stepsTitle='Process'
+          overviewTitle='Inspiration'
         />
 
         <ProjectDeliverables

@@ -20,7 +20,7 @@ const ChicosShopThisLook: React.FC = () => {
     <PageTransition>
       <ProjectPage>
         <ProjectStage
-          stageImage='/assets/img/work_images/chicos_stage.png'
+          stageImage='/assets/img/work_images/chicos/chicos_stage.png'
           backgroundAlt="Chico's FAS retail environment showcasing the Shop This Look feature"
         />
 

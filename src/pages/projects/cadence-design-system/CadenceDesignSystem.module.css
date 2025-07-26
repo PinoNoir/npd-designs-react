@@ -6,8 +6,9 @@
 }
 
 .presentationSection {
-  background-color: var(--color-background-secondary);
-  padding: 4rem 0;
+  background-color: var(--blue-3);
+  border-radius: var(--border-radius-default);
+  padding: 2rem 0;
   margin: 2rem 0;
 }
 
@@ -27,21 +28,23 @@
 .downloadButton {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--color-primary);
-  color: white;
+  gap: var(--space-8);
+  background: var(--blue-4);
+  color: var(--blue-11);
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--border-radius-default);
   text-decoration: none;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.2s ease;
-  border: none;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-body);
   cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 300ms ease-in-out;
 }
 
 .downloadButton:hover {
-  background-color: var(--color-primary-dark);
+  background: transparent;
+  color: var(--blue-11);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

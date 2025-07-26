@@ -25,7 +25,7 @@ const ChicosZoom: React.FC = () => {
     <PageTransition>
       <ProjectPage>
         <ProjectStage
-          stageImage='/assets/img/work_images/chicos_zoom_stage.png'
+          stageImage='/assets/img/work_images/chicos/chicos_zoom_stage.png'
           backgroundAlt="Chico's FAS Product Zoom feature interface"
         />
 

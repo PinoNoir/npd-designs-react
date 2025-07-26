@@ -19,7 +19,7 @@ const MarineInstitute: React.FC = () => {
     <PageTransition>
       <ProjectPage>
         <ProjectStage
-          stageImage='/assets/img/work_images/marine_stage.jpg'
+          stageImage='/assets/img/work_images/marine_institute/marine_showcase_2.jpg'
           backgroundAlt='Marine Institute background'
         />
 
@@ -37,6 +37,7 @@ const MarineInstitute: React.FC = () => {
           projectOverview='The goal was to create a portal for marine biologists to review, upload, and track new ocean discoveries, with a focus on bioluminescent species.'
           projectSteps={marineInstituteSteps}
           stepsTitle='Process'
+          overviewTitle='Inspiration'
         />
 
         <ProjectDeliverables

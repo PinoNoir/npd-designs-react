@@ -19,8 +19,8 @@ const HolyCity: React.FC = () => {
     <PageTransition>
       <ProjectPage>
         <ProjectStage
-          stageImage='/assets/img/work_images/holy_city_stage.jpg'
-          stageLogo='/assets/img/work_images/holy_city_logo_1.png'
+          stageImage='/assets/img/work_images/holy_city/holy_city_stage.jpg'
+          stageLogo='/assets/img/work_images/holy_city/holy_city_logo_1.png'
           stageDescription='Holy City Trim Shop caricature logo'
         />
 
@@ -38,6 +38,7 @@ const HolyCity: React.FC = () => {
           projectOverview="This branding project required deep collaboration and iteration to create logos that truly represented the client's personality and business needs. The caricature logo captures the client's distinctive features and attitude, while the secondary logo was designed specifically for practical applications like leather stamping. The process involved multiple rounds of refinement to ensure each logo was unique, polished, and perfectly suited for its intended use."
           projectSteps={holyCitySteps}
           stepsTitle='Execution'
+          overviewTitle='Inspiration'
         />
 
         <ProjectDeliverables

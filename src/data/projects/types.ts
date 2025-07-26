@@ -5,6 +5,7 @@ export type Deliverable = {
   imageAlt: string;
   isVideo?: boolean;
   videoType?: 'iframe' | 'mp4' | 'webm';
+  description?: string;
 };
 
 export type ProjectStep = { id: string; text: string };

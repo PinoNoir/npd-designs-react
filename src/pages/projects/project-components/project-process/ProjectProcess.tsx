@@ -8,6 +8,7 @@ interface ProjectProcessProps {
   projectProcess?: string;
   projectSteps?: ProjectStep[];
   stepsTitle?: string;
+  overviewTitle?: string;
   // UX-specific props
   problems?: ProjectStep[];
   goals?: ProjectStep[];
@@ -21,6 +22,7 @@ const ProjectProcess = ({
   projectProcess,
   projectSteps,
   stepsTitle = 'Execution',
+  overviewTitle = 'Inspiration',
   problems,
   goals,
   outcome,
@@ -76,9 +78,15 @@ const ProjectProcess = ({
     <section className={styles.projectsSection}>
       <div className={styles.processGrid}>
         <div className={styles.processLeft}>
-          <h3 className={styles.processTitle}>Inspiration</h3>
-          <p className={styles.processText}>{projectOverview}</p>
-          <p className={styles.processText}>{projectProcess}</p>
+          <h3 className={styles.processTitle}>{overviewTitle}</h3>
+          {projectOverview.split('\n\n').map((paragraph, index) => (
+            <p key={index} className={styles.processText}>
+              {paragraph}
+            </p>
+          ))}
+          {projectProcess && (
+            <p className={styles.processText}>{projectProcess}</p>
+          )}
         </div>
 
         <div className={styles.processRight}>

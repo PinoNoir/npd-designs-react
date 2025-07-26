@@ -9,6 +9,7 @@ interface Deliverable {
   imageAlt: string;
   isVideo?: boolean;
   videoType?: 'iframe' | 'mp4' | 'webm';
+  description?: string;
 }
 
 interface ProjectDeliverablesProps {
@@ -61,6 +62,11 @@ const ProjectDeliverables = ({
           {deliverables.map((deliverable) => (
             <div key={deliverable.id} className={styles.deliverable}>
               <p className={styles.deliverableLabel}>{deliverable.title}</p>
+              {deliverable.description && (
+                <p className={styles.deliverableDescription}>
+                  {deliverable.description}
+                </p>
+              )}
               {deliverable.isVideo ? (
                 <div className={styles.videoContainer}>
                   {renderVideo(deliverable)}

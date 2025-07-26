@@ -20,7 +20,7 @@ const ChicosSimplySoma: React.FC = () => {
     <PageTransition>
       <ProjectPage>
         <ProjectStage
-          stageImage='/assets/img/work_images/chicos_og_stage.jpg'
+          stageImage='/assets/img/work_images/chicos/chicos_og_stage.jpg'
           backgroundAlt="Chico's FAS Simply Soma subscription service interface"
         />
 
