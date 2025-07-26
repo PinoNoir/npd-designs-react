@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.nickpinodesigns.com/sitemap.xml
+
+# Disallow any admin or private areas (if you have any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all other content
+Allow: /assets/
+Allow: /images/ 
