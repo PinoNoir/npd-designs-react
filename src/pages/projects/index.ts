@@ -9,4 +9,5 @@ export { default as ChicosZoom } from './chicos-zoom/ChicosZoom';
 export { default as GymSync } from './gym-sync/GymSync';
 export { default as Solvably } from './solvably/Solvably';
 export { default as CadenceDesignSystem } from './cadence-design-system/CadenceDesignSystem';
+export { default as StrettoGenaiChatbot } from './stretto-genai-chatbot/StrettoGenaiChatbot';
 export { default as MarineInstitute } from './marine-institute/MarineInstitute';

@@ -13,6 +13,7 @@
 import { Route as rootRoute } from './routes/__root'
 import { Route as SwellLifeImport } from './routes/swell-life'
 import { Route as StrettoInvoicesPaymentsImport } from './routes/stretto-invoices-payments'
+import { Route as StrettoGenaiChatbotImport } from './routes/stretto-genai-chatbot'
 import { Route as StrettoEballotImport } from './routes/stretto-eballot'
 import { Route as SolvablyImport } from './routes/solvably'
 import { Route as SeriousErpImport } from './routes/serious-erp'
@@ -44,6 +45,12 @@ const SwellLifeRoute = SwellLifeImport.update({
 const StrettoInvoicesPaymentsRoute = StrettoInvoicesPaymentsImport.update({
   id: '/stretto-invoices-payments',
   path: '/stretto-invoices-payments',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const StrettoGenaiChatbotRoute = StrettoGenaiChatbotImport.update({
+  id: '/stretto-genai-chatbot',
+  path: '/stretto-genai-chatbot',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -298,6 +305,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StrettoEballotImport
       parentRoute: typeof rootRoute
     }
+    '/stretto-genai-chatbot': {
+      id: '/stretto-genai-chatbot'
+      path: '/stretto-genai-chatbot'
+      fullPath: '/stretto-genai-chatbot'
+      preLoaderRoute: typeof StrettoGenaiChatbotImport
+      parentRoute: typeof rootRoute
+    }
     '/stretto-invoices-payments': {
       id: '/stretto-invoices-payments'
       path: '/stretto-invoices-payments'
@@ -337,6 +351,7 @@ export interface FileRoutesByFullPath {
   '/serious-erp': typeof SeriousErpRoute
   '/solvably': typeof SolvablyRoute
   '/stretto-eballot': typeof StrettoEballotRoute
+  '/stretto-genai-chatbot': typeof StrettoGenaiChatbotRoute
   '/stretto-invoices-payments': typeof StrettoInvoicesPaymentsRoute
   '/swell-life': typeof SwellLifeRoute
 }
@@ -361,6 +376,7 @@ export interface FileRoutesByTo {
   '/serious-erp': typeof SeriousErpRoute
   '/solvably': typeof SolvablyRoute
   '/stretto-eballot': typeof StrettoEballotRoute
+  '/stretto-genai-chatbot': typeof StrettoGenaiChatbotRoute
   '/stretto-invoices-payments': typeof StrettoInvoicesPaymentsRoute
   '/swell-life': typeof SwellLifeRoute
 }
@@ -386,6 +402,7 @@ export interface FileRoutesById {
   '/serious-erp': typeof SeriousErpRoute
   '/solvably': typeof SolvablyRoute
   '/stretto-eballot': typeof StrettoEballotRoute
+  '/stretto-genai-chatbot': typeof StrettoGenaiChatbotRoute
   '/stretto-invoices-payments': typeof StrettoInvoicesPaymentsRoute
   '/swell-life': typeof SwellLifeRoute
 }
@@ -412,6 +429,7 @@ export interface FileRouteTypes {
     | '/serious-erp'
     | '/solvably'
     | '/stretto-eballot'
+    | '/stretto-genai-chatbot'
     | '/stretto-invoices-payments'
     | '/swell-life'
   fileRoutesByTo: FileRoutesByTo
@@ -435,6 +453,7 @@ export interface FileRouteTypes {
     | '/serious-erp'
     | '/solvably'
     | '/stretto-eballot'
+    | '/stretto-genai-chatbot'
     | '/stretto-invoices-payments'
     | '/swell-life'
   id:
@@ -458,6 +477,7 @@ export interface FileRouteTypes {
     | '/serious-erp'
     | '/solvably'
     | '/stretto-eballot'
+    | '/stretto-genai-chatbot'
     | '/stretto-invoices-payments'
     | '/swell-life'
   fileRoutesById: FileRoutesById
@@ -483,6 +503,7 @@ export interface RootRouteChildren {
   SeriousErpRoute: typeof SeriousErpRoute
   SolvablyRoute: typeof SolvablyRoute
   StrettoEballotRoute: typeof StrettoEballotRoute
+  StrettoGenaiChatbotRoute: typeof StrettoGenaiChatbotRoute
   StrettoInvoicesPaymentsRoute: typeof StrettoInvoicesPaymentsRoute
   SwellLifeRoute: typeof SwellLifeRoute
 }
@@ -507,6 +528,7 @@ const rootRouteChildren: RootRouteChildren = {
   SeriousErpRoute: SeriousErpRoute,
   SolvablyRoute: SolvablyRoute,
   StrettoEballotRoute: StrettoEballotRoute,
+  StrettoGenaiChatbotRoute: StrettoGenaiChatbotRoute,
   StrettoInvoicesPaymentsRoute: StrettoInvoicesPaymentsRoute,
   SwellLifeRoute: SwellLifeRoute,
 }
@@ -540,6 +562,7 @@ export const routeTree = rootRoute
         "/serious-erp",
         "/solvably",
         "/stretto-eballot",
+        "/stretto-genai-chatbot",
         "/stretto-invoices-payments",
         "/swell-life"
       ]
@@ -600,6 +623,9 @@ export const routeTree = rootRoute
     },
     "/stretto-eballot": {
       "filePath": "stretto-eballot.tsx"
+    },
+    "/stretto-genai-chatbot": {
+      "filePath": "stretto-genai-chatbot.tsx"
     },
     "/stretto-invoices-payments": {
       "filePath": "stretto-invoices-payments.tsx"

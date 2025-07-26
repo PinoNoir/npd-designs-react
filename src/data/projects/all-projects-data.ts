@@ -4,14 +4,15 @@ export const projects = [
     title: 'Stretto - GenAI Chatbot',
     description:
       'Concept for an AI chatbot for multiple use cases and products using the Vercel AI SDK.',
-    imageUrl: '/assets/img/projects/ecommerce.jpg',
+    imageUrl: '/assets/img/work_images/stretto/stretto_coming_soon.png',
     category: 'AI',
-    tags: ['TypeScript', 'AI', 'React'],
+    tags: ['Vercel AI SDK', 'Next.js'],
+    route: '/stretto-genai-chatbot',
   },
   {
     id: '2',
     title: 'Cadence Design System',
-    description: 'Enterprise atomic design system for React applications with Storybook documentation.',
+    description: 'Atomic design system for enterprise React applications with Storybook documentation.',
     imageUrl: '/assets/img/work_images/stretto/stretto_cds_stage.jpg',
     category: 'Design Systems',
     tags: ['Design Systems', 'React', 'Storybook'],
@@ -22,8 +23,8 @@ export const projects = [
     title: 'Stretto - E-Balloting System',
     description: 'Complete design overhaul of an internal E-Ballot software system for Case Admin.',
     imageUrl: '/assets/img/work_images/stretto/stretto_ebw_stage.jpg',
-    category: 'UX/UI',
-    tags: ['UX', 'UI', 'Research'],
+    category: 'UI/UX',
+    tags: ['UI/UX', 'Research'],
     route: '/stretto-eballot',
   },
   {
@@ -31,8 +32,8 @@ export const projects = [
     title: 'Stretto - Invoices & Payments',
     description: 'Design enhancements of an Invoices & Payments for a cloud based software system.',
     imageUrl: '/assets/img/work_images/stretto/stretto_ip_stage.jpg',
-    category: 'UX/UI',
-    tags: ['UX', 'UI', 'Research'],
+    category: 'UI/UX',
+    tags: ['UI/UX', 'Research'],
     route: '/stretto-invoices-payments',
   },
   {
@@ -40,8 +41,8 @@ export const projects = [
     title: 'Chicos - Shop this Look',
     description: "Interactive outfitting tool for Chico's FAS Inc. flagship online store.",
     imageUrl: '/assets/img/work_images/chicos/chicos_stage.png',
-    category: 'UX/UI',
-    tags: ['UX', 'UI', 'Research'],
+    category: 'UI/UX',
+    tags: ['UI/UX', 'Research'],
     route: '/chicos-shop-this-look',
   },
   {
@@ -50,8 +51,8 @@ export const projects = [
     description:
       "End-to-end subscription service for Soma's line of clothing and accessories.",
     imageUrl: '/assets/img/work_images/chicos/chicos_og_stage.jpg',
-    category: 'UX/UI',
-    tags: ['UX', 'UI', 'Research'],
+    category: 'UI/UX',
+    tags: ['UI/UX', 'Research'],
     route: '/chicos-simply-soma',
   },
   {
@@ -59,8 +60,8 @@ export const projects = [
     title: 'Chicos - Product Zoom',
     description: "Interactive product zoom feature for Chico's FAS Inc. flagship online store.",
     imageUrl: '/assets/img/work_images/chicos/chicos_zoom_stage.png',
-    category: 'UX/UI',
-    tags: ['UX', 'UI', 'Research'],
+    category: 'UI/UX',
+    tags: ['UI/UX', 'Research'],
     route: '/chicos-zoom',
   },
   {
@@ -68,8 +69,8 @@ export const projects = [
     title: 'Serious ERP',
     description: 'Redesign of a SERP software system using Google Material Design principles.',
     imageUrl: '/assets/img/work_images/serp/serp_stage.jpg',
-    category: 'UX/UI',
-    tags: ['UX', 'UI', 'Research', 'Material Design'],
+    category: 'Design Systems',
+    tags: ['UI/UX', 'Design Systems', 'Material Design'],
     route: '/serious-erp',
   },
   {
@@ -77,8 +78,8 @@ export const projects = [
     title: 'Gym Sync',
     description: 'Senior academic project for a gym app connecting personal trainers with clients.',
     imageUrl: '/assets/img/work_images/gym_sync/gym_sync_stage.jpg',
-    category: 'UX/UI',
-    tags: ['UX', 'UI', 'Research', 'Branding'],
+    category: 'UI/UX',
+    tags: ['UI/UX', 'Research', 'Branding'],
     route: '/gym-sync',
   },
   {
@@ -86,8 +87,8 @@ export const projects = [
     title: 'Marine Institute',
     description: 'Concept for a portal used by marine biologists to track new ocean discoveries.',
     imageUrl: '/assets/img/work_images/marine_institute/marine_showcase_2.jpg',
-    category: 'UX/UI',
-    tags: ['UX', 'UI', 'Research', 'Branding'],
+    category: 'UI/UX',
+    tags: ['UI/UX', 'Research', 'Branding'],
     route: '/marine-institute',
   },
   {
@@ -95,8 +96,8 @@ export const projects = [
     title: 'Solvably',
     description: 'UX overhaul for e-learning and authoring software for an Ed-Tech startup.',
     imageUrl: '/assets/img/work_images/massive_u/massive_u_stage.jpg',
-    category: 'UX/UI',
-    tags: ['UX', 'UI', 'Design Systems', 'Ed-Tech'],
+    category: 'Design Systems',
+    tags: ['UI/UX', 'Design Systems', 'Bootstrap'],
     route: '/solvably',
   },
   {
@@ -104,7 +105,7 @@ export const projects = [
     title: 'Miamah Comedy',
     description:
       'Brand concept for a comedy collective in Miami, Florida.',
-    imageUrl: '/assets/img/work_images/miamah/miamah_stage.jpg',
+    imageUrl: '/assets/img/work_images/miamah/miamah_showcase_2.jpg',
     category: 'Branding',
     tags: ['Branding', 'Visual Design'],
     route: '/miamah-comedy',
@@ -114,7 +115,7 @@ export const projects = [
     title: 'Swell Life Magazine',
     description:
       'Surf culture magazine that put a spotlight on Cocoa Beach, Florida.',
-    imageUrl: '/assets/img/work_images/swell_life/swell_life_stage.jpg',
+    imageUrl: '/assets/img/brand_logos/swell_life_logo.png',
     category: 'Branding',
     tags: ['Branding', 'Visual Design'],
     route: '/swell-life',
@@ -124,7 +125,7 @@ export const projects = [
     title: 'Makoto Japanese Steakhouse',
     description:
       'Interior design and illustration project for a Japanese steakhouse in Melbourne, Florida.',
-    imageUrl: '/assets/img/work_images/makoto/makoto_stage.jpg',
+    imageUrl: '/assets/img/brand_logos/makotos_logo.png',
     category: 'Branding',
     tags: ['Branding', 'Visual Design'],
     route: '/makoto',
@@ -134,7 +135,7 @@ export const projects = [
     title: 'Holy City Trim Shop',
     description:
       'Brand concept for a trim shop in Charleston, South Carolina.',
-    imageUrl: '/assets/img/work_images/holy_city/holy_city_stage.jpg',
+    imageUrl: '/assets/img/brand_logos/holy_city_trim_shop_logo.png',
     category: 'Branding',
     tags: ['Branding', 'Visual Design'],
     route: '/holy-city',
@@ -144,7 +145,7 @@ export const projects = [
     title: 'Hawaii Wildlife Fund',
     description:
       'Rebranding and visual identity design for a non-profit organization.',
-    imageUrl: '/assets/img/work_images/hawaii_wildlife_fund/hawaii_stage.jpg',
+    imageUrl: '/assets/img/work_images/hawaii_wildlife_fund/hawaii_link.jpg',
     category: 'Branding',
     tags: ['Branding', 'UI Design', 'Development'],
     route: '/hawaii-wildlife-fund',

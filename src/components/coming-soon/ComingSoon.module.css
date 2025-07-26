@@ -1,0 +1,30 @@
+.comingSoon {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--gray-11);
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  transition: var(--transition-time-default);
+}
+
+.comingSoon:hover {
+  opacity: 1;
+  color: var(--gray-12);
+}
+
+.small {
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-body);
+}
+
+.medium {
+  font-size: var(--font-size-body);
+  line-height: var(--font-line-height-body);
+}
+
+.large {
+  font-size: var(--font-size-h3);
+  line-height: var(--font-line-height-body);
+} 
