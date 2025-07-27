@@ -12,6 +12,8 @@ function WorkComponent() {
       <Hero
         title="Projects"
         subtitle="An overview of the design & development projects I've worked on."
+        showProjectsButton={false}
+        showContactButton={true}
       />
       <PortfolioGrid projects={projects} />
       <Footer />

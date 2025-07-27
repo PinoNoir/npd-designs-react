@@ -21,4 +21,7 @@ export { default as Input } from './input/Input';
 export { default as TextArea } from './textarea/TextArea';
 export { default as ComingSoon } from './coming-soon/ComingSoon';
 export { default as Error } from '../pages/error/Error';
+export { default as PasswordModal } from './password-modal/PasswordModal';
+export { default as ProtectedProject } from './protected-project/ProtectedProject';
+export { default as Navbar } from './navbar/Navbar';
 export { ThemeProvider, useTheme } from './theme-provider/ThemeProvider';

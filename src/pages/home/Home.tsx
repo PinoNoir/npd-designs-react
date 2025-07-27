@@ -26,7 +26,7 @@ const Home = () => {
       />
 
       <Hero
-        title='Bridging Design & Development for Seamless Experiences'
+        title='Unifying Design & Code to Build Better Products, Faster.'
         subtitle='UX engineer specializing in design systems & frontend development'
       />
 

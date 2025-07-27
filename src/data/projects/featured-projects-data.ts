@@ -15,7 +15,7 @@ export const featuredProjects: Record<string, FeaturedProject> = {
     overline: 'Featured Work',
     client: 'Stretto',
     projectName: 'Cadence Design System',
-    problem: 'Before the Cadence Design System (CDS), Stretto\'s engineering teams faced significant friction when building UI. Each product team maintained its own implementation of common components — buttons, modals, inputs — often with inconsistent styling, behaviors, and accessibility. This not only created visual fragmentation across our applications, but also led to redundant work, increased QA burden, and difficulty onboarding new engineers.',
+    problem: 'Before Cadence Design System (CDS), Stretto\'s engineering teams faced significant friction when building UI. Each product team maintained its own implementation of common components — buttons, modals, inputs — often with inconsistent styling, behaviors, and accessibility. This not only created visual fragmentation across our applications, but also led to redundant work, increased QA burden, and difficulty onboarding new engineers.',
     outcome: 'By establishing a shared set of design tokens, reusable typed components, and centralized documentation through Storybook, CDS enabled teams to move faster while delivering a more polished and unified user experience. Over time, it matured into an essential part of our product development workflow — reducing rework, improving accessibility compliance, and giving designers and engineers a common language.',
     buttonText: 'View Case Study',
     buttonLink: '/cadence-design-system',

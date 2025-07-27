@@ -38,20 +38,21 @@
   font-size: 0.875rem;
   font-weight: var(--font-weight-medium);
   cursor: pointer;
-  border: 1px solid var(--blue-4);
+  border: 1px solid var(--blue-6);
   transition:
     background-color 300ms ease-in-out,
     color 300ms ease-in-out;
 
   &:hover {
-    background-color: var(--gray-a2);
+    color: var(--blue-11);
+    background-color: var(--blue-6);
   }
 }
 
 .categoryButtonActive {
-  background-color: var(--blue-a2);
-  color: var(--blue-11);
-  border: 1px solid var(--blue-6);
+  background-color: var(--blue-3);
+  color: var(--blue-12);
+  border: 1px solid var(--blue-11);
 
   &:hover {
     background-color: var(--blue-a4);

@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
 
         <div className={styles.copyrightContainer}>
           <p className={styles.copyright}>
-            &copy; {currentYear} NPD Designs. All rights reserved.
+            &copy; {currentYear} Nick Pino Designs LLC. All rights reserved.
           </p>
         </div>
       </div>

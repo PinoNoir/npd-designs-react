@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Hero from '../../components/hero/Hero';
 import styles from './Contact.module.css';
-import { Button, Input, TextArea } from '@/components';
+import { Button, Footer, Input, TextArea } from '@/components';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -59,10 +59,9 @@ const Contact: React.FC = () => {
         title='Contact'
         subtitle='Thank you for checking out my portfolio!'
         description=" I'm open to freelancing opportunities. If you have a project in mind or are simply interested in finding out more, get in touch and let's get things moving."
-        overlayImage='/assets/img/profile1.jpg'
-        noBackground
-        overlayBlendMode='normal'
-        overlayOpacity={1}
+        backgroundImage='/assets/img/profile1.jpg'
+        showProjectsButton={true}
+        showContactButton={false}
       />
 
       {/* Contact Section */}
@@ -157,6 +156,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

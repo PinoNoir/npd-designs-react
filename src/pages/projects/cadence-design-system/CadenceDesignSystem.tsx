@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer, PageTransition } from '@/components';
+import { Footer, PageTransition, ProtectedProject } from '@/components';
 import {
   NextLink,
   ProjectOverview,
@@ -19,8 +19,9 @@ import { DownloadIcon } from 'lucide-react';
 
 const CadenceDesignSystem: React.FC = () => {
   return (
-    <PageTransition>
-      <ProjectPage>
+    <ProtectedProject projectName="Cadence Design System" password="stretto2024">
+      <PageTransition>
+        <ProjectPage>
         <ProjectStage
           stageImage='/assets/img/work_images/stretto/stretto_cds_stage.jpg'
           backgroundAlt='Cadence Design System showcase'
@@ -75,6 +76,7 @@ const CadenceDesignSystem: React.FC = () => {
       </ProjectPage>
       <Footer />
     </PageTransition>
+    </ProtectedProject>
   );
 };
 

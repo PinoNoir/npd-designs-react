@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ProjectCard from '../project-card/ProjectCard';
 import styles from './PortfolioGrid.module.css';
+import clsx from 'clsx';
 
 interface Project {
   id: string;
@@ -38,11 +39,11 @@ const PortfolioGrid: React.FC<PortfolioGridProps> = ({ projects }) => {
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`${styles.categoryButton} ${
-              selectedCategory === category
-                ? styles.categoryButtonActive
-                : styles.categoryButtonInactive
-            }`}
+            className={clsx(
+              styles.categoryButton,
+              selectedCategory === category && styles.categoryButtonActive,
+              selectedCategory !== category && styles.categoryButtonInactive
+            )}
           >
             {category.charAt(0).toUpperCase() + category.slice(1)}
           </button>

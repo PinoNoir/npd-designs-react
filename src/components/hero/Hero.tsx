@@ -1,15 +1,19 @@
 import React from 'react';
 import Button from '../button/Button';
 import styles from './Hero.module.css';
+import clsx from 'clsx';
 
 interface HeroProps {
   title: string;
   subtitle?: string;
   description?: string;
   overlayImage?: string;
+  backgroundImage?: string;
   noBackground?: boolean;
   overlayBlendMode?: React.CSSProperties['mixBlendMode'];
   overlayOpacity?: number;
+  showProjectsButton?: boolean;
+  showContactButton?: boolean;
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -17,12 +21,18 @@ const Hero: React.FC<HeroProps> = ({
   subtitle,
   description,
   overlayImage,
+  backgroundImage,
   noBackground,
   overlayBlendMode = 'overlay',
   overlayOpacity = 0.3,
+  showProjectsButton = true,
+  showContactButton = true,
 }) => {
   return (
-    <section className={`${styles.container} ${noBackground ? styles.noBackground : ''}`}>
+    <section 
+      className={clsx(styles.container, noBackground && styles.noBackground)}
+      style={backgroundImage ? { backgroundImage: `url(${backgroundImage})` } : undefined}
+    >
       {/* Optional overlay image */}
       {overlayImage && (
         <div
@@ -53,10 +63,14 @@ const Hero: React.FC<HeroProps> = ({
           {description}
         </p>
         <div className={styles.buttonContainer}>
-          <Button href='/projects'>Explore Work</Button>
-          <Button variant='secondary' href='/contact'>
-            Contact Me
-          </Button>
+          {showProjectsButton && (
+            <Button href='/projects'>Explore Work</Button>
+          )}
+          {showContactButton && (
+            <Button variant='secondary' href='/contact'>
+              Contact Me
+            </Button>
+          )}
         </div>
       </div>
     </section>

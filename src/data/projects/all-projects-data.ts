@@ -17,6 +17,7 @@ export const projects = [
     category: 'Design Systems',
     tags: ['Design Systems', 'React', 'Storybook'],
     route: '/cadence-design-system',
+    password: 'stretto2024',
   },
   {
     id: '3',
@@ -26,6 +27,7 @@ export const projects = [
     category: 'UI/UX',
     tags: ['UI/UX', 'Research'],
     route: '/stretto-eballot',
+    password: 'stretto2024',
   },
   {
     id: '4',
@@ -35,6 +37,7 @@ export const projects = [
     category: 'UI/UX',
     tags: ['UI/UX', 'Research'],
     route: '/stretto-invoices-payments',
+    password: 'stretto2024',
   },
   {
     id: '5',

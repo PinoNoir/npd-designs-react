@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   padding: 5rem;
-  min-height: 80vh;
+  min-height: 60vh;
   margin: 0 auto;
   position: relative;
   background-size: 200% 200%;
@@ -26,6 +26,30 @@
 
 .noBackground::after {
   display: none !important;
+}
+
+/* Background image styles */
+.container[style*='background-image'] {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  position: relative;
+}
+
+.container[style*='background-image']::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.container[style*='background-image'] .textContainer {
+  position: relative;
+  z-index: 2;
 }
 
 /* Hero image overlay with blend mode */

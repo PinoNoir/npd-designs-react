@@ -1,5 +1,5 @@
 import styles from './ProjectCard.module.css';
-import { ArrowRightIcon } from 'lucide-react';
+import { ArrowRightIcon, Lock } from 'lucide-react'; 
 import { Button } from '@/components';
 
 interface ProjectCardProps {
@@ -10,6 +10,7 @@ interface ProjectCardProps {
   image: string;
   tags: string[];
   route?: string;
+  password?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -19,11 +20,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
   tags,
   route,
+  password,
 }) => {
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
         <img src={image} alt={category} className={styles.image} />
+        {password && (
+          <div className={styles.passwordIndicator}>
+            <Lock size={16} />
+            <span>Protected</span>
+          </div>
+        )}
       </div>
       <div className={styles.content}>
         <h3 className={styles.title}>{title}</h3>

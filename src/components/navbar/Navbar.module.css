@@ -13,9 +13,15 @@
 }
 
 .navbarLogo {
+  cursor: pointer;
   height: 32px;
   width: auto;
   fill: var(--gray-12);
+  transition: fill 300ms ease-in-out;
+
+  &:hover {
+    fill: var(--primary-100);
+  }
 }
 
 .navbarMenu {
@@ -56,8 +62,8 @@
 }
 
 .navbarMenu a.active {
-    color: var(--blue-12);
-    background-color: var(--blue-7);
+  color: var(--blue-12);
+  background-color: var(--blue-7);
 }
 
 .navbarRight {
@@ -150,8 +156,6 @@
     transform: translateX(0);
   }
 }
-
-
 
 @media (max-width: 768px) {
   .navbar {

@@ -58,7 +58,7 @@ export const cadenceDesignSystemSteps: ProjectStep[] = [
   },
 ];
 
-export const cadenceDesignSystemOverview = `Before the Cadence Design System (CDS), Stretto’s engineering teams faced significant friction when building UI. Each product team maintained its own implementation of common components — buttons, modals, inputs — often with inconsistent styling, behaviors, and accessibility. This not only created visual fragmentation across our applications, but also led to redundant work, increased QA burden, and difficulty onboarding new engineers.
+export const cadenceDesignSystemOverview = `Before Cadence Design System (CDS), Stretto’s engineering teams faced significant friction when building UI. Each product team maintained its own implementation of common components — buttons, modals, inputs — often with inconsistent styling, behaviors, and accessibility. This not only created visual fragmentation across our applications, but also led to redundant work, increased QA burden, and difficulty onboarding new engineers.
 
 There was no single source of truth between design and development. Designers would hand off Figma files that developers interpreted differently across codebases, resulting in a patchwork UI and a poor user experience.
 
