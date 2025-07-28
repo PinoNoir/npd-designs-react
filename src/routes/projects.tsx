@@ -12,6 +12,7 @@ function WorkComponent() {
       <Hero
         title="Projects"
         subtitle="An overview of the design & development projects I've worked on."
+        description="I'm not your average pixel pusher. I've worked on a wide range of projects, from small bespoke websites to large enterprise applications as a designer and developer."
         showProjectsButton={false}
         showContactButton={true}
       />

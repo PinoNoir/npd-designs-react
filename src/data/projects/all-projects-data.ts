@@ -109,7 +109,7 @@ export const projects = [
     description:
       'Brand concept for a comedy collective in Miami, Florida.',
     imageUrl: '/assets/img/work_images/miamah/miamah_showcase_2.jpg',
-    category: 'Branding',
+    category: 'Visual Design',
     tags: ['Branding', 'Visual Design'],
     route: '/miamah-comedy',
   },
@@ -119,7 +119,7 @@ export const projects = [
     description:
       'Surf culture magazine that put a spotlight on Cocoa Beach, Florida.',
     imageUrl: '/assets/img/brand_logos/swell_life_logo.png',
-    category: 'Branding',
+    category: 'Visual Design',
     tags: ['Branding', 'Visual Design'],
     route: '/swell-life',
   },
@@ -129,7 +129,7 @@ export const projects = [
     description:
       'Interior design and illustration project for a Japanese steakhouse in Melbourne, Florida.',
     imageUrl: '/assets/img/brand_logos/makotos_logo.png',
-    category: 'Branding',
+    category: 'Visual Design',
     tags: ['Branding', 'Visual Design'],
     route: '/makoto',
   },
@@ -139,7 +139,7 @@ export const projects = [
     description:
       'Brand concept for a trim shop in Charleston, South Carolina.',
     imageUrl: '/assets/img/brand_logos/holy_city_trim_shop_logo.png',
-    category: 'Branding',
+    category: 'Visual Design',
     tags: ['Branding', 'Visual Design'],
     route: '/holy-city',
   },
@@ -149,7 +149,7 @@ export const projects = [
     description:
       'Rebranding and visual identity design for a non-profit organization.',
     imageUrl: '/assets/img/work_images/hawaii_wildlife_fund/hawaii_link.jpg',
-    category: 'Branding',
+    category: 'Visual Design',
     tags: ['Branding', 'UI Design', 'Development'],
     route: '/hawaii-wildlife-fund',
   },

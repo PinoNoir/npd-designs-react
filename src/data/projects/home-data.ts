@@ -8,8 +8,7 @@ export const homeData = {
     "description": "UX engineer specializing in design systems & frontend development, crafting digital experiences that deliver results.",
     "sameAs": [
       "https://www.linkedin.com/in/nickpinodesigns",
-      "https://www.behance.net/nickpinodesigns",
-      "https://dribbble.com/nickpinodesigns"
+      "https://www.behance.net/nickpinodesigns"
     ],
     "knowsAbout": [
       "User Experience Design",
