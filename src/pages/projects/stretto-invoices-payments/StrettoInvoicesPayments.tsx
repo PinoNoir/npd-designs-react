@@ -19,7 +19,7 @@ const StrettoInvoicesPayments: React.FC = () => {
   return (
     <ProtectedProject
       projectName='Stretto - Invoices & Payments'
-      password='stretto2024'
+      password='pino2025'
     >
       <PageTransition>
         <ProjectPage>

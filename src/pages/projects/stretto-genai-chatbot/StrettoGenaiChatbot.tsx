@@ -18,7 +18,7 @@ const StrettoGenaiChatbot: React.FC = () => {
   return (
     <ProtectedProject
       projectName='Stretto - GenAI Chatbot'
-      password='stretto2024'
+      password='pino2025'
     >
       <PageTransition>
         <ProjectPage>

@@ -20,7 +20,7 @@ const StrettoEballot: React.FC = () => {
   return (
     <ProtectedProject
       projectName='Stretto - E-Ballot System'
-      password='stretto2024'
+      password='pino2025'
     >
       <PageTransition>
         <ProjectPage>

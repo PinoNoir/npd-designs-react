@@ -21,7 +21,7 @@ const CadenceDesignSystem: React.FC = () => {
   return (
     <ProtectedProject
       projectName='Cadence Design System'
-      password='stretto2024'
+      password='pino2025'
     >
       <PageTransition>
         <ProjectPage>
