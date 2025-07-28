@@ -7,7 +7,7 @@
     "typecheck": "tsc --noEmit",
     "generate-routes": "tsr generate",
     "watch-routes": "tsr watch",
-    "build": "pnpm generate-routes && pnpm vite build",
+    "build": "rm -rf dist && pnpm generate-routes && pnpm vite build --emptyOutDir",
     "dev": "vite dev",
     "fix": "pnpm lint && pnpm prettier",
     "lint": "eslint . --ext js,jsx --fix --report-unused-disable-directives --max-warnings 0",
