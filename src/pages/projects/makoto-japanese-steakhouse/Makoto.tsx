@@ -15,7 +15,7 @@ import {
 import { getProjectNavigation } from '@/utils/project-navigation';
 
 const Makoto: React.FC = () => {
-  const navigation = getProjectNavigation('/makoto-japanese-steakhouse');
+  const navigation = getProjectNavigation('/makoto');
   return (
     <>
       <ProjectNavbar

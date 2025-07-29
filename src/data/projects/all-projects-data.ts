@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: '1',
-    title: 'Stretto - GenAI Chatbot',
+    title: 'Stretto - Gen AI Chatbot',
     description:
       'Concept for an AI chatbot for multiple use cases and products using the Vercel AI SDK.',
     imageUrl: '/assets/img/work_images/stretto/stretto_coming_soon.png',
@@ -11,7 +11,7 @@ export const projects = [
   },
   {
     id: '2',
-    title: 'Stretto - Cadence Design System',
+    title: 'Stretto - CDS',
     description: 'Atomic design system for enterprise React applications with Storybook documentation.',
     imageUrl: '/assets/img/work_images/stretto/stretto_cds_stage.jpg',
     category: 'Design Systems',

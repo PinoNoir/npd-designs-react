@@ -22,7 +22,7 @@ import {
 import { getProjectNavigation } from '@/utils/project-navigation';
 
 const SwellLife: React.FC = () => {
-  const navigation = getProjectNavigation('/swell-life-magazine');
+  const navigation = getProjectNavigation('/swell-life');
 
   return (
     <>

@@ -19,7 +19,7 @@ const StrettoGenaiChatbot: React.FC = () => {
   const navigation = getProjectNavigation('/stretto-genai-chatbot');
 
   return (
-    <ProtectedProject projectName='Stretto - GenAI Chatbot' password='pino2025'>
+    <ProtectedProject projectName='Stretto - Gen AI Chatbot' password='pino2025'>
       <ProjectNavbar
         currentProject={navigation.current.title}
         nextProject={navigation.next}
@@ -29,12 +29,12 @@ const StrettoGenaiChatbot: React.FC = () => {
         <ProjectPage>
           <ProjectStage
             stageImage='/assets/img/work_images/stretto/stretto_gen_ai_stage.png'
-            backgroundAlt='Stretto GenAI Chatbot project'
+            backgroundAlt='Stretto Gen AI Chatbot project'
           />
 
           <ProjectOverview
-            projectName='Stretto - GenAI Chatbot'
-            projectType='AI | TypeScript | React | Vercel AI SDK'
+            projectName='Stretto - Gen AI Chatbot'
+            projectType='TypeScript | React | Vercel AI SDK'
             projectRole='Lead Developer'
             projectSoftware='Cursor | Vercel'
             projectDescription='A concept for an AI chatbot designed to handle multiple use cases and products using the Vercel AI SDK. This project explores the integration of artificial intelligence to enhance user interactions and streamline processes across various applications.'
@@ -51,7 +51,7 @@ const StrettoGenaiChatbot: React.FC = () => {
               />
               <p className={styles.description}>
                 This project is currently in development. Check back soon for
-                updates on the Stretto GenAI Chatbot implementation.
+                updates on the Stretto Gen AI Chatbot implementation.
               </p>
             </div>
           </div>
