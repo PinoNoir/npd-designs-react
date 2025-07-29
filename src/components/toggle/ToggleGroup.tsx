@@ -1,5 +1,5 @@
 import React from 'react';
-import * as ToggleGroupPrimitive from '@radix-ui/react-toggle-group';
+import * as Switch from '@radix-ui/react-switch';
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 import styles from './ToggleGroup.module.css';
 
@@ -9,20 +9,22 @@ interface ToggleProps {
 }
 
 const Toggle: React.FC<ToggleProps> = ({ onValueChange, value }) => {
+  const isChecked = value === 'right';
+
+  const handleToggle = (checked: boolean) => {
+    onValueChange(checked ? 'right' : 'left');
+  };
+
   return (
-    <ToggleGroupPrimitive.Root
-      className={styles.toggleGroup}
-      type='single'
-      value={value}
-      onValueChange={onValueChange}
+    <Switch.Root
+      className={styles.switchRoot}
+      checked={isChecked}
+      onCheckedChange={handleToggle}
     >
-      <ToggleGroupPrimitive.Item value='left' className={styles.toggleItem}>
-        <SunIcon />
-      </ToggleGroupPrimitive.Item>
-      <ToggleGroupPrimitive.Item value='right' className={styles.toggleItem}>
-        <MoonIcon />
-      </ToggleGroupPrimitive.Item>
-    </ToggleGroupPrimitive.Root>
+      <Switch.Thumb className={styles.switchThumb}>
+        {isChecked ? <MoonIcon /> : <SunIcon />}
+      </Switch.Thumb>
+    </Switch.Root>
   );
 };
 

@@ -51,7 +51,7 @@ const Navbar = () => {
         <div className={styles.navbarRight}>
           <div className={styles.themeToggle}>
             <Toggle
-              value={theme === 'dark' ? 'right' : 'left'}
+              value={theme === 'dark-theme' ? 'right' : 'left'}
               onValueChange={() => {
                 toggleTheme();
               }}

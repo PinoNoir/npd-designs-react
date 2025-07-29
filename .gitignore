@@ -2,6 +2,11 @@
 .DS_Store
 *.local
 *.log*
+.env
+.env.local
+.env.development
+.env.production
+.icloud/
 
 # Dist
 node_modules

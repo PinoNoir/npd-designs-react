@@ -1,10 +1,11 @@
+export { default as Button } from './button/Button';
+export { default as Dropdown } from './dropdown/Dropdown';
+export { default as Divider } from './divider/Divider';
+export { default as ExpertiseCard } from './expertise-card/ExpertiseCard';
 export { default as Banner } from './banner/Banner';
 export { default as FeatureCard } from './feature-card/FeatureCard'
 export { default as FeatureImage } from './featured-image/FeatureImage'
 export { default as FeaturedSection } from './featured-section/FeaturedSection';
-export { default as Button } from './button/Button';
-export { default as Dropdown } from './dropdown/Dropdown';
-export { default as Divider } from './divider/Divider';
 export { default as Hero } from './hero/Hero';
 export { default as PortfolioGrid } from './portfolio-grid/PortfolioGrid';
 export { default as ProjectCard } from './project-card/ProjectCard';

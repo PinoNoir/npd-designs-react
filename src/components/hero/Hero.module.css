@@ -103,6 +103,7 @@
 .subtitle {
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-medium);
+  line-height: 1.2;
   margin-block-end: var(--space-16);
   color: var(--secondary-100);
 }
