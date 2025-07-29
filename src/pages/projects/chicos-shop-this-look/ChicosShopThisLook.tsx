@@ -1,7 +1,6 @@
 import React from 'react';
-import { Footer, PageTransition } from '@/components';
+import { Footer, PageTransition, ProjectNavbar } from '@/components';
 import {
-  NextLink,
   ProjectOverview,
   ProjectProcess,
   ProjectStage,
@@ -14,11 +13,20 @@ import {
   chicosShopThisLookProblems,
   chicosShopThisLookGoals,
 } from '@/data/projects/chicos-stl-data';
+import { getProjectNavigation } from '@/utils/project-navigation';
 
 const ChicosShopThisLook: React.FC = () => {
+  const navigation = getProjectNavigation('/chicos-shop-this-look');
+  
   return (
-    <PageTransition>
-      <ProjectPage>
+    <>
+      <ProjectNavbar
+        currentProject={navigation.current.title}
+        nextProject={navigation.next}
+        previousProject={navigation.previous}
+      />
+      <PageTransition>
+        <ProjectPage>
         <ProjectStage
           stageImage='/assets/img/work_images/chicos/chicos_stage.png'
           backgroundAlt="Chico's FAS retail environment showcasing the Shop This Look feature"
@@ -51,15 +59,10 @@ const ChicosShopThisLook: React.FC = () => {
           deliverables={chicosShopThisLookDeliverables}
           sectionTitle='Project Deliverables'
         />
-
-        <NextLink
-          label="Chico's FAS - Simply Soma Subscription Service"
-          projectName='Go To Project'
-          link='/chicos-simply-soma'
-        />
       </ProjectPage>
+      </PageTransition>
       <Footer />
-    </PageTransition>
+    </>
   );
 };
 

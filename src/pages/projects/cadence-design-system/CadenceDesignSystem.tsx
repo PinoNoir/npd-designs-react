@@ -1,7 +1,6 @@
 import React from 'react';
-import { Footer, PageTransition, ProtectedProject } from '@/components';
+import { Footer, PageTransition, ProtectedProject, ProjectNavbar } from '@/components';
 import {
-  NextLink,
   ProjectOverview,
   ProjectProcess,
   ProjectStage,
@@ -14,27 +13,36 @@ import {
   cadenceDesignSystemOverview,
   cadenceDesignSystemSteps,
 } from '@/data/projects/cadence-design-system-data';
+import { getProjectNavigation } from '@/utils/project-navigation';
 import styles from './CadenceDesignSystem.module.css';
 import { DownloadIcon } from 'lucide-react';
 
 const CadenceDesignSystem: React.FC = () => {
+  const navigation = getProjectNavigation('/cadence-design-system');
+  
   return (
     <ProtectedProject
       projectName='Cadence Design System'
       password='pino2025'
     >
-      <PageTransition>
-        <ProjectPage>
+      <>
+        <ProjectNavbar
+          currentProject={navigation.current.title}
+          nextProject={navigation.next}
+          previousProject={navigation.previous}
+        />
+        <PageTransition>
+          <ProjectPage>
           <ProjectStage
             stageImage='/assets/img/work_images/stretto/stretto_cds_stage.jpg'
             backgroundAlt='Cadence Design System showcase'
           />
 
           <ProjectOverview
-            projectName='Stretto'
-            projectType='Storybook | React | Typescript | UI Design | Documentation'
+            projectName='Stretto - Cadence Design System'
+            projectType='React | Typescript | MDX'
             projectRole='Lead UX Engineer'
-            projectSoftware='Figma | VS Code'
+            projectSoftware='Figma | VS Code | Storybook'
             projectDescription='Cadence Design System is a comprehensive library of reusable components, meticulously crafted to ensure consistency and efficiency across multiple React applications. This system not only enhances the development process but also guarantees cohesive ui design, styling, and user experience, aligning with my commitment to quality and innovation.'
           />
 
@@ -70,15 +78,10 @@ const CadenceDesignSystem: React.FC = () => {
             deliverables={cadenceDesignSystemDeliverables}
             sectionTitle='Project Deliverables'
           />
-
-          <NextLink
-            label='Solvably'
-            projectName='Go To Project'
-            link='/solvably'
-          />
         </ProjectPage>
+        </PageTransition>
         <Footer />
-      </PageTransition>
+      </>
     </ProtectedProject>
   );
 };

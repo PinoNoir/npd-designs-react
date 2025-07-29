@@ -3,9 +3,9 @@ import { Deliverable, ProjectStep } from './types';
 export const hawaiiWildlifeFundDeliverables: Deliverable[] = [
   {
     id: 'hawaii-1',
-    title: 'Style Guide Layout',
+    title: 'Style Guide',
     imageSrc: '/assets/img/work_images/hawaii_wildlife_fund/hawaii_showcase_3.jpg',
-    imageAlt: 'Hawaii Wildlife Fund Style Guide layout',
+    imageAlt: 'Hawaii Wildlife Fund Style Guide',
   },
   {
     id: 'hawaii-2',

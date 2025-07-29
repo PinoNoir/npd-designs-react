@@ -1,7 +1,6 @@
 import React from 'react';
-import { Footer, PageTransition } from '@/components';
+import { Footer, PageTransition, ProjectNavbar } from '@/components';
 import {
-  NextLink,
   ProjectOverview,
   ProjectProcess,
   ProjectStage,
@@ -14,11 +13,20 @@ import {
   chicosSomaProblems,
   chicosSomaGoals,
 } from '@/data/projects/chicos-soma-data';
+import { getProjectNavigation } from '@/utils/project-navigation';
 
 const ChicosSimplySoma: React.FC = () => {
+  const navigation = getProjectNavigation('/chicos-simply-soma');
+  
   return (
-    <PageTransition>
-      <ProjectPage>
+    <>
+      <ProjectNavbar
+        currentProject={navigation.current.title}
+        nextProject={navigation.next}
+        previousProject={navigation.previous}
+      />
+      <PageTransition>
+        <ProjectPage>
         <ProjectStage
           stageImage='/assets/img/work_images/chicos/chicos_og_stage.jpg'
           backgroundAlt="Chico's FAS Simply Soma subscription service interface"
@@ -46,15 +54,10 @@ const ChicosSimplySoma: React.FC = () => {
           deliverables={chicosSomaDeliverables}
           sectionTitle='Design Callouts'
         />
-
-        <NextLink
-          label="Chico's FAS - Product Zoom UX Enhancements"
-          projectName='Go To Project'
-          link='/chicos-zoom'
-        />
       </ProjectPage>
+      </PageTransition>
       <Footer />
-    </PageTransition>
+    </>
   );
 };
 

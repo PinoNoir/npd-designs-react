@@ -1,7 +1,6 @@
 import React from 'react';
-import { Footer, PageTransition } from '@/components';
+import { Footer, PageTransition, ProjectNavbar } from '@/components';
 import {
-  NextLink,
   ProjectOverview,
   ProjectProcess,
   ProjectStage,
@@ -13,9 +12,18 @@ import {
   holyCityDeliverables,
   holyCitySteps,
 } from '@/data/projects/holy-city-data';
+import { getProjectNavigation } from '@/utils/project-navigation';
 
 const HolyCity: React.FC = () => {
+  const navigation = getProjectNavigation('/holy-city-trim-shop');
+  
   return (
+    <>
+      <ProjectNavbar
+        currentProject={navigation.current.title}
+        nextProject={navigation.next}
+        previousProject={navigation.previous}
+      />
     <PageTransition>
       <ProjectPage>
         <ProjectStage
@@ -45,11 +53,10 @@ const HolyCity: React.FC = () => {
           deliverables={holyCityDeliverables}
           sectionTitle='Project Deliverables'
         />
-
-        <NextLink label='Hawaii Wildlife Fund' projectName='Go To Project' link='/hawaii-wildlife-fund' />
       </ProjectPage>
+      </PageTransition>
       <Footer />
-    </PageTransition>
+    </>
   );
 };
 

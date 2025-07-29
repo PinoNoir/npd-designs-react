@@ -4,22 +4,27 @@ import {
   PageTransition,
   ComingSoon,
   ProtectedProject,
+  ProjectNavbar,
 } from '@/components';
 import {
-  NextLink,
   ProjectOverview,
   ProjectStage,
   ProjectDivider,
   ProjectPage,
 } from '../project-components';
 import styles from './StrettoGenaiChatbot.module.css';
+import { getProjectNavigation } from '@/utils/project-navigation';
 
 const StrettoGenaiChatbot: React.FC = () => {
+  const navigation = getProjectNavigation('/stretto-genai-chatbot');
+
   return (
-    <ProtectedProject
-      projectName='Stretto - GenAI Chatbot'
-      password='pino2025'
-    >
+    <ProtectedProject projectName='Stretto - GenAI Chatbot' password='pino2025'>
+      <ProjectNavbar
+        currentProject={navigation.current.title}
+        nextProject={navigation.next}
+        previousProject={navigation.previous}
+      />
       <PageTransition>
         <ProjectPage>
           <ProjectStage
@@ -50,15 +55,9 @@ const StrettoGenaiChatbot: React.FC = () => {
               </p>
             </div>
           </div>
-
-          <NextLink
-            label='Cadence Design System'
-            projectName='Go To Project'
-            link='/cadence-design-system'
-          />
         </ProjectPage>
-        <Footer />
       </PageTransition>
+      <Footer />
     </ProtectedProject>
   );
 };

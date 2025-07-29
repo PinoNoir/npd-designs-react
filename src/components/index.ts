@@ -25,4 +25,11 @@ export { default as Error } from '../pages/error/Error';
 export { default as PasswordModal } from './password-modal/PasswordModal';
 export { default as ProtectedProject } from './protected-project/ProtectedProject';
 export { default as Navbar } from './navbar/Navbar';
+export { default as ProjectNavbar } from './project-navbar/ProjectNavbar';
 export { ThemeProvider, useTheme } from './theme-provider/ThemeProvider';
+export {
+  AccordionRoot,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from './accordion/Accordion';

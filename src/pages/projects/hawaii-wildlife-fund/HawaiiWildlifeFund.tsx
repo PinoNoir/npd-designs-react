@@ -1,7 +1,6 @@
 import React from 'react';
-import { Footer, PageTransition } from '@/components';
+import { Footer, PageTransition, ProjectNavbar } from '@/components';
 import {
-  NextLink,
   ProjectOverview,
   ProjectProcess,
   ProjectStage,
@@ -13,9 +12,18 @@ import {
   hawaiiWildlifeFundDeliverables,
   hawaiiWildlifeFundSteps,
 } from '@/data/projects/hawaii-wildlife-fund-data';
+import { getProjectNavigation } from '@/utils/project-navigation';
 
 const HawaiiWildlifeFund: React.FC = () => {
+  const navigation = getProjectNavigation('/hawaii-wildlife-fund');
+  
   return (
+    <>
+      <ProjectNavbar
+        currentProject={navigation.current.title}
+        nextProject={navigation.next}
+        previousProject={navigation.previous}
+      />
     <PageTransition>
       <ProjectPage>
         <ProjectStage
@@ -44,15 +52,10 @@ const HawaiiWildlifeFund: React.FC = () => {
           deliverables={hawaiiWildlifeFundDeliverables}
           sectionTitle='Project Deliverables'
         />
-
-        <NextLink
-          label='Cadence Design System'
-          projectName='Go To Project'
-          link='/cadence-design-system'
-        />
       </ProjectPage>
+      </PageTransition>
       <Footer />
-    </PageTransition>
+    </>
   );
 };
 

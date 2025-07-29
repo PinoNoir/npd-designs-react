@@ -1,5 +1,12 @@
 import React from 'react';
-import { Footer, PageTransition } from '@/components';
+import {
+  Footer,
+  PageTransition,
+  AccordionRoot,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from '@/components';
 import { DownloadIcon } from 'lucide-react';
 import styles from './Resume.module.css';
 
@@ -14,7 +21,7 @@ const Resume: React.FC = () => {
               download='Nick_Pino_Resume.pdf'
               className={styles.downloadButton}
             >
-              Download PDF <DownloadIcon size={18} /> 
+              Download PDF <DownloadIcon size={18} />
             </a>
           </div>
           <div className={styles.header}>
@@ -36,68 +43,65 @@ const Resume: React.FC = () => {
               </div>
             </div>
           </div>
-
-          <div className={styles.resumeGrid}>
-            {/* Left Column */}
-            <div className={styles.leftCol}>
-              <section className={styles.section}>
-                <h3 className={styles.sectionTitle}>Overview</h3>
+          <AccordionRoot type='single' defaultValue='overview' collapsible>
+            <AccordionItem value='overview'>
+              <AccordionTrigger>Overview</AccordionTrigger>
+              <AccordionContent>
                 <p className={styles.summary}>
-                  Creative professional with over 15 years of expertise in
-                  design and web development, seamlessly blending
-                  aesthetics with functionality. My experience includes 6 years
-                  in development, with a strong focus on React & Typescript, and
-                  4 years in product design, where I&apos;ve built and scaled
-                  enterprise-level design systems using atomic design principles.
-                  I excel in building trust and fostering collaboration across
-                  cross-functional teams to tackle complex challenges and deliver
-                  user-centered solutions that align with business goals.
+                  Creative professional with over 10 years of expertise in
+                  design and web development, seamlessly blending aesthetics
+                  with functionality. My experience includes 6 years in
+                  development, with a strong focus on React & Typescript, and 4
+                  years in product design, where I&apos;ve built and scaled
+                  enterprise-level design systems using atomic design
+                  principles. I excel in building trust and fostering
+                  collaboration across cross-functional teams to tackle complex
+                  challenges and deliver user-centered solutions that align with
+                  business goals.
                 </p>
-              </section>
+              </AccordionContent>
+            </AccordionItem>
 
-              <section className={styles.section}>
-                <h3 className={styles.sectionTitle}>EDUCATION</h3>
+            <AccordionItem value='education'>
+              <AccordionTrigger>Education</AccordionTrigger>
+              <AccordionContent>
                 <div className={styles.educationBlock}>
-                  <span className={styles.eduSchool}>
+                  <div className={styles.eduSchool}>
                     University of Central Florida
-                  </span>
-                  <br />
-                  <span className={styles.eduDegree}>
+                  </div>
+                  <div className={styles.eduDegree}>
                     Digital Media (Web Design)
-                  </span>
-                  <br />
-                  <span className={styles.eduDetails}>
+                  </div>
+                  <div className={styles.eduDetails}>
                     2018 | BA | Cum Laude Honors
-                  </span>
+                  </div>
                 </div>
                 <div className={styles.educationBlock}>
-                  <span className={styles.eduSchool}>
+                  <div className={styles.eduSchool}>
                     Eastern Florida State College
-                  </span>
-                  <br />
-                  <span className={styles.eduDegree}>
+                  </div>
+                  <div className={styles.eduDegree}>
                     Graphic Design & Interactive Media
-                  </span>
-                  <br />
-                  <span className={styles.eduDetails}>
+                  </div>
+                  <div className={styles.eduDetails}>
                     2013 | AS | Cum Laude Honors
-                  </span>
+                  </div>
                 </div>
                 <div className={styles.educationBlock}>
-                  <span className={styles.eduSchool}>
+                  <div className={styles.eduSchool}>
                     Pinellas Technical College
-                  </span>
-                  <br />
-                  <span className={styles.eduDegree}>Graphic Design</span>
-                  <br />
-                  <span className={styles.eduDetails}>
+                  </div>
+                  <div className={styles.eduDegree}>Graphic Design</div>
+                  <div className={styles.eduDetails}>
                     2005 | Certification
-                  </span>
+                  </div>
                 </div>
-              </section>
+              </AccordionContent>
+            </AccordionItem>
 
-              <section className={styles.section}>
-                <h3 className={styles.sectionTitle}>SKILLS</h3>
+            <AccordionItem value='skills'>
+              <AccordionTrigger>Skills & Expertise</AccordionTrigger>
+              <AccordionContent>
                 <div className={styles.skillsBlock}>
                   <div className={styles.skillCategory}>
                     <span className={styles.skillLabel}>
@@ -132,13 +136,12 @@ const Resume: React.FC = () => {
                     initiatives from conception to implementation.
                   </div>
                 </div>
-              </section>
-            </div>
+              </AccordionContent>
+            </AccordionItem>
 
-            {/* Right Column */}
-            <div className={styles.rightCol}>
-              <section className={styles.section}>
-                <h3 className={styles.sectionTitle}>EXPERIENCE</h3>
+            <AccordionItem value='experience'>
+              <AccordionTrigger>Professional Experience</AccordionTrigger>
+              <AccordionContent>
                 <div className={styles.experienceBlock}>
                   <div className={styles.expHeader}>
                     <span className={styles.expRole}>UX Engineer</span>
@@ -146,11 +149,11 @@ const Resume: React.FC = () => {
                     <span className={styles.expDates}>Oct 2022 - Present</span>
                   </div>
                   <div className={styles.expDetails}>
-                    Hired internally as Stretto’s first UX engineer, I’m the
-                    lead maintainer of the Cadence Design System project used in
-                    React applications. I work closely with development and
-                    product teams to improve the quality of our products while
-                    enhancing the developer experience. Other key
+                    Hired internally as Stretto&apos;s first UX engineer,
+                    I&apos;m the lead maintainer of the Cadence Design System
+                    project used in React applications. I work closely with
+                    development and product teams to improve the quality of our
+                    products while enhancing the developer experience. Other key
                     responsibilities are as followed:
                     <ul>
                       <li>
@@ -223,7 +226,7 @@ const Resume: React.FC = () => {
                         spacing, etc.
                       </li>
                       <li>
-                        Designed a cohesive visual language for Stretto’s
+                        Designed a cohesive visual language for Stretto&apos;s
                         products.
                       </li>
                       <li>
@@ -244,7 +247,9 @@ const Resume: React.FC = () => {
                 <div className={styles.experienceBlock}>
                   <div className={styles.expHeader}>
                     <span className={styles.expRole}>UX Designer</span>
-                    <span className={styles.expCompany}>Chico&apos;s FAS Inc.</span>
+                    <span className={styles.expCompany}>
+                      Chico&apos;s FAS Inc.
+                    </span>
                     <span className={styles.expDates}>
                       July 2019 - April 2020
                     </span>
@@ -272,13 +277,13 @@ const Resume: React.FC = () => {
                       </li>
                     </ul>
                   </div>
+                  <p className={styles.references}>
+                    References available upon request.
+                  </p>
                 </div>
-                <p className={styles.references}>
-                  References available upon request.
-                </p>
-              </section>
-            </div>
-          </div>
+              </AccordionContent>
+            </AccordionItem>
+          </AccordionRoot>
         </div>
         <Footer />
       </div>

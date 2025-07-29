@@ -1,7 +1,6 @@
 import React from 'react';
-import { Footer, PageTransition } from '@/components';
+import { Footer, PageTransition, ProjectNavbar } from '@/components';
 import {
-  NextLink,
   ProjectOverview,
   ProjectProcess,
   ProjectStage,
@@ -13,9 +12,17 @@ import {
   makotosDeliverables,
   makotosSteps,
 } from '@/data/projects/makotos-data';
+import { getProjectNavigation } from '@/utils/project-navigation';
 
 const Makoto: React.FC = () => {
+  const navigation = getProjectNavigation('/makoto-japanese-steakhouse');
   return (
+    <>
+      <ProjectNavbar
+        currentProject={navigation.current.title}
+        nextProject={navigation.next}
+        previousProject={navigation.previous}
+      />
     <PageTransition>
       <ProjectPage>
         <ProjectStage
@@ -45,11 +52,10 @@ const Makoto: React.FC = () => {
           deliverables={makotosDeliverables}
           sectionTitle='Project Deliverables'
         />
-
-        <NextLink label='Miamah Comedy' projectName='Go To Project' link='/projects/miamah-comedy' />
       </ProjectPage>
+      </PageTransition>
       <Footer />
-    </PageTransition>
+    </>
   );
 };
 

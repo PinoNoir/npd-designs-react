@@ -1,7 +1,6 @@
 import React from 'react';
-import { Footer, PageTransition } from '@/components';
+import { Footer, PageTransition, ProjectNavbar } from '@/components';
 import {
-  NextLink,
   ProjectOverview,
   ProjectProcess,
   ProjectStage,
@@ -14,9 +13,18 @@ import {
   seriousErpProblems,
   seriousErpGoals,
 } from '@/data/projects/serious-erp-data';
+import { getProjectNavigation } from '@/utils/project-navigation';
 
 const SeriousErp: React.FC = () => {
+  const navigation = getProjectNavigation('/serious-erp');
+  
   return (
+    <>
+      <ProjectNavbar
+        currentProject={navigation.current.title}
+        nextProject={navigation.next}
+        previousProject={navigation.previous}
+      />
     <PageTransition>
       <ProjectPage>
         <ProjectStage
@@ -46,15 +54,10 @@ const SeriousErp: React.FC = () => {
           deliverables={seriousErpDeliverables}
           sectionTitle='Project Deliverables'
         />
-
-        <NextLink
-          label="Solvably"
-          projectName='Go To Project'
-          link='/projects/solvably'
-        />
       </ProjectPage>
+      </PageTransition>
       <Footer />
-    </PageTransition>
+    </>
   );
 };
 

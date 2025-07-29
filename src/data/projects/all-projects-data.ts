@@ -11,7 +11,7 @@ export const projects = [
   },
   {
     id: '2',
-    title: 'Cadence Design System',
+    title: 'Stretto - Cadence Design System',
     description: 'Atomic design system for enterprise React applications with Storybook documentation.',
     imageUrl: '/assets/img/work_images/stretto/stretto_cds_stage.jpg',
     category: 'Design Systems',

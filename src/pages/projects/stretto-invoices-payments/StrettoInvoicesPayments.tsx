@@ -1,7 +1,11 @@
 import React from 'react';
-import { Footer, PageTransition, ProtectedProject } from '@/components';
 import {
-  NextLink,
+  Footer,
+  PageTransition,
+  ProtectedProject,
+  ProjectNavbar,
+} from '@/components';
+import {
   ProjectOverview,
   ProjectProcess,
   ProjectStage,
@@ -14,13 +18,21 @@ import {
   strettoInvoicesPaymentsProblems,
   strettoInvoicesPaymentsGoals,
 } from '@/data/projects/stretto-invoices-payments-data';
+import { getProjectNavigation } from '@/utils/project-navigation';
 
 const StrettoInvoicesPayments: React.FC = () => {
+  const navigation = getProjectNavigation('/stretto-invoices-payments');
+
   return (
     <ProtectedProject
       projectName='Stretto - Invoices & Payments'
       password='pino2025'
     >
+      <ProjectNavbar
+        currentProject={navigation.current.title}
+        nextProject={navigation.next}
+        previousProject={navigation.previous}
+      />
       <PageTransition>
         <ProjectPage>
           <ProjectStage
@@ -30,7 +42,7 @@ const StrettoInvoicesPayments: React.FC = () => {
 
           <ProjectOverview
             projectName='Stretto - Best Case Cloud'
-            projectType='Best Case Cloud - Invoices & Payments'
+            projectType='Invoices & Payments System'
             projectRole='Lead Product Designer'
             projectSoftware='Figma'
             projectDescription='After joining the bankruptcy division I was tasked with redesigning the Invoices & Payments feature for Best Case Cloud. Because it is an integral part of the software and a huge revenue driver for the business, I felt a lot of pressure in making sure the design was easy to use. On top of having no prior experience working on a payment system, it needed to support unique scenarios only found in bankruptcy law, which made it even more complex. But with the help of cognitive walkthroughs, design reviews, and user testing, I was able to design a flexible tool that helped users collect payments from their clients with much less effort.'
@@ -50,15 +62,9 @@ const StrettoInvoicesPayments: React.FC = () => {
             deliverables={strettoInvoicesPaymentsDeliverables}
             sectionTitle='Project Deliverables'
           />
-
-          <NextLink
-            label='More Projects Coming Soon'
-            projectName='Back to Projects'
-            link='/projects'
-          />
         </ProjectPage>
-        <Footer />
       </PageTransition>
+      <Footer />
     </ProtectedProject>
   );
 };

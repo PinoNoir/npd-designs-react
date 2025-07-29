@@ -1,7 +1,11 @@
 import React from 'react';
-import { Footer, PageTransition, ProtectedProject } from '@/components';
 import {
-  NextLink,
+  Footer,
+  PageTransition,
+  ProtectedProject,
+  ProjectNavbar,
+} from '@/components';
+import {
   ProjectOverview,
   ProjectProcess,
   ProjectStage,
@@ -15,13 +19,21 @@ import {
   strettoEballotCaseAdminSolutions,
   strettoEballotWebsiteProblems,
 } from '@/data/projects/stretto-eballot-data';
+import { getProjectNavigation } from '@/utils/project-navigation';
 
 const StrettoEballot: React.FC = () => {
+  const navigation = getProjectNavigation('/stretto-eballot');
+
   return (
     <ProtectedProject
       projectName='Stretto - E-Ballot System'
       password='pino2025'
     >
+      <ProjectNavbar
+        currentProject={navigation.current.title}
+        nextProject={navigation.next}
+        previousProject={navigation.previous}
+      />
       <PageTransition>
         <ProjectPage>
           <ProjectStage
@@ -30,7 +42,7 @@ const StrettoEballot: React.FC = () => {
           />
 
           <ProjectOverview
-            projectName='Stretto - America Works Software'
+            projectName='Stretto - America Works'
             projectType='Solicitation - E-Ballot Setup Enhancement'
             projectRole='Lead Product Designer'
             projectSoftware='Figma'
@@ -66,15 +78,9 @@ const StrettoEballot: React.FC = () => {
             deliverables={strettoEballotDeliverables.slice(4, 5)}
             sectionTitle='Website System Deliverables'
           />
-
-          <NextLink
-            label='Best Case Cloud - Invoices & Payments'
-            projectName='Go To Project'
-            link='/projects/stretto-invoices-payments'
-          />
         </ProjectPage>
-        <Footer />
       </PageTransition>
+      <Footer />
     </ProtectedProject>
   );
 };
