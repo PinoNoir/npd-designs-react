@@ -79,7 +79,7 @@ const Home = () => {
             <ExpertiseCard
               icon={FileCode}
               title='Frontend Dev'
-              description='Strong foundation in modern web technologies like React and Node.js, with experience in release management & Git.'
+              description='Strong foundation in modern web technologies like React and Node.js, with experience in CI/CD & Git.'
             />
           </div>
         </div>

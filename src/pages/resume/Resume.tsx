@@ -38,6 +38,7 @@ const Resume: React.FC = () => {
             <div className={styles.headerRight}>
               <div className={styles.contactInfo}>
                 <span>nickpinodesigns.com</span>
+                <span>Password: pino2025</span>
                 <span>nickpino.designs@gmail.com</span>
                 <span>727-430-5188</span>
               </div>
