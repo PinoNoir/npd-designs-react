@@ -9,7 +9,7 @@ const About = () => {
       <Hero
         title='About'
         subtitle='UX engineer specializing in design systems & frontend development'
-        description="I translate design prototypes into production-ready code, building scalable UI systems that maintain visual consistency and performance. My hybrid background lets me think like both a designer and developer—helping teams ship polished, high-quality interfaces faster."
+        description='I translate design prototypes into production-ready code, building scalable UI systems that maintain visual consistency and performance. My hybrid background lets me think like both a designer and developer—helping teams ship polished, high-quality interfaces faster.'
       />
       <section className={styles.aboutSection}>
         <div className={styles.container}>
@@ -28,13 +28,11 @@ const About = () => {
                   <h2>Education & Background</h2>
                 </div>
                 <p>
-                  I've immersed myself in the field of design for over a
+                  I've immersed myself in design and web development for over a
                   decade—constantly learning new techniques and dedicating
                   myself to academia. In 2018 I graduated with a BA in Digital
                   Media from UCF to refresh my knowledge and stay current with
-                  emerging technology and best practices. My current focus is UX
-                  design—building digital products that improve workflows, solve
-                  problems, and deliver better experiences.
+                  emerging tech and best practices.
                 </p>
               </div>
               <div className={styles.aboutText}>
@@ -46,7 +44,7 @@ const About = () => {
                   I've worked as a designer long enough to know silver bullets
                   don't exist. Every project is unique and always riddled with
                   ambiguity and constraints. Fortunately, there's no need to
-                  reinvent the wheel, I can follow industry guidelines and
+                  reinvent the wheel. I can follow industry guidelines and
                   proven UX frameworks—beginning with a discovery phase to
                   understand the problem; followed by prototyping, validating my
                   ideas with users, and collaborating with stakeholders
@@ -60,15 +58,22 @@ const About = () => {
                   <Code size={24} />
                   <h2>Development Approach</h2>
                 </div>
+                <p style={{ marginBottom: '1rem' }}>
+                  I began my frontend development journey in 2009, starting with
+                  HTML and CSS, then moving into more advanced languages like
+                  JavaScript, jQuery, and PHP. As CSS frameworks like Bootstrap
+                  and Material Design emerged, I recognized the growing need for
+                  consistency, scalability, and shared UI patterns in modern
+                  software development.
+                </p>
+                
                 <p>
-                  My journey in frontend development complements my design
-                  background perfectly. I focus on creating accessible,
-                  responsive interfaces that work seamlessly across all devices.
-                  By combining my design expertise with technical skills in
-                  React, TypeScript, and modern CSS, I can bridge the gap
-                  between design and implementation, ensuring that the final
-                  product matches the vision while meeting technical
-                  requirements and best practices.
+                  Fast-forward to today, and the importance of reusable, themed
+                  components has never been greater. By combining my design background
+                  with technical skills in React, TypeScript, and CSS,
+                  I help bridge the gap between design and implementation—ensuring
+                  the final product matches the original vision while meeting
+                  technical requirements and best practices.
                 </p>
               </div>
             </div>
