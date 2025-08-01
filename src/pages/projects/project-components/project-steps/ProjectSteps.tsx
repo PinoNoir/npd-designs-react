@@ -7,7 +7,7 @@ interface ProjectStepsProps {
 
 const ProjectSteps = ({ steps, title = 'Execution' }: ProjectStepsProps) => (
   <div className={styles.projectSteps}>
-    {title && <h3 className={styles.stepsTitle}>{title}</h3>}
+    {title && <h3 className={styles.sectionTitle}>{title}</h3>}
     <ol className={styles.numberedList}>
       {steps.map((step) => (
         <li key={step.id} className={styles.listItem}>
