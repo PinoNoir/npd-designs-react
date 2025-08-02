@@ -1,89 +1,65 @@
 import React, { useState, useEffect } from 'react';
 import styles from './OptimizedImage.module.css';
+import clsx from 'clsx';
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
   className?: string;
-  onLoad?: () => void;
-  onError?: () => void;
+  loading?: 'lazy' | 'eager';
+  sizes?: string;
+  priority?: boolean;
 }
-
-// Type guard to validate src
-const isValidImageSrc = (src: string): boolean => {
-  return Boolean(
-    src && src.trim() !== '' && src !== 'null' && src !== 'undefined',
-  );
-};
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   className = '',
-  onLoad,
-  onError,
+  loading = 'lazy',
+  sizes = '100vw',
+  priority = false,
 }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const [imageSrc, setImageSrc] = useState<string>('');
 
   useEffect(() => {
-    // Validate src prop
-    if (!isValidImageSrc(src)) {
-      console.warn('OptimizedImage: Invalid or empty src provided:', src);
-      setHasError(true);
-      setIsLoading(false);
-      onError?.();
-      return;
+    if (priority) {
+      setIsLoaded(true);
     }
+  }, [priority]);
 
-    setIsLoading(true);
-    setHasError(false);
+  const handleLoad = () => {
+    setIsLoaded(true);
+  };
 
-    // Preload image
-    const img = new Image();
-
-    img.onload = () => {
-      setImageSrc(src);
-      setIsLoading(false);
-      onLoad?.();
-    };
-
-    img.onerror = () => {
-      setHasError(true);
-      setIsLoading(false);
-      onError?.();
-    };
-
-    img.src = src;
-  }, [src, onLoad, onError]);
+  const handleError = () => {
+    setHasError(true);
+    setIsLoaded(true);
+  };
 
   if (hasError) {
     return (
-      <div className={`${styles.errorContainer} ${className}`}>
-        <p className={styles.errorText}>Failed to load image</p>
+      <div className={clsx(styles.errorPlaceholder, className)}>
+        <span>Image failed to load</span>
       </div>
     );
   }
 
   return (
-    <div className={`${styles.imageContainer} ${className}`}>
-      {isLoading && (
-        <div className={styles.loadingPlaceholder}>
-          <div className={styles.loadingSpinner}></div>
-        </div>
-      )}
-
-      {imageSrc && (
-        <img
-          src={imageSrc}
-          alt={alt}
-          className={`${styles.image} ${
-            isLoading ? styles.hidden : styles.visible
-          }`}
-          onLoad={() => setIsLoading(false)}
-        />
-      )}
+    <div className={clsx(styles.imageContainer, className)}>
+      <img
+        src={src}
+        alt={alt}
+        loading={loading}
+        sizes={sizes}
+        className={clsx(styles.image, isLoaded && styles.loaded)}
+        onLoad={handleLoad}
+        onError={handleError}
+        // Performance optimizations
+        decoding='async'
+        fetchPriority={priority ? 'high' : 'auto'}
+      />
+      {!isLoaded && !priority && <div className={styles.skeleton} />}
     </div>
   );
 };

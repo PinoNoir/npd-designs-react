@@ -2,6 +2,9 @@
   position: relative;
   min-height: 100vh;
   width: 100%;
+  /* Enable hardware acceleration */
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .loadingOverlay {
@@ -16,7 +19,11 @@
   justify-content: center;
   z-index: 1000;
   opacity: 1;
-  transition: opacity 0.3s ease-out;
+  /* Faster transition for mobile */
+  transition: opacity 0.2s ease-out;
+  /* Enable hardware acceleration */
+  transform: translateZ(0);
+  will-change: opacity;
 }
 
 .loadingSpinner {
@@ -32,7 +39,11 @@
   border: 3px solid var(--gray-6);
   border-top: 3px solid var(--blue-9);
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  /* Optimized animation for mobile */
+  animation: spin 0.8s linear infinite;
+  /* Enable hardware acceleration */
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .loadingText {
@@ -43,29 +54,32 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% { transform: translateZ(0) rotate(0deg); }
+  100% { transform: translateZ(0) rotate(360deg); }
 }
 
 .content {
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
+  transform: translateZ(0) translateY(10px);
+  /* Faster transition for mobile */
+  transition: all 0.3s ease-out;
+  /* Enable hardware acceleration */
+  will-change: transform, opacity;
 }
 
 .content.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateZ(0) translateY(0);
 }
 
 .content.hidden {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateZ(0) translateY(10px);
 }
 
-/* Smooth scroll behavior for the entire page */
+/* Optimized scroll behavior for mobile */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto; /* Disable smooth scroll on mobile for better performance */
 }
 
 /* Ensure proper stacking context */
@@ -79,7 +93,22 @@ html {
   scroll-padding-top: 0;
 }
 
-/* Ensure body doesn't maintain scroll position */
-body {
-  scroll-behavior: auto;
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  .content {
+    transform: translateZ(0) translateY(5px); /* Smaller transform on mobile */
+    transition: all 0.2s ease-out; /* Even faster on mobile */
+  }
+  
+  .content.hidden {
+    transform: translateZ(0) translateY(5px);
+  }
+  
+  .spinner {
+    animation: spin 0.6s linear infinite; /* Faster spinner on mobile */
+  }
+  
+  .loadingOverlay {
+    transition: opacity 0.15s ease-out; /* Faster overlay transition on mobile */
+  }
 } 

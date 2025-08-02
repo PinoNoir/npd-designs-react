@@ -1,14 +1,15 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styles from './PageTransition.module.css';
+import clsx from 'clsx';
 
 interface PageTransitionProps {
   children: React.ReactNode;
   className?: string;
 }
 
-const PageTransition: React.FC<PageTransitionProps> = ({ 
-  children, 
-  className = '' 
+const PageTransition: React.FC<PageTransitionProps> = ({
+  children,
+  className = '',
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
@@ -19,41 +20,43 @@ const PageTransition: React.FC<PageTransitionProps> = ({
     setIsLoading(true);
     setIsVisible(false);
 
-    // Use requestAnimationFrame to ensure DOM is ready
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'instant' // Use instant to avoid smooth scroll conflicts
-      });
-    };
+    // Scroll to top immediately
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant',
+    });
 
-    // Scroll to top after a brief delay to ensure route transition is complete
-    const scrollTimer = setTimeout(scrollToTop, 50);
-
-    // Simulate loading time for images and content
+    // Reduced loading time for better mobile performance
     const loadingTimer = setTimeout(() => {
       setIsLoading(false);
-      
-      // Small delay before showing content for smooth transition
+
+      // Shorter delay for content visibility
       const visibilityTimer = setTimeout(() => {
         setIsVisible(true);
-      }, 100);
-      
+      }, 50);
+
       return () => clearTimeout(visibilityTimer);
-    }, 800);
+    }, 300); // Reduced from 800ms to 300ms
 
     return () => {
-      clearTimeout(scrollTimer);
       clearTimeout(loadingTimer);
     };
   }, []);
 
-  // Handle image loading
+  // Simplified image loading logic
   useEffect(() => {
     const images = containerRef.current?.querySelectorAll('img');
     if (!images || images.length === 0) {
       setIsLoading(false);
+      return;
+    }
+
+    // Check if images are already loaded
+    const allImagesLoaded = Array.from(images).every((img) => img.complete);
+    if (allImagesLoaded) {
+      setIsLoading(false);
+      setTimeout(() => setIsVisible(true), 50);
       return;
     }
 
@@ -64,7 +67,7 @@ const PageTransition: React.FC<PageTransitionProps> = ({
       loadedImages++;
       if (loadedImages === totalImages) {
         setIsLoading(false);
-        setTimeout(() => setIsVisible(true), 100);
+        setTimeout(() => setIsVisible(true), 50);
       }
     };
 
@@ -72,21 +75,22 @@ const PageTransition: React.FC<PageTransitionProps> = ({
       loadedImages++;
       if (loadedImages === totalImages) {
         setIsLoading(false);
-        setTimeout(() => setIsVisible(true), 100);
+        setTimeout(() => setIsVisible(true), 50);
       }
     };
 
-    images.forEach(img => {
-      if (img.complete) {
-        handleImageLoad();
+    // Add event listeners only to images that haven't loaded
+    images.forEach((img) => {
+      if (!img.complete) {
+        img.addEventListener('load', handleImageLoad, { once: true });
+        img.addEventListener('error', handleImageError, { once: true });
       } else {
-        img.addEventListener('load', handleImageLoad);
-        img.addEventListener('error', handleImageError);
+        handleImageLoad();
       }
     });
 
     return () => {
-      images.forEach(img => {
+      images.forEach((img) => {
         img.removeEventListener('load', handleImageLoad);
         img.removeEventListener('error', handleImageError);
       });
@@ -94,10 +98,7 @@ const PageTransition: React.FC<PageTransitionProps> = ({
   }, []);
 
   return (
-    <div 
-      ref={containerRef}
-      className={`${styles.pageTransition} ${className}`}
-    >
+    <div ref={containerRef} className={clsx(styles.pageTransition, className)}>
       {isLoading && (
         <div className={styles.loadingOverlay}>
           <div className={styles.loadingSpinner}>
@@ -106,11 +107,12 @@ const PageTransition: React.FC<PageTransitionProps> = ({
           </div>
         </div>
       )}
-      
-      <div 
-        className={`${styles.content} ${
-          isVisible ? styles.visible : styles.hidden
-        }`}
+
+      <div
+        className={clsx(
+          styles.content,
+          isVisible ? styles.visible : styles.hidden,
+        )}
       >
         {children}
       </div>
@@ -118,4 +120,4 @@ const PageTransition: React.FC<PageTransitionProps> = ({
   );
 };
 
-export default PageTransition; 
+export default PageTransition;

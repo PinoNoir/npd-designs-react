@@ -3,62 +3,76 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  /* Enable hardware acceleration */
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  /* Enable hardware acceleration */
+  transform: translateZ(0);
+  will-change: opacity;
 }
 
-.image.visible {
+.image.loaded {
   opacity: 1;
 }
 
-.image.hidden {
-  opacity: 0;
-}
-
-.loadingPlaceholder {
+.skeleton {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--gray-3) 25%,
+    var(--gray-4) 50%,
+    var(--gray-3) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  /* Enable hardware acceleration */
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.errorPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   background-color: var(--gray-3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-.loadingSpinner {
-  width: 24px;
-  height: 24px;
-  border: 2px solid var(--gray-6);
-  border-top: 2px solid var(--blue-9);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.errorContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 200px;
-  background-color: var(--gray-2);
-  border: 1px solid var(--gray-6);
-  border-radius: var(--radius-md);
-}
-
-.errorText {
   color: var(--gray-10);
   font-size: var(--font-size-sm);
-  margin: 0;
+  text-align: center;
+  padding: var(--space-16);
+  border-radius: var(--border-radius-default);
+  border: 1px solid var(--gray-5);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .image {
+    transition: opacity 0.2s ease-out; /* Faster transition on mobile */
+  }
+  
+  .skeleton {
+    animation: shimmer 1s infinite; /* Faster shimmer on mobile */
+  }
 } 

@@ -12,7 +12,6 @@ export default defineConfig({
       '@': resolve(__dirname, '/src'),
     },
   },
-  assetsInclude: ['/src/assets/img/**'],
   plugins: [react(), TanStackRouterVite()],
   css: {
     modules: {
@@ -26,6 +25,16 @@ export default defineConfig({
   },
   build: {
     cssMinify: 'esbuild',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['@tanstack/react-router'],
+          ui: ['lucide-react'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
   },
   server: {
     hmr: {
@@ -34,5 +43,12 @@ export default defineConfig({
   },
   optimizeDeps: {
     exclude: ['@tanstack/router-devtools'],
+    include: ['react', 'react-dom', 'lucide-react'],
   },
+  // Performance optimizations
+  esbuild: {
+    target: 'es2020',
+  },
+  // Image optimization
+  assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg', '**/*.webp'],
 });
